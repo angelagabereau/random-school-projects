@@ -1,0 +1,46 @@
+
+
+FOA: 2.5.2.2 Posting resolution
+
+
+
+
+
+FOA Home
+
+ | UP: Fine points
+
+
+
+Posting resolution
+
+Typically we need only keep track of {which } document contains the
+posting. But an important element of many query languages are
+PROXIMITY operators which allow users to specify how close two
+keywords must be (adjacent words, within the same sentence, within the
+same paragraph, within a $k$-word window of one another, etc.). To
+support such queries, we may also be concerned with recording higher
+RESOLUTION posting information than just which document it is in.
+For example, many systems retain the exact {\em character} position of
+the (beginning of the) keyword. Figure (figure) shows the
+elaborate data structure used by the STAIRS IR system. In addition to
+very high-resolution postings, this representation supported other query
+attributes (e.g. security) as well.
+
+
+
+
+Top of Page
+
+ | UP: Fine points
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

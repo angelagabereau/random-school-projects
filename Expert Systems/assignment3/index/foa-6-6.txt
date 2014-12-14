@@ -1,0 +1,74 @@
+
+
+FOA: 6.6 Deep interfaces
+
+
+
+
+
+FOA Home
+
+ | UP: Inference beyond the \Index
+
+
+
+Deep interfaces
+
+Probably because interface technology did not support rich graphical
+presentations and pointing devices until late in the development of
+computer science, the human-computer interface (HCI) is often an
+after-thought in software engineering. This bias remains today in search
+engine designs which assume the indexing and match algorithms can be
+separated from the presentation of result [<A
+HREF="bibrefs.html#Harman92b">Harman92b] [<A
+HREF="bibrefs.html#REF654">REF654] .
+
+
+Sometimes interface design is
+approached as a data visualization task [<A
+HREF="bibrefs.html#Veerasamy96">Veerasamy96] . Korfage VIBE
+presentation [Korfhage95]
+highlights a user and author's perspectives on topical areas. Rather
+than assuming that there is any absolute, preferred perspective on
+keywords, Korfage considers what the words look like from the
+perspective of users and authors, respectively.
+
+
+In terms of the vector
+space model, we can think of these as projections. The huge dimensional
+space of keywords, or even the still large reduced dimension
+representation, is still far more than we can visualize on the two
+dimensional computer screen. We can try to impose other dimensions (e.g.
+color, size) but still we must pick some projected subspace of the
+larger data set. Norman and Schneiderman have written extensively on the
+design of interfaces which are deeply connected to the user's underlying
+task [Norman88] [<A
+HREF="bibrefs.html#Shneiderman92">Shneiderman92] ; Marchianoni has
+focused particularly on interfaces for the ``information seeking'' task
+[Marchionini95] . As part of
+the Xerox PARC group, Hearst has explored a number of visualization
+techniques (cf. Figure (FOAref) ); she has also recently
+provided an extensive survey of interface technologies [<A
+HREF="bibrefs.html#Hearst99">Hearst99] .
+
+Subsections
+
+	 6.6.1 Geographical hitlists
+
+
+
+
+Top of Page
+
+ | UP: Inference beyond the \Index
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

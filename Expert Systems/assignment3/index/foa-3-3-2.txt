@@ -1,0 +1,151 @@
+
+
+FOA: 3.3.2 Word occurrence as a  Poisson process
+
+
+
+
+
+FOA Home
+
+ | UP: A statistical basis for keyword meaning
+
+
+
+Word occurrence as a  Poisson process
+
+\newcommand{\prob}{probability\ }
+
+
+When the words contained in a corpus
+are ranked and shown to be distributed according to a Zipfian
+distribution, an obvious but important observation can be made: The most
+frequently occurring words are not really about anything. Words
+like NOT, OF, THE, OR, TO, BUT, BE, etc., obviously play an
+important {\em functional} role, as part of the syntactic structure of
+sentences. But it is hard to imagine users asking for documents
+about OF, or about BUT. {A query
+like {\tt TO BE OR NOT TO BE} is not hard to imagine, however, and leads
+to special retrieval techniques like PAT-trees that allow indexing of
+each and every word; cf. Section <A
+HREF="foa-2-5-2.html">&sect;2.5.2 .} Define FUNCTION WORDS to
+be those that have only (!) a syntactic function, for example \term{OF},
+\term{THE}, \term{BUT} and distinguish them from CONTENT WORDS
+which are descriptive in the sense that we're interested in for the
+indexing task. This is one of the first but most certainly not the last
+example FOA makes using a priori determinations of a word's
+semantic utility based on its statistical properties.
+
+
+For
+example, we might hope that function words occur {randomly} throughout
+arbitrary text, while content words do not. One ubiquitous model of
+randomness is as a POISSON PROCESS , used in the past to model
+things like: \bit \item raisins' distribution across slices of bread; or
+\item misprints' distribution across printed pages; or \item the
+distribution of peoples' birthdays across days of the year. distribution
+of peoples' birthdays across days of the year. stribution of peoples'
+birthdays across days of the year. ibution of peoples' birthdays across
+days of the year. tion of peoples' birthdays across days of the year. n
+of peoples' birthdays across days of the year. f peoples' birthdays
+across days of the year. eoples' birthdays across days of the year. les'
+birthdays across days of the year. ' birthdays across days of the year.
+irthdays across days of the year. hdays across days of the year. ys
+across days of the year. across days of the year. ross days of the year.
+s days of the year. ays of the year. of the year. the year. e year. ear.
+. \eit
+
+
+In the case of our documents, we'll start with a slightly simpler
+BERNOULLI model wherein we imagine an author making
+binary decisions, picking a keyword $k$ with \prob $p_k$. Then
+in a document of length $L$ the \prob that it was selected exactly $n$
+times in document $d$ is: \Pr(f_{kd} = n) = {L \choose n} (p_k)^n
+(1-p_k)^{L-n} In other words, we'd expect it to occur an average of $p_k
+\cdot L$ times in a document of length $L$.
+
+
+As $L \infty$ and $p
+\rightarrow 0$ (and the mean value $\lambda \equiv p \cdot L \rightarrow
+1$), the Poisson distribution: \Pr(f_{kd} = n) = \frac{e^{- \lambda}
+(\lambda)^{n}}{n!} converges to this same distribution. We will
+generally be interested in a large set of parameters $\lambda_k$, each
+corresponding to a particular keyword $k$. If we imagine a
+Bernoulli-like experiment where individual function words are placed
+with low probability and observed across the many ``experiments'' of
+words occurring in documents, we can expect that a particular word \( k
+\) will occur \( n \) times in a randomly selected document according to
+a Poisson distribution (Since documents are of different length, we must
+also take care to normalize them all to the same number of experiments.)
+
+
+As
+an example of how a Poisson model might be applied to good use, work
+pioneered by Bookstein and Swanson in the mid-1970's proposed that
+function words are distributed according to a relatively constant
+Poisson distribution [<A
+HREF="bibrefs.html#Bookstein74">Bookstein74] [<A
+HREF="bibrefs.html#Bookstein77">Bookstein77] [<A
+HREF="bibrefs.html#Croft79">Croft79] while content words were not.
+That is, when a keyword is found in a document, it is for one of two
+possible reasons: either it just happens (randomly) to be there, or it
+really means something. Robertson and Walker [<A
+HREF="bibrefs.html#Robertson94">Robertson94] distinguish the latter,
+ELITE occurrences of a keyword: \bq We hypothesize that
+occurrences of a term in a document have a random or stochastic element,
+which nevertheless reflects a real but hidden distinction between those
+... ``elite'' documents which are about the concept represented
+by the term and those which are not. We may draw an inference about
+eliteness from the term frequency, but this inference will of course be
+probabilistic. Furthermore, relevance (to a query which may of course
+contain many concepts) is related to eliteness rather than directly to
+term frequency, which is assumed to depend only on eliteness.
+[Robertson94] \eq
+
+
+Beyond
+discriminating function from content words, the Poisson model has been
+used to measure the degree to which a content word is effective
+as a keyword for a document [<A
+HREF="bibrefs.html#Robertson94">Robertson94] . If we assume that a
+potential keyword effectively describes some documents in a corpus but
+occurs at the level of chance throughout the rest of the corpus, the
+distribution of this keyword across the corpus can be described as the
+mixture of a Poisson process with some other distribution.
+
+
+The so-called
+TWO-POISSON MODEL models both distributions (i.e., one over the
+\Rel documents that could accurately be characterized as about
+this keyword, and a second over the rest of the \IRel documents which
+are not) as Poisson, but with distinct means \( \lambda_w^{1} \) and \(
+\lambda_w^{2} \), with the superscripts 1 and 2 refering to the \Rel and
+\IRel distributions, resp. One advantage of assuming both distributions
+are Poisson, and that we only need to discriminate between two classes
+(relevant vs. nonrelevant), is that a single parameter \( p_{rel}
+\equiv\Pr(\mathname{Relevance})\) controls the probability that the word
+\( w \) is relevant: \Pr(d {\textstyle \about} w \mid k {\textstyle
+occurrences of} w = \frac{p_{rel} e^{-\lambda_w^{1}}
+(\lambda_w^{1})^{k}} {p_{rel} e^{-\lambda_w^{1}} (\lambda_w^{1})^{k} +
+(1 - p_{rel}) e^{-\lambda_w^{2}} (\lambda_w^{2})^{k}} This probability
+can then be used as part of a decision theoretic model related to the
+costs of indexing too many or too few documents with a keyword \( w \)
+(cf. Section &sect;5.5.6 ).
+
+
+
+
+Top of Page
+
+ | UP: A statistical basis for keyword meaning
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

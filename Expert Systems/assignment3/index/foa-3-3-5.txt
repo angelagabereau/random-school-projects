@@ -1,0 +1,96 @@
+
+
+FOA: 3.3.5 Weighting the index relation
+
+
+
+
+
+FOA Home
+
+ | UP: A statistical basis for keyword meaning
+
+
+
+Weighting the index relation
+
+The simplest notion of an index is binary - either a keyword is
+associated with a document or it is not. But it is natural to imagine
+degrees of \about-ness. We will capture this strength with a
+single real number, a {\em weight}, capturing the strength of the
+relationship between keyword and document. This weight can be used in
+two different ways. One example is to reduce the number of links to only
+the most significant relationships. In this respect a weighted indexing
+system is a more general formulation than a binary formulation; we can
+always go to a binary relation from the weighted one. This might make
+weights useful even if our retrieval method was Boolean (as it often was
+in early IR systems). But today the more common reason for using a
+weighted indexing relation is that the retrieval method can exploit
+these weights directly.
+
+
+One way to describe what this number means
+is probabilistic - we seek a measure of a document's relevance,
+conditionalized on the belief that a keyword is relevant: \[ w_{kd}
+\propto \Pr(d \mathrm{\ relevant\ } | \ k \mathrm{\ relevant}) \] Note
+that this is a \emph{directed} relation: we may or may not believe that
+the symmetric relation: \[ w_{dk} \propto \Pr(k \mathrm{\ relevant\ }\ |
+\ d \mathrm{\ relevant}) \] should be the same. Unless specified
+otherwise, when we refer to a weight $w$ we will intend it to mean
+$w_{kd}$.
+
+
+In order to compute statistical estimates for such
+probabalities we define several important quantities: f_{kd} & \equiv &
+\mathrm{number of occurrences of keyword} k \mathrm{in document}d
+\nonumber \\ f_{k} & \equiv & \mathrm{total number of occurrences of
+keyword} k \mathrm{acros entire corpus} \nonumber \\ D_{k} & \equiv &
+\mathrm{number of documents containing keyword} k
+
+
+ We will make two
+demands on the weight reflecting the degree to which a document is
+about a particular keyword/topic. The first one goes back to
+Luhn's central observation [Luhn61] :
+Repetition is an indication of emphasis. If an author uses a
+word frequently, it is because he or she thinks it's important. Define
+$f_{kd}$ to be the number of occurrences of keyword $k$ in a document
+$d$.
+
+
+Our second concern is that a keyword be a useful
+discriminator within the context of the corpus. Capturing this
+notion of corpus-context statistically proves much more difficult; for
+now we simply give it the name $\mathname{discrim}_k$.
+
+
+Since we care
+about both, we will devise our weight to be the { product} of the two
+factors, corresponding to their conjunction: w_{kd} \propto f_{kd} \cdot
+\mathname{discrim}_k
+
+
+ We will now consider several different index
+weighting schemes that have been suggested over the years. These all
+share the same reliance on $f_{kd}$ as a measure of keyword importance
+within the document, and the same product form as Equation
+(FOAref) . What they do not share is how best to quantify the
+discrimination power $\mathname{discrim}_k_k\ $ of the keyword.
+
+
+
+
+Top of Page
+
+ | UP: A statistical basis for keyword meaning
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

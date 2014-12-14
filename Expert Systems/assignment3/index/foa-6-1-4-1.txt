@@ -1,0 +1,150 @@
+
+
+FOA: 6.1.4.1 Citations and arguments
+
+
+
+
+
+FOA Home
+
+ | UP: Discussion
+
+
+
+Citations and arguments
+
+Expository documents are arguments: Attempts to convince an audience
+that some set of proposition are true. Depending on the type of
+document, and the type of audience, the argument may be more or less
+formally structured.
+
+
+Perhaps the most structured kinds of documents are
+mathematical papers. Mathematical arguments typically depend on, indeed
+are defined by, theorem proving which connects new propositions to
+previously established results. Even in the case of mathematical papers
+however, it is interesting to observe the crucial role natural language
+text continues to play in providing a context for formal theoretical
+results. Readers can be persuaded that assumptions are reasonable, that
+mathematical definitions capture intuitive relationships, etc. Citations
+in a mathematical paper typically point to papers containing theorems
+that were used as part of the current proof.
+
+
+In a scientific paper, the
+form of the argument often has to do with the discipline. There is often
+data to present, methodology to describe, etc. Many of the citations are
+typically gathered in a section relating the current piece of work to
+prior literature. This prior literature may be referenced for at least
+two, very different purposes. Most typically the prior work is used much
+as theorems in mathematical papers, to establish a result from which the
+current work proceeds. The current author points to the work of a prior
+author as providing validation for a proposition they both believe to be
+true. Another potential reason for citation is quite the opposite. In
+this case, the current author is interested in debating a position put
+forward by the cited work.
+
+
+This polarity, reflecting whether the cited
+work and its conclusions are positively or negatively correlated with
+those in the citing work will be termed the POLARITY of the
+citation. Here legal documents provide a good example for what might be
+possible in scientific writing. Every law student learns proper legal
+syntax for codifying references as they learn to write LEGAL
+BRIEFS , the structured memos provided to judges and often
+incorporated into the ultimate opinion [<A
+HREF="bibrefs.html#BlueBook">BlueBook] . One feature of their
+writing is the special syntax used to refer to statuatory law (e.g.,
+{\tt 17 U.S.C 101} refers to a section of the U.S. Code) or case law
+(e.g., {\tt West Pub. Co. v. Mead Data Cent., Inc., 616 F.Supp 1571}) in
+a conventional fashion. A more interesting aspect of legal brief style
+is the explicit syntactic marking of the relation of the cited case to
+the argument being made in the brief: reference to a supporting legal
+precident is marked by {\tt cf.}, while potentially antagonistic
+argument is marked with {\tt but cf.}!
+
+
+Note the importance of the
+syntactic localization of both the source and destination of a citation
+pointer to the two document's semantic purposes. Localization helps to
+anchor the author's purpose in using the citation to the document's
+larger argument. Most papers make many points and attempt to establish a
+number of propositions. The ability to point to particular conclusions
+within the cited paper is therefore important. The citing paper's
+argument structure is simultaneously being extended, and so refenence to
+prior argument at a particular location in the current argument is can
+be more persuasive than if all cites aren't localized.
+
+
+ within the
+opinion, as reported in a particular court reporter publication, makes
+it far easier to find the relevant legal issue. Goldberg summarizes the
+legal issues:
+
+
+ Given today's technology, access to court opinions should
+be easier than ever. The law of the states and the federal law is in the
+public domain and is frequently reported electronically by the
+courts.... Small legal publishers are attempting to take advantage of
+this access and package less expensive computer assisted legal research
+tools than Westlaw and Lexis services; for example, many want to package
+state law on CD-ROM. Given the raw material is available these
+publishers should have a green light. The problem is that West
+Publishing, who publishes many of the State and Regional reporters and
+has control over the Federal Reporters, claims that their citation form,
+specifically the pagination of the reporters, is protected by copyright.
+As a result, those who wish to become legal publishers must either
+receive a license from the official reporters to use their pagination
+and citation form or petition the court for recognition of their
+citation form. Publishers are free to request copies of opinions from
+the courts or, for those that are available, download them from
+electronic bulletin boards and then print them in whatever form they
+choose. These materials are useless, however, to many potential
+customers as there is no recognized way to cite to them. In turn, the
+fee these publishers can fetch is a fraction of that of those using
+West's pagination. In 1991, the Supreme Court held in Feist Publication
+v. Rural Telephone Service that in order to deserve a copyright a work
+must have a ``creative spark" since a copyright is to reward
+originality. This decision has left some to doubt whether West is
+deserving of copyright protection for its pagination. In the 1980s, West
+sued Mead Data's Lexis over the use of its pagination but the two
+settled out of court. Under the terms of the license agreement Lexis
+received, Lexis can not relitigate so the issue is not yet settled.
+Efforts to get legislation on the issue passed have failed allegedly in
+part due to West's strong legislative ties. [<A
+HREF="bibrefs.html#Goldberg95">Goldberg95]
+
+
+ The American Bar
+Association has recently issued a <A
+HREF="http://www.uscourts.gov/aba/abarep.htm">Special Report on Citation
+Issues including page numbering. Like most of electronic publishing,
+the underlying issues remains in flux. }
+
+
+One reason citation has been
+less-exploited in FOA applications than it might is due to the expense
+of obtaining this data. In the context of the WWW, however, it turns out
+that the indices built by Web crawlers can be quite easily extended to
+capture cited pages information which can also be easily
+inverted to maintain citing pages as well (cf. Section <A
+HREF="foa-8-1.html">&sect;8.1 ).
+
+
+
+
+Top of Page
+
+ | UP: Discussion
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

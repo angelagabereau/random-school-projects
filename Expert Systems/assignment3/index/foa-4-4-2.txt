@@ -1,0 +1,88 @@
+
+
+FOA: 4.4.2 RAVePlan
+
+
+
+
+
+FOA Home
+
+ | UP: RAVe: A Relevance Assessment VEhicle
+
+
+
+RAVePlan
+
+A second challenge in the desired density or redundancy of sample
+points. That is, for each document that we believe may be relevant to a
+query, how many subjects should evaluate it? The answer will vary
+depending on such factors as the number of participants, their
+expertise, their motivation to produce quality judgments, how long each
+will spend rating documents, etc. A higher density means that less
+documents will be evaluated, but also that the inter-subject, cumulative
+assesment is likely to be more statistically stable. This can be
+especially important when RelFbk is to be used to train the system.
+
+
+The
+trade-off between the most important of these factors is captured in the
+following formula: x = \frac{N R}{S T Q} where x & = & number of
+documents to be evaluated for each query \\ N & = & number of subjects
+\\ R & = & expected subject efficiency (votes/user/time) \\ T & = & time
+spent by subjects \\ S & = & desired density (votes/document) \\ Q & = &
+number of queries to be evaluated \\
+
+
+ Note that this formula ignores the
+overlap between queries that occurs when users see a document that may
+be relevant to two or more of the queries in the their list. Care must
+be taken, therefore, to minize expected overlap between the topical
+areas of the queries. We have also found that the assessment densitities
+constructed using this formula to be unfortunately uneven. The main
+source of these is variability in $R$, the rate at which subjects are
+able to produce relevance assesments.
+
+
+RAVePLAN takes as
+input a list of $Q$ query specifications, a list of $N$ subject logins,
+the desired density $S$, and the number of documents $R*T$ that should
+be allocated to each subject. The query specifications indicate which
+queries can go in which fields, and which queries should not be shown
+together. This allows us to limit possible interactions between queries
+about similar topics. { Ideally, RAVePLAN could be folded
+into the interactive RAVe facility (described below), so that documents
+are allocated dynamically and incrementally, maintaining a
+nearly-consistent density on all queries. The experimenters could then
+push the experiment alternately in the directions of higher density or
+larger candidate-document sets. In its current implementation, however,
+RAVePLAN requires that we predetermine the list of
+documents that each subject will see. }
+
+
+RAVePLAN outputs two
+files. The plan file, which is an input to the RAVe
+interactive application, lists each subject id along with the queries
+and document numbers which have been selected for that subject. The
+assigments is a list of document-query pairs, which tells
+us which query we expect the document to be relevant to.
+RAVeCompile uses this file after data collection is
+completed to generate true and false-positive measures.
+
+
+
+
+Top of Page
+
+ | UP: RAVe: A Relevance Assessment VEhicle
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

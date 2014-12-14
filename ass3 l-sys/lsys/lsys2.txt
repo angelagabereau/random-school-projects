@@ -1,0 +1,4 @@
+3
+a bcca
+c acc
+b b

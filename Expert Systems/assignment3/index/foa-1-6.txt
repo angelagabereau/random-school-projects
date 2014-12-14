@@ -1,0 +1,233 @@
+
+
+FOA: 1.6 FOA versus database retrieval
+
+
+
+
+
+FOA Home
+
+ | UP: Overview
+
+
+
+FOA versus database retrieval
+
+Within the field of computer science, the subfields of databases and IR
+are often closely aligned. Databases have well-developed theoretic
+underpinnings [Vianu97] that has
+generated efficient algorithms [<A
+HREF="bibrefs.html#McFadden94">McFadden94] and become the foundation
+for one of the most successful elements of the computer industry.
+
+
+Both
+databases and search engines attempt to characterize a particular class
+of queries by which many users are expected to attempt to get
+information from computers. Historically, database systems and theory
+have been perceived as central to the discipline of Computer Science,
+probably more so than the IR techniques that are the core technologies
+for FOA. How many computer science departments in the US offer
+undergraduate classes in Databases? In IR? How many graduate classes?
+How many journals or conference proceedings, associated with the ACM or
+IEEE, are published in each area? Things may be changing, however.
+
+
+The
+general public's discovery of the Internet and subsequent interest in
+search engines like Alta Vista, InfoSeek and Yahoo! suggests that many
+users find value in the lists of the Web pages returned in response.
+These search engines are clearly doing an important job for many people,
+and it is a different job than they use to organize their address book
+(record collection, baseball statistics, ...) {databases}. How are IR
+and database technologies to be distinguished?
+
+
+To make the distinctions
+more concrete, let's imagine a particular information need and think
+about how both a database and a search engine might attempt to satisfy
+it. An example query might be:
+
+
+ What is the best SCSI disk drive to buy?
+
+
+
+In the case of databases, strong assumptions must first be made about
+{structure} among attributes of individual records. Good database design
+demands that the fundamental elements of data, their format, and logical
+relations among them be carefully analyzed and anticipated in a
+LOGICAL DATA MODEL long before any data is actually collected and
+maintained within some physical implementation. These assumptions allow
+specification of a syntax for the query language, strategies for
+optimizing the query's use of computational resources, and efficient
+storage of the data on physical devices.
+
+
+Let's now assume that a logical
+data model like this has been constructed and that a large catalog of
+information from various hard drive manufacturers and vendors has been
+collated. We will also make the much larger and problematic assumption
+that the users are capable of translating the natural language of Q1.3
+into the somewhat baroque syntax of a query language like SQL. The
+result of the database search might look something like:
+
+
+ Creating an
+example relation like this and populating it with a few instances is
+simple, but performing the necessary data modeling, collating the data
+from all of the various manufacturers and vendors, and keeping it all up
+to date is a much more daunting task. If the database catalog is out of
+date, or missing data from some important vendors, users might well
+leave the database badly informed.
+
+
+Now let's imagine using a search
+engine on the same query. When run against a Usenet news search engine
+like DejaNews, this query results in the retrieval shown in Figure
+(figure) with the most highly ranked posting shown in Figure
+(FOAref)
+
+
+ On Thu, 28 Aug 1997 23:10:03 GMT, Michael Query
+ wrote:
+
+
+>My question is, should I get another 2 Gb
+SCSI disk for putting the >OS (NT 4.0 WS), software, etc on, or should I
+get an IDE disk for this?
+
+
+Having played around with different configs for
+a while, I'd say go SCSI. I'd do that even if I had to get a second SCSI
+controller.
+
+
+(You'll ``hear'' a lot of people arguing that IDE is good
+enough, but if you are after overall improved performance SCSI is best.)
+
+
+my
+2Y. \caption{One posting retrieved}
+
+
+ Users of this search engine will
+read about many issues {\em related} to hard disks, some of which
+may be {\em relevant} to their particular situation. For example, does
+the ``best'' qualifier in Q1.3 mean lowest cost, maximum
+capacity, minimum access time,...? Are users able to choose between IDE
+and SCSI, or restricted to SCSI? Depending upon just what kind of users
+they are, some of the information retrieved may be immediately
+applicable to the purchase being considered, while other parts of it are
+better considered COLLATERAL KNOWLEDGE (D. E. Rose, personal
+communication) that simply leaves users more well-educated.
+
+
+A very
+different set of assumptions are necessary to imagine the search engine
+working than those we made about the database system above. For example,
+just who wrote these postings? Are they a credible source of good
+information; what is their AUTHORITY ? The well-trained database
+users should ask equally skeptical questions about the data retrieved,
+but rarely are authority, data integrity, etc. considered really part of
+database analysis.
+
+
+But the key assumption for our IR users are that they
+can ``listen in'' on this previous ``conversation'' and {interpret} the
+text that has been left behind as containing potential answers to his or
+her current question. The search engine is charged with retrieving
+textual passages that are at least likely to answer the users'
+questions. Once presented with these retrievals, the FOA users have more
+humble expectations, and are willing to do more interpretive work.
+Because FOA searches are often even less concrete than this query,
+issued by users simply trying to learn about a topic, {\em
+semantic} issues central to the interpretation of a textual passage and
+its context, validity, etc. are at the heart of the FOA enterprise.
+
+
+ has
+summarized these issues along a number of dimensions by which IR and
+database systems can be distinguished, and several of these are
+duplicated in Table (FOAref) :
+
+
+Database systems are almost
+always assumed to provide data items directly. Search engines provide a
+level of indirection, a { pointer} to textual passages which contain
+many facts, hopefully including some of interest. The information need
+of the users is quite vague when compared to that of the database users.
+The search engine users are searching for information about a
+topic they understand incompletely. Typical database users have a fairly
+specific question, like Q1.3 above, in mind. It might even be that the
+database is missing some data; for example the special null value \O\
+shows that the price of the third disk drive in Figure (FOAref)
+is not known. Even in this case, however, the database system ``knows
+that it doesn't know'' this fact. FOA queries are rarely brought to such
+a sharp point; ambiguity is intrinsic to the users' expectations.
+
+
+Because
+the queries are so general, an FOA retrieval must be described in
+probabilistic terms. If a particular hard disk's price is part of our
+database, we are certain, with probability=1.0, of its value. Never
+would a database system reply with ``This hard disk might cost about As
+discussed in depth in Section &sect;5.5 , a
+search engine can employ sophisticated methods for reasoning
+probabilistically, and available evidence might even allow it to be
+quite confident that retrieved items will be perceived as relevant. But
+never will we be entirely certain that a document will be what users
+want, only that we have high confidence it may be.
+
+
+Finally, one of the
+problems in evaluating search engines is just what success criteria are
+to be used. In a database system we typically assume that what we get
+back from the database system is correct. (Try to find an ad for a
+database system that boasts, ``Our system retrieves only right
+answers''!) Database systems are claimed to be more efficient, cheaper,
+easier to integrate into existing code, more user-friendly.
+
+
+This list of
+ways search engines might be distinguished from databases is far from
+exhaustive; Blair has proposed a more extensive analysis [<A
+HREF="bibrefs.html#Blair84">Blair84] . More recently, as search
+engine technology and WWW-inspired applications have both burgeoned,
+hybrids of database and search have blurred the historical differences
+further. Some bases of database/search engine interaction are mentioned
+in Chapter &sect;6 .
+
+
+Chapter <A
+HREF="foa-4.html">&sect;4 discusses the evaluation of search engines
+in great detail, but typically the bottom line is - Does the system help
+you? If you are writing a research paper, did this search engine help
+you find materials that were useful in your search? If you are a lawyer
+preparing a case, and you want to find every relevant judicial opinion,
+does the search engine offer an advantage over an equavalent amount of
+time combing through the books in a law library? Such squishy,
+qualitative judgements are notoriously difficult to measure, and
+especially to measure consistently across broad populations of users.
+The next section provides a quick preview of several precise
+measurements that have proven useful to the IR community, but would not
+be found persuasive within the database community.
+
+
+
+
+Top of Page
+
+ | UP: Overview
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

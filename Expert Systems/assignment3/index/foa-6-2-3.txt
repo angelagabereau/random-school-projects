@@ -1,0 +1,54 @@
+
+
+FOA: 6.2.3 Argument relations
+
+
+
+
+
+FOA Home
+
+ | UP: Hypertext, intra-document links
+
+
+
+Argument relations
+
+A central purpose of many documents is to persuade. Especially
+interesting, then, are relations among documents that reveal the
+arguments relating among the documents [<A
+HREF="bibrefs.html#Sitter92">Sitter92] . The law provides several
+interesting examples, as shown in Figure (figure) (taken from ,
+from Rose Fig. 7.4). Rose enumerates four relations often found in legal
+documents, from simple reference to more elaborate logical relations
+such as exception.
+
+
+While less explicit than within legal documents,
+educational materials also have implicit or explicit PREREQUISITE
+relationships assumed by a text's author. Figure (figure) shows
+dependencies amongh this book's chapters. In interdisciplinary papers,
+it is common to have several introductory sections, providing background
+for experts in one field who may not have requisite background in
+another. When taken across many texts, such a prerequisite structure
+imposes a lattice, which can be exploited to help a reader/browsing user
+find just those components of the document that are most important to
+them.
+
+
+
+
+Top of Page
+
+ | UP: Hypertext, intra-document links
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

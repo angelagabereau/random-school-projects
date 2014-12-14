@@ -1,0 +1,178 @@
+
+
+FOA: 3.3.4 Language distribution
+
+
+
+
+
+FOA Home
+
+ | UP: A statistical basis for keyword meaning
+
+
+
+Language distribution
+
+We next move beyond characteristics of single keywords, to an analysis
+of the distribution of the entire set of index terms. Any
+index, whether constructed manually or automatically based on word
+frequency patterns, is defined by a tension between EXHAUSTIVITY
+on the one hand and SPECIFICITY on the other. An index is
+exhaustive if it includes many topics. It is specific if users can
+precisely identify their information needs.
+
+
+Unfortunately, these two
+intuitively reasonable desiderata are in some senses at odds
+with one another, as suggested by Figure (figure) . The best
+explanation of this trade-off is in terms of precision and recall (cf.
+Section &sect;4.3.4 ): High recall is
+easiest when an index is exhaustive but not very specific; high
+precision is best accomplished when the index is not very exhaustive but
+highly specific. If we assume that the same index must serve many users,
+each with varying expectations regarding the precision and recall of
+their retrieval, the best index will be at some balance point between
+these goals.
+
+
+If we index a document with many keywords, it will be
+retrieved more often; hence we can expect higher recall, while precision
+may suffer. van Riesbergen has talked about this extreme as a
+``document'' orientation, or REPRESENTATION BIAS , \vanR{24, 29}.
+A document-oriented approach to index-building focuses the system
+builder's attention on a careful representation of each document, based
+on an analysis of what it is document-oriented approach to
+index-building focuses the system builder's attention on a careful
+representation of each document, based on an analysis of what it is
+nt-oriented approach to index-building focuses the system builder's
+attention on a careful representation of each document, based on an
+analysis of what it is ented approach to index-building focuses the
+system builder's attention on a careful representation of each document,
+based on an analysis of what it is approach to index-building focuses
+the system builder's attention on a careful representation of each
+document, based on an analysis of what it is ch to index-building
+focuses the system builder's attention on a careful representation of
+each document, based on an analysis of what it is index-building focuses
+the system builder's attention on a careful representation of each
+document, based on an analysis of what it is building focuses the system
+builder's attention on a careful representation of each document, based
+on an analysis of what it is ng focuses the system builder's attention
+on a careful representation of each document, based on an analysis of
+what it is uses the system builder's attention on a careful
+representation of each document, based on an analysis of what it is he
+system builder's attention on a careful representation of each document,
+based on an analysis of what it is tem builder's attention on a careful
+representation of each document, based on an analysis of what it is
+uilder's attention on a careful representation of each document, based
+on an analysis of what it is 's attention on a careful representation of
+each document, based on an analysis of what it is ention on a careful
+representation of each document, based on an analysis of what it is on a
+careful representation of each document, based on an analysis of what it
+is careful representation of each document, based on an analysis of what
+it is l representation of each document, based on an analysis of what it
+is esentation of each document, based on an analysis of what it is tion
+of each document, based on an analysis of what it is f each document,
+based on an analysis of what it is document, based on an analysis of
+what it is ent, based on an analysis of what it is based on an analysis
+of what it is on an analysis of what it is analysis of what it is is of
+what it is what it is t is \about.
+
+
+But an index's fundamental purpose is
+to reconcile a corpus' many document descriptions with the many users'
+queries that can be expected to come. We could equally well analyze the
+problem from a QUERY-ORIENTED perspective - how well do the query
+terms discriminate one document from another?
+
+
+From the users'
+perspective, we'd like to have these queries match meaningfully onto the
+vocabulary of our index. From the perspective of the corpus, we'd like
+to be able to discriminate documents one from another. These are quite
+different perspectives on an index, and reflect a fundamental
+VOCABULARY MISMATCH , between the way users describe their
+interests and the way documents have been described.
+
+
+If an indexing
+vocabulary is specific, then a user should expect that just the right
+keyword in a MAGIC BULLET QUERY will elicit all and only relevant
+documents. The average number of documents assigned to specific keywords
+should be low. In an exhaustive indexing, the many aspects of a document
+will each be reflected by expressive keywords; on average many keywords
+will be assigned to a document: Exhaust & \propto & \langle
+\frac{kw}{doc} \rangle \nonumber \\ Spec & \propto^{-1} & \langle
+\frac{doc}{kw} \rangle \nonumber \\ & \propto & \langle \frac{kw}{doc}
+\rangle
+
+
+ The important observation is that these two averages must be
+taken across much different distributions. We already know from Zipf's
+Law that the number of occurrences varies dramatically from one keyword
+to another. Once we make an assumption about how keywords occur within
+separate documents, we can derive the distribution of keywords across
+documents. But the distribution of keywords assigned to documents can be
+expected to be much more uniform - documents are about a nearly
+unform or constant number of topics. Figure (figure) represents
+the index as a graph, where edges connect keyword nodes on the left with
+document nodes on the right. The \mathname{Index} graph is a bi-partite
+graph, with its nodes divided into two subsets (keywords and documents),
+and nodes in one set having only connections with those in the other. If
+we assume that the total number of edges must remain constant, we can
+assume that the total area under both distributions is the same. The
+quantity capturing the exhaustivity/specificity trade-off is therefore
+the ratio of $Vocab$ to corpus size $\mathname{NDoc}$.
+
+
+While this
+analysis is crude, it does highlight two important features of every
+index. First, in most applications $$ is fixed while $\mathname{Vocab}$
+is a matter of discretion, a free variable which can be tuned to
+increase or decrease specificity/exhaustivity. Second, certainly in most
+modern applications (i.e., with the huge disk volumes now common),
+$\mathname{NDoc} \gg \mathname{Vocab}$. This is one of the most
+important ways in which experimental collections (including AIT!) differ
+from real corpora. A useful indexing vocabulary can be expected to be of
+a relatively constant size, $\mathname{Vocab} \approx 10^{3}-10^{5}$
+while corpora sizes are likely to vary dramatically: $\mathname{NDoc}
+\approx 10^{4}-10^{9}$.
+
+
+Along similar lines, it is always useful to think
+about what this means in the context of the WWW, where the notion of a
+closed corpus disappears. The WWW is an organic, constantly and
+growing set of documents; our vocabulary for describing it is more
+constrained.
+
+
+Several other basic features of the Index are shown in
+Figure (FOAref) . The flipped histogram along the left side is
+meant to reflect the Zipfian distribution over keywords, with the most
+frequent keywords beginning at the top. Recall that this distribution
+captures the total number of word occurrences, regardless of
+how these occurrences happen to be distributed across inter-document
+boundaries. A second distribution is also sketched, suggesting how the
+number of documents versus word occurrences might also be
+distributed - we can expect these two quantities to be at least loosely
+correlated. The distinction between intra- and inter-document word
+frequencies is a topic we return to in Section <A
+HREF="foa-3-3-7.html">&sect;3.3.7 .
+
+
+
+
+Top of Page
+
+ | UP: A statistical basis for keyword meaning
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

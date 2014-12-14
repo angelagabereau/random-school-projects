@@ -1,0 +1,115 @@
+
+
+FOA: 6.5.2.4 Learning in AIR
+
+
+
+
+
+FOA Home
+
+ | UP: Spreading activation search
+
+
+
+Learning in AIR
+
+Nodes marked by the user with positive or negative feedback act as
+sources of a signal that then propagates backwards along the weighted
+links. A local learning rule then modifies the weight on links directly
+or indirectly involved in the query process. Several learning rules were
+investigated; the experiments reported here used a learning rule that
+correlated the activity of the PRE-SYNAPTIC $node_i$ with the
+feedback signal experienced by the POST-SYNAPTIC $node_j$: w_{ij}
+& \propto & Corr(n_{i}& Corr(n_{i}\ active, n_{j}\ relevant) \\ & = &
+\frac{\mu_{a_{i} \cdot r_{j}} - \mu_{a_{i}} \cdot
+\mu{r_{j}}}{\sigma_{a_{i}} \cdot \sigma_{r_{j}}} \\ & = & \frac{\Sigma
+(a_{i} \cdot r_{j}) - \frac{\Sigma a_{i} \Sigma r_{j}}{N}}{\sqrt{\Sigma
+a_{i}^{2} - \frac{(\Sigma a_{i})^{2}}{N}} \sqrt{\Sigma r_{j}^{2} -
+\frac{(\Sigma r_{j})^{2}}{N}}} \end{eqnarray*}
+
+
+AIR makes a most-direct
+correspondence between the connectionist notion of {activity} and the IR
+notion of $\Pr(\mathname{Rel})$ (cf. Section <A
+HREF="foa-5-5.html">&sect;5.5 ): The activity level of nodes at the
+end of the propagation phase is considered to be a prediction of the
+probability that this node will be judged relevant to the query
+presented by the user. This interpretation constrained the AIR system
+design in several ways (e.g., activity is a real number bounded between
+zero and one, query nodes are activated fully). AIR also allows negative
+activity, which is interpreted as the probability that a node is {\em
+not} relevant. The next step of the argument is to consider a link
+weight $w_{AB}$ to be the conditional probability that $Node_{B}$ is
+relevant given that $Node_{A}$ is relevant. Next, this definition must
+be extended inductively to include indirect, transitive paths that AIR
+uses extensively for its retrievals.
+
+
+The system's interactions with users
+are then considered experiments. Given a query, AIR predicts which nodes
+will be considered relevant and the user confirms or disconfirms this
+prediction. These results update the system's weights (conditional
+probabilities) so as reflect the system's updated estimates. Thus, AIR's
+representation results from the combination of two completely different
+sources of evidence: the word frequency statistics underlying its
+initial indexing; and the opinions of its users.
+
+
+A straight-forward
+mechanism exists for incrementally introducing new documents into AIR's
+database. Links are established from the new document to all of its
+initial keywords and to its authors; new keyword and author nodes are
+created as necessary. The weights on these links are distributed evenly
+so that they sum to a constant. Because the sum of the (outgoing)
+weights for all nodes is to remain constant, any associative weight to
+the new document must come from existing link weights. a new parameter
+({*CONSERVATIVE*}) is introduced to control the weight given these new
+links at the expense of existing ones. If the network is untrained by
+users, this parameter can be set to zero so as to make the effect of an
+incremental addition exactly the same as if the new document had been
+part of the initial collection. In a trained network, setting {\tt
+*CONSERVATIVE*} near unity insures that the system's experience
+incorporated in existing link weights is not sacrificed to make the new
+connections. Also, note that the computation required to place the new
+document is strictly local: only the links directly adjacent to the new
+documents immediate neighbors need be changed. The major observation
+about the inclusion of new documents, however, is that there is an
+immediate ``place'' for new documents in AIR's existing representation.
+
+
+A
+second source of new information to the AIR system comes from users'
+queries. If a query contains a term unknown to AIR, this term is held in
+abeyance and AIR executes the query based on the remaining terms. Then,
+after the user has designated which of AIR's responses are relevant to
+this query, a new node corresponding to the new query term is created
+and becomes subjected to exactly the same learning rule used for all
+other nodes.
+
+
+While easily incorporating new documents and new query terms
+are valuable properties for any IR system, from the perspective of
+machine learning these are both examples of simple rote learning, and
+necessarily dependant on the specifics of the IR task domain. The main
+focus of the AIR system is the use of general purpose connectionist
+learning techniques that, once the initial document network is
+constructed, are quite independent from the IR task.
+
+
+
+
+Top of Page
+
+ | UP: Spreading activation search
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

@@ -1,0 +1,66 @@
+
+
+FOA: 1.5.2 Computer-assisted indexing
+
+
+
+
+
+FOA Home
+
+ | UP: Indexing
+
+
+
+Computer-assisted indexing
+
+The field of library science has studied the manual process of
+constructing effective indices for a very long time. This standard
+becomes a useful comparison against which our best automatic techniques
+can be compared, but also how difficult comparison will be. There is
+data, for example, that suggests that the capacity of one person (e.g.
+the indexer) to {anticipate} the words used by another person (e.g., a
+second indexer, or the query of subsequent user) is severely limited [<A
+HREF="bibrefs.html#Furnas90">Furnas90] ; we are all quite
+idiosyncratic in this regard. The lack of inter-indexer consistency
+among humans must make us humble in our expectations for automated
+techniques.
+
+
+But manual and automatic indexing need not be viewed as
+competing alternatives. In economic terms, if we had sufficient
+resources, we could hire enough highly trained catalogers to carefully
+read each and every document in a corpus and index each of them. If we
+couldn't afford this very expensive option, we would have to be
+satisfied with the best index our automatic system could construct. But
+if we have enough to hire one or two human indexers, what tools might we
+give them that would make most effective use of their time?
+
+
+We seek
+methods which {leverage} the editorial resource, in the sense that this
+manual effort does not grow as the corpus does. How might
+editors/libarians guide an automatic indexing process? What information
+should this computation provide that would allow intelligent human
+readers the assurance of a high quality indexing function? Chapter 7
+will discuss ways that editors can TRAIN machine learning
+systems, and a number of analyses of interest to editors will be
+mentioned as well, especially in Chapter 6.
+
+
+
+
+Top of Page
+
+ | UP: Indexing
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

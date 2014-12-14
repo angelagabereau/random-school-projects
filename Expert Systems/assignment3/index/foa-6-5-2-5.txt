@@ -1,0 +1,95 @@
+
+
+FOA: 6.5.2.5 Generalized representation
+
+
+
+
+
+FOA Home
+
+ | UP: Spreading activation search
+
+
+
+Generalized representation
+
+The standard, inter-keyword and inter-document associations typically
+evaluated as part of keyword and document clustering are part of the
+broader context of the associative representation used by AIR. The
+system extends these pairwise clustering relations and the fundamental
+keyword-document Index relation to include higher-order {\em
+transitive} relations as well. That is, if node A is associated with
+node B and node B is associated with node C, then node A is also
+considered to be associated with node C, but to a lesser extent.
+
+
+Obviously,
+this transitive assumption is not always valid, and this may be why most
+IR research has not considered this extension. But AIR was is an
+adaptive system, and one of the critical problems facing any learning
+system is the generation of {plausible hypotheses}; i.e., theories which
+stand a better than average chance of being correct. Transitivity is
+considered a default assumption, the consequences of which will be
+subjected to adaptation which favor appropriate transitivities and cull
+out inappropriate ones.
+
+
+It is interesting to contrast the adaptive
+changes made by AIR in response to RelFbk with the documet
+modification strategies of Salton with Brauen et al. [<A
+HREF="bibrefs.html#REF566">REF566] [<A
+HREF="bibrefs.html#REF567">REF567] mentioned in Section <A
+HREF="foa-4-2-2.html">&sect;4.2.2 (and returned to again in Section
+&sect;7.3 ). The query-document matches used
+as the basis of their changes considers only direct, keyword-to-document
+associations while AIR makes use of a much wider web of indirect
+associations as well. To a first approximation the changes made by AIR
+to direct keyword-to-document associations are not unlike those proposed
+by Salton and Brauen (if I'd only known!). But AIR makes other changes,
+to more indirect associations as well.
+
+
+Salton and Buckley have analyzed
+the spreading activation search used in some of these systems and
+concluded that it is inferior to more traditional retrieval methods [<A
+HREF="bibrefs.html#REF668">REF668] [<A
+HREF="bibrefs.html#Salton88b">Salton88b] . They point out: ... the
+relationships between terms or documents are specified by {\em labeled}
+links between the nodes .... the effectiveness of the procedure is
+crucially dependent on the {\em availability} of a representative node
+association map (p. 4,5) [Emphasis added]
+
+
+ In a weighted, associative
+representation the semantics of indexing,inter-document and
+inter-keyword clustering links are dropped in favor of a single,
+homogeneous ASSOCIATIVE RELATION. AIR treats all three types of
+weighted links equally. For example, if inter-document citation data had
+been available this information could naturally be included a swell;
+again the semantics of these relations would have been dropped in favor
+of a simple associative weight. The contrast between the use of use of
+spreading activation search in {\em connectionist} networks with its use
+in {\em semantic} networks is admittedly a subtle one, but it is also
+critically important [REF672] . One
+clear difference is that semantic networks typically make logical,
+deterministic use of labeled links, while connectionist networks like
+AIR rely on weighted links for probabilisitic computations.
+
+
+
+
+Top of Page
+
+ | UP: Spreading activation search
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

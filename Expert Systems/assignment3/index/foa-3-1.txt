@@ -1,0 +1,111 @@
+
+
+FOA: 3.1 Microscopic semantics and the statistics of  communication
+
+
+
+
+
+FOA Home
+
+ | UP: Weighting and matching against Indices
+
+
+
+Microscopic semantics and the statistics of  communication
+
+In the last chapter, we described the FOA process linguistically, in
+terms of words that occur in documents, morphological features of these
+words, structures organizing the sentences of documents, etc. We now
+want to treat all of these words --- which have meaning to their
+authors and to us reading them --- as a \rikmeaning-less stream of data
+- word after word after word. (Imagine it coming from some SETI radio
+telescope, eaves-dropping on the communication of some other planet!) We
+will now seek common patterns and trends to this data, using the same
+sorts of statistical tricks that physicists typically use on their data
+streams. What can we learn from looking at the statistics of our data
+stream, treating text as \rikmeaning-less and attempting to infer a new
+notion of meaning from those statistics?
+
+
+But now let's narrow our focus,
+all the way down to the bits and characters used to represent the
+corpus, for example as a file on a physical device, like a hard disk.
+Imagine that you are an archaeologist, trying to study some civilization
+that had left this evidence behind. How might you interpret this modern
+Rosetta Stone?
+
+
+Let's ignore those issues relating to the basic ASCII
+encoding. That is, suppose we have special knowledge of a character set.
+Then the frequency of these characters' occurrences would already give
+us a great deal of information. Anyone who has studied simple cipher
+techniques (or played Scrabble!) knows that a table of most frequently
+used letters (cf. Figure (FOAref) [<A
+HREF="bibrefs.html#Welsh88">Welsh88] ) can be well-exploited for
+breaking simple codes.
+
+
+ \hline Letter & Frequency\\
+\hline E & .120 \\ T & .085 \\ A & .077 \\ I & .076 \\ N & .067 \\ O &
+.067 \\ S & .067 \\ R & .059 \\ H & .050 \\ D & .042 \\ L & .042 \\ U &
+.037 \\ C & .032 \\ F & .024 \\ M & .024 \\ W & .022 \\ Y & .022 \\ P &
+.020 \\ B & .017 \\ G & .017 \\ V & .012 \\ K & .007 \\ Q & .005 \\ J &
+.004 \\ X & .004 \\ Z & .002 \\ \hline \caption{English letter
+frequencies}
+
+
+ In this chapter we will move another level above
+characters. We will consider morphological transformations we can
+perform on character sequences that help us to identify root words. We
+will briefly mention phrases by which multiple words can be joined into
+simple phrasal units.
+
+
+At each level we will ask very similar questions:
+What is our unit of analysis; i.e., just what are we counting? Then,
+what does the distribution of frequency occurrences across this level of
+features tell us about the pattern of their use? What can we tell about
+the meaning of these features, based on such statistics [<A
+HREF="bibrefs.html#Francis82">Francis82] ?
+
+
+In fact, many influential
+thinkers have looked at such patterns among symbols. Going back to some
+of our most ancient writings suggests that statistical analyses of the
+original Hebrew characters and their positions within the
+two-dimensional array of the page reveals new ``codes'' [<A
+HREF="bibrefs.html#Witztum94">Witztum94] [<A
+HREF="bibrefs.html#Drosnin97">Drosnin97] .
+
+
+Donald Knuth, one of
+computer science's most reknowned theoreticians, has analyzed an
+apparently random verse (Chapter 3, verse 16) from 59 of the Bible's
+books and used these as the basis of STRATIFIED SAMPLING of the
+approximately 30000 Biblical verses [<A
+HREF="bibrefs.html#Knuth90">Knuth90] . He found, for example, that
+the 3:16 verses were particulary richin occurrances of {\tt YHWH}, the
+ancient Hebrew name for God. Personally, Knuth found this analysis the
+source for ``historical and spiritual insights,'' as part of a Bible
+study class he lead. But speaking scientifically, how can we
+find meaning in text, and when are such attempts merely
+numerology?
+
+
+
+
+Top of Page
+
+ | UP: Weighting and matching against Indices
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

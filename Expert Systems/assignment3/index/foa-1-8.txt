@@ -1,0 +1,68 @@
+
+
+FOA: 1.8 Summary
+
+
+
+
+
+FOA Home
+
+ | UP: Overview
+
+
+
+Summary
+
+ \item We constantly, naturally Find Out About (FOA) many, many things.
+Computer search engines need to support this activity, just as
+naturally. \item Language is central to our FOA activities. Our
+understanding of prior work in linguistics and the philosophy of
+language will inform our search engine development, and the increasing
+use of search engines will provide empirical evidence reflecting back to
+these same disciplines. \item IR is the field of computer science that
+traditionally deals with retrieving free-text documents in response to
+queries. This is done by indexing all the documents in a corpus with
+keyword descriptors. There are a number of techniques for automatically
+recommending keywords, but also a great deal of art. \item Users'
+interests must be shaped into queries constructed from these same
+keywords. Retrieval is accomplished by matching the query against the
+documents' descriptions and returning those that appear closest. \item A
+central component of the FOA process is the users' relevance feedback,
+assessing how closely the retrieved documents match what they had ``in
+mind.'' \item Search engines accomplish a function related to database
+systems, but their natural language foundations create fundamental
+differences as well. \item In order to know how to shop for a good
+search engine, as well as to allow the science of FOA to move forward,
+it is important to develop an evaluation methodology by which we can
+fairly compare alternatives.
+
+
+ In this overview we've made some
+simplifying assumptions and raised more questions than we've answered,
+but that is exactly the goal! By now, I hope you have been convinced
+that there are many facets to the problem of FOA, ranging from a good
+characterization of what the users seek, to what the documents to
+methods for inferring semantic clues about each document, to the
+problem of evaluating whether our search engines are performing as we've
+intended. The rest of this book will consider each of these facets in
+greater detail, and others as well. But like all truly great problems,
+issues surrounding FOA will remain long after this text is dust.
+
+
+
+
+Top of Page
+
+ | UP: Overview
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

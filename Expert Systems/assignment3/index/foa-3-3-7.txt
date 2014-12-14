@@ -1,0 +1,97 @@
+
+
+FOA: 3.3.7 Inverse document frequency
+
+
+
+
+
+FOA Home
+
+ | UP: A statistical basis for keyword meaning
+
+
+
+Inverse document frequency
+
+Up to this point, we've been concerned only with the total number of
+times a word occurs across the entire corpus. Karen Sparck Jones has
+observed that, from a discrimination point of view, what we'd really
+like to know is the number of documents containing a keyword.
+This thinking underlies the INVERSE DOCUMENT FREQUENCY (IDF)
+weighting:
+
+
+The basis for IDF weighting is the observation that people
+tend to express their information needs using rather broadly defined,
+frequently occurring terms, whereas it is the more specific, i.e.,
+low-frequency terms that are likely to be of particular importance in
+identifying relevant material. This is because the number of documents
+relevant to a query is generally small, and thus any frequently
+occurring terms must necessarily occur in many irrelevant documents;
+infrequently occurring terms have a greater probability of occurring in
+relevant documents --- and should thus be considered as being of greater
+potential when searching a database. [<A
+HREF="bibrefs.html#SparckJones97">SparckJones97] \eq
+
+
+Rather than
+looking at the raw occurrence frequencies, we will aggregate occurrences
+within any document and consider only the { number of documents} in
+which a keyword occurs. IDF proposes, again using a ``statistical
+interpretation of term specificity'' [<A
+HREF="bibrefs.html#SparckJones72">SparckJones72] that the value of a
+keyword varies inversely with the $\log$ of the number of documents in
+which it occurs: w_{kd}=f_{kd} * \left(\log {\mathname{Norm} \over D_k}
++ 1\right) where $D_{k}$ is defined in Equation (FOAref) .
+
+
+The
+formula in (FOAref) is still not fully specified, in that the
+count \( D_{k} \) must be normalized with respect to a constant \(
+\mathname{Norm} \). We could normalize with respect to the total number
+of documents in the corpus [<A
+HREF="bibrefs.html#SparckJones72">SparckJones72] [<A
+HREF="bibrefs.html# Croft79"> Croft79] ; another possibility is to
+normalize against the maximum document frequency (i.e., the most
+documents any keyword appears in) [<A
+HREF="bibrefs.html#SparckJones79a">SparckJones79a] [<A
+HREF="bibrefs.html#SparckJones79b">SparckJones79b] .
+
+
+
+\mathname{Norm}=\left\{ \begin{array}{ll} \mathname{\mathname{NDoc}}
+&[SparckJones72] \\ %
+\stackunder{k}{\mathname{argmax}} D_k &[<A
+HREF="bibrefs.html#SparckJones79">SparckJones79] \\
+{\mathname{argmax}_{k}} D_k &[<A
+HREF="bibrefs.html#SparckJones79a">SparckJones79a] [<A
+HREF="bibrefs.html#SparckJones79b">SparckJones79b] \\ \right.
+
+
+ Today
+the most common form of IDF weighting is that used by Robertson and
+Sparck Jones [Robertson76] ,
+which normalizes with respect to the number of documents not containing
+a keyword $(\mathname{NDoc}- D_k)$ and adds a constant of $\frac{1}{2}$
+to both numerator and denominator to moderate extreme values:
+w_{kd}=f_{kd} * \left(\log {(\mathname{NDoc}- D_k)+0.5\over D_k +
+0.5}\right)
+
+
+
+
+Top of Page
+
+ | UP: A statistical basis for keyword meaning
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

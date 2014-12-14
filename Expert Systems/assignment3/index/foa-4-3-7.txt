@@ -1,0 +1,117 @@
+
+
+FOA: 4.3.7 Multiple retrievals across varying queries
+
+
+
+
+
+FOA Home
+
+ | UP: INDIVIDUALS' assessment: search engine  performance
+
+
+
+Multiple retrievals across varying queries
+
+The next step of our construction is to go beyond a single query to
+consider the performance of a system across a set of queries. It should
+come as no surprise, given the wide range of activities in which FOA is
+a crucial component that there is enormous variability among the kinds
+of queries produced by users.
+
+
+One obvious dimension to this variability
+concerns the ``breadth'' of the query: How general is it? If the set for
+a query is known, this can be quantified by GENERALITY ,
+comparing the size of \Rel to the total number of documents in the
+corpus: \beq \mathname{Generality}_q \equiv
+{\left|\mathname{Rel}_q\right|\over\mathname{NDoc}} \eeq There are many
+other ways in which queries can vary, and the fact that different
+retrieval techniques seem to be much more effective on some types of
+queries than others makes this a critical issue for further research.
+For now, however, we will treat all queries interchangeably but consider
+average performance across a set of them.
+
+
+Figure (figure)
+juxtaposes two Re/Pre curves, corresponding to two queries. Query 1 is
+as before while Query 2 is a more specific query, as evidenced by its
+lower asymptote. Even with these two queries, we can see that in general
+there is no guarantee that we will have Re/Pre data points at the
+desired recall level. This necessitates INTERPOLATION of data
+points at required recall levels. The typical interpolation is done at
+pre-specified recall levels, for example ${0, 0.25, 0.5, 0.75, 1.0}$. As
+\vanR{152} discusses, a number of interpolation techniques are
+available, each with their own biases. Since each new relevant document
+added to our retrieved set will produce an increase in precision
+(causing the saw-tooth pattern observed in the graph), simply using the
+next available data point above a desired recall level will produce an
+over-estimate, while using the prior data point will produce an
+under-estimate.
+
+
+With pre-established recall levels, we can now juxtapose
+an arbitrary number of queries, and average over them at these levels.
+For 30 years the most typical presentation of results within the IR
+community is the 11-POINT AVERAGE curves, like those shown in
+Figure (figure) [REF563] [<A
+HREF="bibrefs.html#Salton68">Salton68] . (This data happens to show
+performance on the ADI corpus of Boolean versus weighted retrieval
+methods, include only the last 10 data points.)
+
+
+It is not uncommon to see
+research data reduced even further. For if queries are averaged at fixed
+recall levels, and then all of these recall levels are averaged
+together, we can produce a single number that measures retrieval system
+performance. Note the even more serious bias this last averaging
+produces, however. It says that we are as interested in how well the
+system did at the 90% percent recall level as at 10\%!? Virtually all
+users care more about the first screen full of hits they retrieve than
+the last.
+
+
+This motivates another way to use the same basic Re/Pre data.
+Rather than measuring at fixed recall levels, statistics are collected
+at the 10, 25, 50 document retrieval levels. Precision within the first
+10 or 15 documents is arguably a much closer measure of standard browser
+effectiveness than any other single number.
+
+
+All such atempts to boil the
+full Re/Pre plot are bound to introduce artifacts of their own. In most
+cases the full Re/Pre curve picture is certainly worth a thousand words.
+Plotting the entire curve is straight-forward and immediately
+interpretable, and lets the viewer draw more of their own conclusions.
+
+
+We
+must guard against taking our intuitions based on this tiny example
+(with only 25 documents in the entire corpus) too seriously when
+considering results from standard corpora and queries. For example, our
+first query had fully twenty percent of the corpus as relevant; even our
+second query had eight percent. In a corpus of a million documents, this
+would mean eighty thousand of them were relevant!? Much more typical are
+queries with a tiny fraction, perhaps .001% relevant. This will mean
+that the precision asymptote is very nearly zero. Also, we are likely to
+have many, many more relevant documents, resulting in a much smoother
+curve.
+
+
+
+
+Top of Page
+
+ | UP: INDIVIDUALS' assessment: search engine  performance
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

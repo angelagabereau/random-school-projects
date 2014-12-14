@@ -1,0 +1,185 @@
+
+
+FOA: 6.3.2 Corpus-based linguistics and WordNet
+
+
+
+
+
+FOA Home
+
+ | UP: Keyword structures
+
+
+
+Corpus-based linguistics and WordNet
+
+Linguistics has traditionally focused on the phenomena of
+spoken language, and since Chomsky [<A
+HREF="bibrefs.html#REF716">REF716] [<A
+HREF="bibrefs.html#REF725">REF725] further focused on
+syntactic rules describing the generation and understanding of
+individual sentences. But as more large samples of written text have
+become increasingly available, CORPUS-BASED LINGUISTICS has
+become an increasingly active area of research . . D. D. Lewis and E. D.
+Liddy have collected a useful <A
+HREF="http://ftp://ciir-ftp.cs.umass.edu/pub/papers/lewis/nlirbib93.ps.Z">bibliography
+and resource list on NLP for IR , and R. Futrelle and X. Zhang have
+collected Large-Scale Persistent Object Systems For <A
+HREF="http://atg1.wustl.edu/DL94/paper/futrelle.html">Corpus Linguistics
+and Information Retrieval . Stuart Shieber maintains the <A
+HREF="http://xxx.lanl.gov/cmp-lg/">The Computation and Language
+Archive as part of the LANL reprint server.
+
+
+The sophistication of
+computational linguistics syntactic analysis provides a striking
+contrast to IR's typical BAG-OF-WORDS approach which aggressively
+ignores any ordering effects. Conversely, IR's central concerns with
+semantic issues of meaning and the ultimate pragmatics of using
+language to find relevant documents goes beyond the myopic concern with
+isolated sentences that is typical of linguistics. The range of
+potential interactions between these perspectives is only beginning to
+be explored, but includes the introduction of parsing techniques with IR
+retrieval systems [Smeaton92] [<A
+HREF="bibrefs.html#Strzalkowski94">Strzalkowski94] , as well as
+using statistical methods to identify PHRASES that are a first
+step from a simple bag-of-words to sytactically well-formed sentences
+[LEWIS92b] [<A
+HREF="bibrefs.html#Krovetz93">Krovetz93] [<A
+HREF="bibrefs.html#Church89">Church89] [<A
+HREF="bibrefs.html#REF1112">REF1112] [<A
+HREF="bibrefs.html#REF866">REF866] . Another important direction of
+interaction is the use of IR methods across multi-lingual corpora, for
+example arising from the integration of the European Community [<A
+HREF="bibrefs.html#Hull96a">Hull96a] [<A
+HREF="bibrefs.html#Sheridan96">Sheridan96] .
+
+
+From a syntactic
+perspective, the only way to get issues of real meaning into
+language is via the LEXICON : a dictionary of all words and their
+meanings. Our present concern, inter-keyword structures, them becomes an
+issue of LEXICAL SEMANTICS [<A
+HREF="bibrefs.html#REF641">REF641] , and it is no surprise then that
+linguists have also developed representational systems for inter-word
+relationships. An influential and widely used example of a keyword
+thesaurus is the <A
+HREF="http://www.cogsci.princeton.edu/~wn/">WordNet {developed by
+George Miller and colleagues} [<A
+HREF="bibrefs.html#Fellbaum98">Fellbaum98] . {This is the same
+George Miller whose analysis of Zipf's Law was mentioned in Section <A
+HREF="foa-3-2.html">&sect;3.2 . He is perhaps most famous for his
+``human information processing'' analyses of cognition, such as the
+limit of $7\pm2$ on the number of ``chunks'' that can be retained in
+short-term memory [Miller56] . The
+same information theoretic motivation underlies all these wide-ranging
+efforts.}
+
+
+One obvious distinction of WordNet is simply the size of its
+vocabulary: it contains almost 100,000 distinct word forms, divided into
+lexical categories as shown in Figure (FOAref) . Central to the
+lexical approach to semantics is distinguishing between lexical items
+and the ``concepts'' they are meant to invoke. ``Word form'' will be
+used here to refer to the physical utterance or inscription and ``word
+meaning'' to refer to the lexicalized concept that a form can be used to
+express. Then the starting point for lexical semantics can be said to be
+the mapping between forms and meanings. [<A
+HREF="bibrefs.html#Fellbaum98">Fellbaum98]
+
+
+ The relations connecting
+words in WordNet ar similar to those used within thesauri, but not
+identical. The first and most important relation is SYNONYMY .
+This has a special role in WordNet, pulling multiple word forms together
+into a SYNONYM SET which, by definition, all have the same
+meaning. According to one definition (usually attributed to Leibniz) two
+expressions are synonymous if the substitution of one for the other
+never changes the truth value of a sentence in which the substitution is
+made\ldots. A weakened version of this definition would make synonymy
+relative to a context: two expressions are synonymous in a linguistic
+context C if the substitution of one for the other in C does not alter
+the truth value. [Fellbaum98]
+
+
+ The
+BT/NT relation in standard thesauri is refined in WordNet into two types
+of relations, HYPERNYMY and MERONYMY . The former relation
+plays a dominant role, allowing INHERITANCE of various properties
+of parent words by their children. Much attention has been devoted to
+hyponymy/hypernymy (variously called subordination/superordination,
+subset/superset, or the ISA relation)\ldots. A hyponym inherits all the
+features of the more generic concept and adds at least one feature that
+distinguishes it from its superordinate and from any other hyponyms of
+that superordinate. This convention provides the central organizing
+principle for the nouns in WordNet. [<A
+HREF="bibrefs.html#Fellbaum98">Fellbaum98] This hypernymy relation
+connects virtually all the words into a forest of trees rooted on a very
+restricted set of ``unique beginners.'' In the case of nouns, the
+top-level categories are those shown in Figure (FOAref) , and
+for verbs in Figure (FOAref)
+
+
+ The final category of STATIVE
+VERBS is used to capture the distinction between the majority of
+ACTIVE VERBS and those (e.g., SUFFICE, BELONG,
+RESEMBLE) reflecting state characteristics.
+
+
+WordNet also
+represents roughly the opposite of the synonym relation with the
+ANTONYMY relation. Defining this logically proves more difficult,
+and Miller is forced to simply equate it with human subjects' typical
+responses: Antonymy is a lexical relation between word forms, not a
+semantic relation between word meanings\ldots. The strongest
+psycholinguistic indication that two words are antonyms is that each is
+given on a word association test as the most common response to the
+other. For example, if people are asked for the first word they think of
+(other than the probe word itself) when they hear VICTORY,
+most will respond DEFEAT; when they hear
+DEFEAT most will respond VICTORY. [<A
+HREF="bibrefs.html#Fellbaum98">Fellbaum98]
+
+
+ The use of the antonymy
+relation in WordNet is particularly interesting when applied to
+adjectives. The semantic organization of descriptive adjectives is
+entirely different from that of nouns. Nothing like the hyponymic
+relation that generates nominal hierarchies is available for
+adjectives\ldots. The semantic organization of adjectives is more
+naturally thought of as an abstract hyperspace of N dimensions rather
+than as a hierarchical tree. [<A
+HREF="bibrefs.html#Fellbaum98">Fellbaum98] First, WordNet
+distinguishes the bulk of adjectives, which are called DESCRIPTIVE
+ADJECTIVES (such as BIG, INTERESTING, POSSIBLE) from
+RELATIONAL ADJECTIVES (PRESIDENTIAL, NUCLEAR) and
+REFERENCE-MODIFYING ADJECTIVES (FORMER, ALLEGED).
+They then find: All descriptive adjectives have antonyms; those lacking
+direct antonyms have indirect antonyms, i.e., are synonyms of adjectives
+that have direct antonyms. (p. 28) An example of the resulting
+dumbbell-shaped ``bi-polar'' organization is shown in Figure
+(figure) .
+
+
+Voorhees has been one of the first to explore how
+WordNet data can be harnassed as part of a search engine [<A
+HREF="bibrefs.html#Voorhees93">Voorhees93] .
+
+
+
+
+Top of Page
+
+ | UP: Keyword structures
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

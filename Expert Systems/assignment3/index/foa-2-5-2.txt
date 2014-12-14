@@ -1,0 +1,40 @@
+
+
+FOA: 2.5.2 Fine points
+
+
+
+
+
+FOA Home
+
+ | UP: Implementation
+
+
+
+Fine points
+Subsections
+
+	 2.5.2.1 Changing indices for dynamic corpora
+	 2.5.2.2 Posting resolution
+	 2.5.2.3 Emphasizing proxy text
+	 2.5.2.4 Document number
+	 2.5.2.5 Dependencies on document type
+
+
+
+
+Top of Page
+
+ | UP: Implementation
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

@@ -1,0 +1,54 @@
+
+
+FOA: 3 Weighting and matching against Indices
+
+
+
+
+
+FOA Home
+
+ | UP: foa-book.tex
+
+
+
+Weighting and matching against Indices
+
+The Bible Code as Ouija Board: The fascination with the
+subliminal, the camouflaged, and the encrypted is ancient. Getting a
+computer to munch away at long strings of letters from the Old Testament
+is not that different from killing animals and interpreting the
+entrails, or pouring out tea and reading the leaves. It does add the
+modern impersonal touch - a computer found it, not a person, so it must
+be ``really there." But computers find what people tell them to find. As
+the programmers like to say, ``prophesy in, prophesy out." [<A
+HREF="bibrefs.html#Menaud96">Menaud96] \eq
+
+Subsections
+
+	 3.1 Microscopic semantics and the statistics of  communication
+	 3.2 Rembember Zipf
+	 3.3 A statistical basis for keyword meaning
+	 3.4 Vector space
+	 3.5 Matching queries against documents
+	 3.6 Calculating TF-IDF Weighting
+	 3.7 Computing partial match scores
+	 3.8 Conclusion
+
+
+
+
+Top of Page
+
+ | UP: foa-book.tex
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

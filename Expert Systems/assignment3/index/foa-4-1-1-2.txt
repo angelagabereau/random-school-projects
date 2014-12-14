@@ -1,0 +1,85 @@
+
+
+FOA: 4.1.1.2 RelFbk is nonmetric
+
+
+
+
+
+FOA Home
+
+ | UP: Cognitive assumptions
+
+
+
+RelFbk is nonmetric
+
+As we move from a cognitive understanding of the users' tasks to
+statistical analyses of their behaviors, it is important to understand
+one important feature of the RelFbk data stream: RelFbk is
+NONMETRIC data. That is, while users find it easy and natural to
+critique retrieved documents with \blue{$\oplus$}, \red{$\ominus$} and
+\#, they would find it much more difficult to reliably assign
+numeric quantities reflecting something like the relative
+goodness of each retrieval.
+
+
+Think for a moment just why this is hard, by
+imagining your reactions to a typical retrieval. Is the first document
+to be rated 10, or 6743? If you rate the second document as 6, and the
+third 2, then you must also ensure that the third document is exactly as
+much less relevant than the second as the second is from the first.
+Trying to keep all $Rel(d_{i})$ assesments consistent in the metric
+sense, for many retrieved documents or any other set, makes people
+crazy. Issue a query of your choosing to any Web search engine that will
+retrieve 10 or more hits. Using the order of retrieval as an index, go
+to odd retrieval documents (i.e., hits \#1, 3, 5, etc.) and
+assign to each a score in the range [-10,+10] indicating how relevant
+you found it. Now repeat the exercise for the even documents.
+Finally, analyze your assessments for each of the triplets of documents:
+${1,4,7}, {2,5,8}$ and ${3,6,9}$. How well do they satisfy the required
+properties of a metric (cf. Section <A
+HREF="foa-5-2-2.html">&sect;5.2.2 )?
+
+
+ This is not only a property of
+relevance assessments. A large literature on psychological assessment
+[Kruskal77a] [<A
+HREF="bibrefs.html#Kruskal77b">Kruskal77b] [<A
+HREF="bibrefs.html#REF611">REF611] has demonstrated that while human
+subjects can quite easily and reliably sort objects into ``piles'' where
+they like one pile better than another, they find it more difficult to
+quantify just how much they like each object, and make these
+quantitative assessments consistent with one another in the way that
+would be necessary if we were to have a true preference {\em metric}. .
+Rather than assuming that users can provide a separate score for each
+retrieved document, we will therefore treat this as an ordered,
+non-metric scale of increasing PREFERENCE : \beq \red{\ominus}
+\prec \# \prec \blue{\oplus} \eeq
+
+
+Each of these assumptions is a matter
+of considerable debate [Wilson73]
+[Froehlich94] , and likely to be
+the topic of much future work. It is also interesting to note that to
+linguists attempting a comprehensive model of how and why humans use
+language, ``relevance'' plays a central role (cf. Section <A
+HREF="foa-8-2-2.html">&sect;8.2.2 ).
+
+
+
+
+Top of Page
+
+ | UP: Cognitive assumptions
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

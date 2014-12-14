@@ -1,0 +1,57 @@
+
+
+FOA: 4.2.2 Using \RelFbk to adapt documents' indices
+
+
+
+
+
+FOA Home
+
+ | UP: Extending the dialog with \RelFbk
+
+
+
+Using \RelFbk to adapt documents' indices
+
+An alternative use of RelFbk is to make changes to the documents
+rather than to the query. While before the argument was that it is
+sensible to make the query look more like those documents the users
+liked, the argument now is the converse: Documents found relevant to a
+query should be described more like the query used to identify them.
+Changes made to document vectors according to this heuristic are known
+as DOCUMENT MODIFICATIONS and shown in Figure (figure) .
+
+
+Note
+that unlike query modification, adaptive document modifications made in
+response to RelFbk are not expected to be of (immediate) use to the
+users who provide them. Instead, the hope is that these changed
+documents' representations are available later, to others who might be
+searching. As Salton [Salton83]
+describes the goal: Following a large number of such interactions
+documents which are wanted by the users will have been moved slowly into
+the active portion of the document space - that part in which large
+numbers of users' queries are concentrated, while items which are
+normally rejected will be located on the periphery of the space. [p.
+145] This provocative proposal, {\em allowing a search engine to learn
+from its users}, is considered in much greater detail in Chapter <A
+HREF="foa-7.html">&sect;7 .
+
+
+
+
+Top of Page
+
+ | UP: Extending the dialog with \RelFbk
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

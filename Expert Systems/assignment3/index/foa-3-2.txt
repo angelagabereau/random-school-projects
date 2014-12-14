@@ -1,0 +1,75 @@
+
+
+FOA: 3.2 Rembember Zipf
+
+
+
+
+
+FOA Home
+
+ | UP: Weighting and matching against Indices
+
+
+
+Rembember Zipf
+
+Looking at our corpus as a very long string of characters, something
+that even a monkey could generate, provides a useful baseline against
+which we can evaluate larger constructs.
+
+
+Associate with each word $w$ its
+frequency $F(w)$, the number of times it occurs anywhere in the corpus.
+Now imagine that we've sorted the vocabulary according to frequency, so
+that the most frequently occurring word will have rank $r=1$, the next
+most frequent word will have $r=2$, and so on.
+
+
+George Kingsley Zipf
+(1902-1950) has become famous for noticing that the distribution we find
+true of our corpus is in fact very reliably true of any large sample of
+natural language we might consider. Zipf [<A
+HREF="bibrefs.html#REF323">REF323] observed that the words'
+rank-frequency distribution can be fit very closely by the relation:
+
+
+This
+empirical rule is now known as Zipf's Law. But why should this pattern
+of word usage, something we can reasonably expect to vary with author or
+type of publication, be so universal?! Even more, the notion of ``word''
+used in this formula has also varied radically - in tabulations of word
+frequencies by Yule and Thorndike, words were stemmed to their root
+form; Yule counted only nouns [Yule24]
+[Thorndike37] . Dewey [<A
+HREF="bibrefs.html#Dewey29">Dewey29] and Thorndike collected
+statistics from multiple sources, others were collected from a single
+work (for example, James Joyce's {\em Ulysses\/}). The frequency
+distribution for a small subset of (non-noise words in) our AIT corpus
+is shown in Figure (figure) . Note the nearly linear ,
+negatively-sloped relation when frequency is plotted as a function of
+rank, and both are plotted on log scales.
+
+Subsections
+
+	 3.2.1 Looking for meaning in all the wrong places \\         (at the character level)
+	 3.2.2 More recent Zipfian sightings
+	 3.2.3 Summary
+
+
+
+
+Top of Page
+
+ | UP: Weighting and matching against Indices
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

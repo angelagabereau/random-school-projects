@@ -1,0 +1,66 @@
+
+
+FOA: 6.5.2.1 Basic representation
+
+
+
+
+
+FOA Home
+
+ | UP: Spreading activation search
+
+
+
+Basic representation
+
+In AIR, each new document first causes a corresponding document node to
+be generated. An author node is then generated (if it doesn't already
+exist) for each author of the document. Two links are then created
+between the document and each of its keywords (one in each direction),
+and two more between the document and each of its authors. Weights are
+assigned to these links according to an inverse frequency weighting
+scheme: the sum of the weights on all links going out of a node is
+forced to be a constant; in our system that constant is one. Figure
+(figure) shows the subnet corresponding to the book
+Parallel Models of Associative Memory, by J. A. Anderson and G.
+E. Hinton [REF35] .
+
+
+The initial network
+is constructed from the super-position of many such documents'
+representations. Most of the experiments to be described in this report
+used a network constructed from 1600 documents, forming a network of
+approximately 5,000 nodes. This is a trivial corpus, and used relatively
+crude lexical analysis and keyword weighting ideas. However, AIR
+requires only that the initial automatic indexing assign some
+weighted set of tentative keywords to each document.
+
+
+There is one
+property of the inverse weighting scheme on which AIR does depend,
+however. A network built using this keyword weighting scheme, together
+with similar constraints on the weights assigned author links, has the
+satisfying property of {conserving activity}. That is, if a unit of
+activity is put into a node and the total outgoing associativity from
+that node is one, the amount of activity in the system will neither
+increase nor diminish. This is helpful in controlling the spreading
+activation dynamics of the network during querying.
+
+
+
+
+Top of Page
+
+ | UP: Spreading activation search
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

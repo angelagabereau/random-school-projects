@@ -1,0 +1,64 @@
+
+
+FOA: 1.5 Indexing
+
+
+
+
+
+FOA Home
+
+ | UP: Overview
+
+
+
+Indexing
+
+INDEXING is the process by which a vocabulary of keywords is
+assigned to all documents of a corpus. Mathematically, an index is a
+{\em relation} mapping each document to the set of keywords that it is
+on} mapping each document to the set of keywords that it is pping each
+document to the set of keywords that it is each document to the set of
+keywords that it is document to the set of keywords that it is nt to the
+set of keywords that it is the set of keywords that it is t of keywords
+that it is eywords that it is s that it is it is \about.
+
+
+The inverse
+mapping captures, for each keyword, the documents it DESCRIBES :
+
+
+This
+assignment might be done manually or automatically. MANUAL
+INDEXING means that people, skilled as natural language users and
+perhaps also with expertise in the domain of discourse, have read each
+document (at least cursorily) and selected appropriate keywords for it.
+AUTOMATIC INDEXING refers to algorithmic procedures for
+accomplishing this same result. Because the Index relation is the
+fundamental connection between the users' expressions of information
+need and the documents that can satisfy them, this simply-stated goal,
+``Build the Index relation'', is at the core of the IR problem and FOA
+generally.
+
+Subsections
+
+	 1.5.1 Automatically selecting keywords
+	 1.5.2 Computer-assisted indexing
+
+
+
+
+Top of Page
+
+ | UP: Overview
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

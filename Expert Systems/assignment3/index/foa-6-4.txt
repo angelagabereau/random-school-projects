@@ -1,0 +1,68 @@
+
+
+FOA: 6.4 Social relations among authors
+
+
+
+
+
+FOA Home
+
+ | UP: Inference beyond the \Index
+
+
+
+Social relations among authors
+
+Another potential source of information about documents that we can use
+to augment statistial keywords is ``cultural'' information, capturing
+some features of the social relationships among authors in a
+field. Most of our discussion of documents has been as if they were
+completely dead artifacts. But documents are written by people,
+authors who write from a particular perspective. When their writing is
+in science, or the law, or any other tradition within which they
+participate, we can make reasonable guesses about some aspects of what
+it is they are trying to say.
+
+
+An author's education, in particular,
+offers clues as to how we can interpret their words. Work and writing in
+many fields requires extensive, graduate education. Students are soon
+moved from common ``core'' curricula to more advanced material. Kuhn and
+others have analyzed the central role textbooks play as part of the
+social process of codifying a discipline [<A
+HREF="bibrefs.html#REF162">REF162] . As students move beyond common
+textbooks to the specialized training, their approach to the problem
+often resembles that of their teachers (at least as long as they are
+around the teacher). By knowing something about the author's education,
+and especially about their dissertation advisor, we may have a basis for
+interpreting their writing. The importance of dissertations as an
+academic resource was recognized as early as 1940 by University
+Microfilms Inc. (UMI) as copies of virtually every dissertation
+published by many universities was microfilmed. UMI (now the Information
+and Learning division of Bell \& Howell) makes its <A
+HREF="http://wwwlib.umi.com/dissertations">Dissertation Abstracts
+corpus available for WWW searching.
+
+Subsections
+
+	 6.4.1 A.I. Geneology
+	 6.4.2 An emprical foundation for a philosophy of Science
+
+
+
+
+Top of Page
+
+ | UP: Inference beyond the \Index
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

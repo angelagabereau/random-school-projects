@@ -1,0 +1,43 @@
+
+
+FOA: 1 Overview
+
+
+
+
+
+FOA Home
+
+ | UP: foa-book.tex
+
+
+
+Overview
+Subsections
+
+	 1.1 Finding Out About - a cognitive activity
+	 1.2 Keywords
+	 1.3 Query syntax
+	 1.4 Documents
+	 1.5 Indexing
+	 1.6 FOA versus database retrieval
+	 1.7 How well are we doing?
+	 1.8 Summary
+
+
+
+
+Top of Page
+
+ | UP: foa-book.tex
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

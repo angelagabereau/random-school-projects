@@ -1,0 +1,45 @@
+
+
+FOA: 2.5.2.3 Emphasizing proxy text
+
+
+
+
+
+FOA Home
+
+ | UP: Fine points
+
+
+
+Emphasizing proxy text
+
+The fact that keyword tokens occur in both the proxy text and the main
+text of the document gives us the opportunity to treat them differently.
+For example, we can {emphasize } the importance of words used in the
+proxy over those occurring in the raw text. This would be sensible if we
+believed that those occurrences in the subject of a message, for
+example, or in the title of a dissertation, are better characterizations
+of a document than words picked from the text of the abstract or the
+text of the email message. In our code, this emphasis will be controlled
+by an integer variable EmphProxy, which notes occurrences
+of keywords in the proxy by doubling (EmphProxy=2) or
+tripling (EmphProxy=3) the keyword counters for proxy text.
+
+
+
+
+Top of Page
+
+ | UP: Fine points
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

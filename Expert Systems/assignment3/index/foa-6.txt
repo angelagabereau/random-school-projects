@@ -1,0 +1,173 @@
+
+
+FOA: 6 Inference beyond the \Index
+
+
+
+
+
+FOA Home
+
+ | UP: foa-book.tex
+
+
+
+Inference beyond the \Index
+
+The that critical mapping between documents and descriptive keywords,
+has dominated our approach to FOA in all the preceeding chapters. But
+there is of course a larger context of available information: FOA can be
+accomplished by showing a user relations among keywords, by
+acquainting him or her with important authors, by pointing to important
+journals where relevant documents are often published, etc. Retrieval of
+all these information resources, especially when structured in
+meaningful interface, can tell a user much more than simply listing
+relevant documents.
+
+
+This chapter is concerned with exploiting a variety
+of other clues we might have about documents (and keywords, authors,
+etc.), above and beyond the statistical, word-frequency information that
+has been at the heart of the Index relation. In all cases,
+these techniques identify some new source of data, represent it
+efficiently, and then perform some kind of inference over the
+representation.
+
+
+AI is a subdiscipline of computer science centrally
+concerned with questions of knowledge representation and inference over
+those representations, especially when these algorithms arguably lead to
+``intelligent'' behaviors. (In many ways the best characterization of
+the AI domain is extensional one provided by the corpus of Ph.D.
+dissertations so classified by U.M.I.) We could expect, therefore, that
+there would be a great deal of cross-fertilization between AI methods
+and IR methods, both growing up within computer science during the same
+period. But for complicated reasons, until recently there has been very
+little interaction.
+
+
+ By and large, AI has defined its notions of
+inference in logical terms, based originally on automatic
+theorem proving results. The last chapter has discussed IR's
+probabilistic foundations and so one immediate axis of difference
+between AI and IR is the distinction between primarily logical and
+primarily probabilistic modes of inference. Nevertheless, some in IR
+perceived early on the advantages that AI's KNOWLEDGE
+REPRESENTATIONS [REF328] and
+expert systems [Fox87] [<A
+HREF="bibrefs.html#McCune85">McCune85] [<A
+HREF="bibrefs.html#Fidel86">Fidel86] techniques offered.
+
+
+Today, the
+fields of AI and IR align much more closely. For example, both machine
+learning and natural language processing have always been considered
+central issues within AI. The next chapter discusses at length machine
+learning techniques as they hve been applied to document corpora.
+Section &sect;8.2 can only sketch another
+large intersection, corpus-based linguistics, where natural language
+issues and IR techniques also merge.
+
+
+The advantages of applying AI
+knowledge representation techniques become especially obvious when
+additional structured attributes are associated with documents,
+keywords, and authors. Early on, Kochen [<A
+HREF="bibrefs.html#REF320">REF320] considered a broad range of these
+forms of information as shown in Figure (figure) Even more
+inclusive lists have been proposed [<A
+HREF="bibrefs.html#Katzer82">Katzer82] [<A
+HREF="bibrefs.html#REF436">REF436]
+
+
+ This shows the primary
+Index relation in the larger context of other information we
+might also have available. What all of these additional forms of
+information have in common is their ability to shed new light on the
+semantic questions of what the documents are about. Information about
+the publication details of documents, for example the journal date, even
+page numbers of documents, can help provide a context within which
+individual documents can be better understood. Much of this
+data-about-data document is now referred to as META-DATA . This
+additional modeling of document structure in languages like XML and
+codified in standards like the <A
+HREF="http://www-diglib.stanford.edu/diglib/pub/dublin.html">Dublin
+Core are one of the most important ways in which database and IR
+technologies now interact. This constructively blurs many of the
+database/search engine differences mentioned before (cf. Section <A
+HREF="foa-1-6.html">&sect;1.6 ). Techniques for performing FACT
+EXTRACTION -- building database relations from analysis of textual
+WWW pages [Craven98] -- suggest a
+broad range of new ways that structured attributes may enter into the
+retrieval task.
+
+
+Section &sect;6.1 discusses
+one of the most important ways in which documents can be understood
+independent of their keywords. In science, in the common law tradition,
+and much more recently in email newsgroups and now with HTML hyperlinks,
+the ability to link one document to another can provide vital
+information about how the arguments of one document relate to those
+contained in another.
+
+
+Section &sect;6.3 will
+discuss some of the special representation techniques which have been
+used to organize keywords in the vocabulary. It is also possible to
+reason about authors of documents. Section <A
+HREF="foa-6-4-1.html">&sect;6.4.1 discusses experiments exploiting
+Ph.D. ``genealogies'' in which dissertation authors are related to one
+another by shared advisors. Co-authorship and membership in the same
+research institution have also been proposed as ways to provide context
+on a particular author's words. In some cases characterizations of
+expertise of the authors, and independent of the documents themselves,
+are available.
+
+
+The chapter concludes with several suggestions of just how
+these varied information sources can become integrated as part of
+next-generation FOA tools. Section &sect;6.5
+considers several ``modes of inference'' by which new conclusion about
+keywords and documents can be reached from elementary facts. Section <A
+HREF="foa-6-6.html">&sect;6.6 suggests a few of the new interface
+techniques that become available as richer data streams are provided by
+and presented back to a user. Sections <A
+HREF="foa-6-7.html">&sect;6.7 and <A
+HREF="foa-6-8.html">&sect;6.8 look at two domains of discourse in
+particular -- the law and science surrounding molecular genetics -- as
+examples of how such techniques can be marshalled towards particular FOA
+purposes. After considering all these ways that the methods of AI can be
+used to help with FOA, Section &sect;6.9
+concludes with a speculation of how the problem of intelligence itself
+might be changed as we take seriously the prospect of basing it on
+textual representations.
+
+Subsections
+
+	 6.1 Citation: inter-document links
+	 6.2 Hypertext, intra-document links
+	 6.3 Keyword structures
+	 6.4 Social relations among authors
+	 6.5 Modes of inference
+	 6.6 Deep interfaces
+	 6.7 FOA(The Law)
+	 6.8 FOA(Evolution)
+	 6.9 Text-based intelligence
+
+
+
+
+Top of Page
+
+ | UP: foa-book.tex
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

@@ -1,0 +1,928 @@
+!SESSION 2007-02-24 12:47:35.278 -----------------------------------------------
+eclipse.buildId=M20050929-0840
+java.version=1.5.0_06
+java.vendor=Apple Computer, Inc.
+BootLoader constants: OS=macosx, ARCH=ppc, WS=carbon, NL=en_US
+Framework arguments:  -keyring /Users/angelagabereau/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch ppc -keyring /Users/angelagabereau/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.debug.core 4 120 2007-02-24 18:38:38.312
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:145)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:253)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:313)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:254)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:313)
+	at java.io.FilterInputStream.read(FilterInputStream.java:90)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:127)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:193)
+	at java.lang.Thread.run(Thread.java:613)
+!SESSION 2007-03-14 14:30:51.230 -----------------------------------------------
+eclipse.buildId=M20050929-0840
+java.version=1.5.0_06
+java.vendor=Apple Computer, Inc.
+BootLoader constants: OS=macosx, ARCH=ppc, WS=carbon, NL=en_US
+Framework arguments:  -keyring /Users/angelagabereau/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch ppc -keyring /Users/angelagabereau/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.debug.core 4 2 2007-03-18 15:06:08.15
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.debug.internal.ui.actions.RemoveAllTerminatedAction.launchesRemoved(RemoveAllTerminatedAction.java:119)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:1494)
+	at org.eclipse.core.internal.runtime.InternalPlatform.run(InternalPlatform.java:1044)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:783)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:1545)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:405)
+	at org.eclipse.debug.internal.core.LaunchManager.removeLaunch(LaunchManager.java:371)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager$1.run(LaunchConfigurationManager.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:76)
+
+!ENTRY org.eclipse.debug.core 4 120 2007-03-18 15:06:08.103
+!MESSAGE An exception occurred during launch change notification.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.debug.internal.ui.actions.RemoveAllTerminatedAction.launchesRemoved(RemoveAllTerminatedAction.java:119)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:1494)
+	at org.eclipse.core.internal.runtime.InternalPlatform.run(InternalPlatform.java:1044)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:783)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:1545)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:405)
+	at org.eclipse.debug.internal.core.LaunchManager.removeLaunch(LaunchManager.java:371)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager$1.run(LaunchConfigurationManager.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:76)
+!SESSION 2007-03-20 09:39:20.871 -----------------------------------------------
+eclipse.buildId=M20050929-0840
+java.version=1.5.0_06
+java.vendor=Apple Computer, Inc.
+BootLoader constants: OS=macosx, ARCH=ppc, WS=carbon, NL=en_US
+Framework arguments:  -keyring /Users/angelagabereau/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch ppc -keyring /Users/angelagabereau/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.ui 4 4 2007-03-20 20:07:32.796
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-20 20:07:32.815
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForSetBlocked(ProgressMonitorDialog.java:267)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.updateForSetBlocked(ProgressMonitorJobsDialog.java:242)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.setBlocked(ProgressMonitorDialog.java:247)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.setBlocked(ProgressMonitorJobsDialog.java:437)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$9.run(ProgressMonitorFocusJobDialog.java:277)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-20 20:07:33.309
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-20 20:07:33.311
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForClearBlocked(ProgressMonitorDialog.java:256)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.clearBlocked(ProgressMonitorDialog.java:237)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.clearBlocked(ProgressMonitorJobsDialog.java:424)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$6.run(ProgressMonitorFocusJobDialog.java:191)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-20 21:04:42.487
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-20 21:04:42.489
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForSetBlocked(ProgressMonitorDialog.java:267)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.updateForSetBlocked(ProgressMonitorJobsDialog.java:242)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.setBlocked(ProgressMonitorDialog.java:247)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.setBlocked(ProgressMonitorJobsDialog.java:437)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$9.run(ProgressMonitorFocusJobDialog.java:277)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-20 21:04:43.881
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-20 21:04:43.883
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForClearBlocked(ProgressMonitorDialog.java:256)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.clearBlocked(ProgressMonitorDialog.java:237)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.clearBlocked(ProgressMonitorJobsDialog.java:424)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$6.run(ProgressMonitorFocusJobDialog.java:191)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-21 11:06:24.616
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-21 11:06:24.640
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForSetBlocked(ProgressMonitorDialog.java:267)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.updateForSetBlocked(ProgressMonitorJobsDialog.java:242)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.setBlocked(ProgressMonitorDialog.java:247)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.setBlocked(ProgressMonitorJobsDialog.java:437)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$9.run(ProgressMonitorFocusJobDialog.java:277)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-21 11:06:25.261
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-21 11:06:25.263
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForClearBlocked(ProgressMonitorDialog.java:256)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.clearBlocked(ProgressMonitorDialog.java:237)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.clearBlocked(ProgressMonitorJobsDialog.java:424)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$6.run(ProgressMonitorFocusJobDialog.java:191)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+!SESSION 2007-03-21 11:23:03.918 -----------------------------------------------
+eclipse.buildId=M20050929-0840
+java.version=1.5.0_06
+java.vendor=Apple Computer, Inc.
+BootLoader constants: OS=macosx, ARCH=ppc, WS=carbon, NL=en_US
+Framework arguments:  -keyring /Users/angelagabereau/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch ppc -keyring /Users/angelagabereau/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.resources 2 10035 2007-03-21 11:23:17.896
+!MESSAGE A workspace crash was detected. The previous session did not exit normally.
+
+!ENTRY org.eclipse.ui 4 4 2007-03-21 12:05:53.694
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-21 12:05:53.713
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForSetBlocked(ProgressMonitorDialog.java:267)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.updateForSetBlocked(ProgressMonitorJobsDialog.java:242)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.setBlocked(ProgressMonitorDialog.java:247)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.setBlocked(ProgressMonitorJobsDialog.java:437)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$9.run(ProgressMonitorFocusJobDialog.java:277)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-21 12:05:54.289
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-21 12:05:54.292
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForClearBlocked(ProgressMonitorDialog.java:256)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.clearBlocked(ProgressMonitorDialog.java:237)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.clearBlocked(ProgressMonitorJobsDialog.java:424)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$6.run(ProgressMonitorFocusJobDialog.java:191)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-21 12:09:46.36
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-21 12:09:46.37
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForSetBlocked(ProgressMonitorDialog.java:267)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.updateForSetBlocked(ProgressMonitorJobsDialog.java:242)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.setBlocked(ProgressMonitorDialog.java:247)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.setBlocked(ProgressMonitorJobsDialog.java:437)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$9.run(ProgressMonitorFocusJobDialog.java:277)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-21 12:09:46.718
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-21 12:09:46.720
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForClearBlocked(ProgressMonitorDialog.java:256)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.clearBlocked(ProgressMonitorDialog.java:237)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.clearBlocked(ProgressMonitorJobsDialog.java:424)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$6.run(ProgressMonitorFocusJobDialog.java:191)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-21 12:13:26.764
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-21 12:13:26.766
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForSetBlocked(ProgressMonitorDialog.java:267)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.updateForSetBlocked(ProgressMonitorJobsDialog.java:242)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.setBlocked(ProgressMonitorDialog.java:247)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.setBlocked(ProgressMonitorJobsDialog.java:437)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$9.run(ProgressMonitorFocusJobDialog.java:277)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-21 12:13:27.294
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-21 12:13:27.296
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForClearBlocked(ProgressMonitorDialog.java:256)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.clearBlocked(ProgressMonitorDialog.java:237)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.clearBlocked(ProgressMonitorJobsDialog.java:424)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$6.run(ProgressMonitorFocusJobDialog.java:191)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-21 12:23:51.663
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-21 12:23:51.666
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForSetBlocked(ProgressMonitorDialog.java:267)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.updateForSetBlocked(ProgressMonitorJobsDialog.java:242)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.setBlocked(ProgressMonitorDialog.java:247)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.setBlocked(ProgressMonitorJobsDialog.java:437)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$9.run(ProgressMonitorFocusJobDialog.java:277)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-21 12:23:54.21
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-21 12:23:54.23
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForClearBlocked(ProgressMonitorDialog.java:256)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.clearBlocked(ProgressMonitorDialog.java:237)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.clearBlocked(ProgressMonitorJobsDialog.java:424)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$6.run(ProgressMonitorFocusJobDialog.java:191)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-21 12:42:19.522
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-21 12:42:19.524
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForSetBlocked(ProgressMonitorDialog.java:267)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.updateForSetBlocked(ProgressMonitorJobsDialog.java:242)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.setBlocked(ProgressMonitorDialog.java:247)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.setBlocked(ProgressMonitorJobsDialog.java:437)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$9.run(ProgressMonitorFocusJobDialog.java:277)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-21 12:42:21.371
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-21 12:42:21.624
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForClearBlocked(ProgressMonitorDialog.java:256)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.clearBlocked(ProgressMonitorDialog.java:237)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.clearBlocked(ProgressMonitorJobsDialog.java:424)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$6.run(ProgressMonitorFocusJobDialog.java:191)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-21 12:53:36.508
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-21 12:53:36.511
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForSetBlocked(ProgressMonitorDialog.java:267)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.updateForSetBlocked(ProgressMonitorJobsDialog.java:242)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.setBlocked(ProgressMonitorDialog.java:247)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.setBlocked(ProgressMonitorJobsDialog.java:437)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$9.run(ProgressMonitorFocusJobDialog.java:277)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-21 12:53:36.761
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-21 12:53:36.764
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForClearBlocked(ProgressMonitorDialog.java:256)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.clearBlocked(ProgressMonitorDialog.java:237)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.clearBlocked(ProgressMonitorJobsDialog.java:424)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$6.run(ProgressMonitorFocusJobDialog.java:191)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+!SESSION 2007-03-22 18:43:46.158 -----------------------------------------------
+eclipse.buildId=M20050929-0840
+java.version=1.5.0_06
+java.vendor=Apple Computer, Inc.
+BootLoader constants: OS=macosx, ARCH=ppc, WS=carbon, NL=en_US
+Framework arguments:  -keyring /Users/angelagabereau/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws carbon -arch ppc -keyring /Users/angelagabereau/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.ui 4 4 2007-03-26 10:38:34.242
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-26 10:38:34.322
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForSetBlocked(ProgressMonitorDialog.java:267)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.updateForSetBlocked(ProgressMonitorJobsDialog.java:242)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.setBlocked(ProgressMonitorDialog.java:247)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.setBlocked(ProgressMonitorJobsDialog.java:437)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$9.run(ProgressMonitorFocusJobDialog.java:277)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-26 10:38:36.760
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-26 10:38:36.765
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForClearBlocked(ProgressMonitorDialog.java:256)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.clearBlocked(ProgressMonitorDialog.java:237)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.clearBlocked(ProgressMonitorJobsDialog.java:424)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$6.run(ProgressMonitorFocusJobDialog.java:191)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-26 10:47:08.615
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-26 10:47:08.617
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForSetBlocked(ProgressMonitorDialog.java:267)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.updateForSetBlocked(ProgressMonitorJobsDialog.java:242)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.setBlocked(ProgressMonitorDialog.java:247)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.setBlocked(ProgressMonitorJobsDialog.java:437)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$9.run(ProgressMonitorFocusJobDialog.java:277)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)
+
+!ENTRY org.eclipse.ui 4 4 2007-03-26 10:47:08.705
+!MESSAGE Unhandled event loop exception
+
+!ENTRY org.eclipse.ui 4 0 2007-03-26 10:47:08.707
+!MESSAGE Widget is disposed
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:2942)
+	at org.eclipse.swt.SWT.error(SWT.java:2865)
+	at org.eclipse.swt.SWT.error(SWT.java:2836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:674)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:307)
+	at org.eclipse.swt.widgets.Label.setImage(Label.java:309)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.updateForClearBlocked(ProgressMonitorDialog.java:256)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog$ProgressMonitor.clearBlocked(ProgressMonitorDialog.java:237)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog$3.clearBlocked(ProgressMonitorJobsDialog.java:424)
+	at org.eclipse.ui.internal.progress.ProgressMonitorFocusJobDialog$6.run(ProgressMonitorFocusJobDialog.java:191)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:123)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:2932)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2715)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1699)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1663)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:367)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:143)
+	at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:103)
+	at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:376)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.core.launcher.Main.invokeFramework(Main.java:334)
+	at org.eclipse.core.launcher.Main.basicRun(Main.java:278)
+	at org.eclipse.core.launcher.Main.run(Main.java:973)
+	at org.eclipse.core.launcher.Main.main(Main.java:948)

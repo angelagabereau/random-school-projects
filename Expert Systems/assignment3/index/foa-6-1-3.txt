@@ -1,0 +1,89 @@
+
+
+FOA: 6.1.3 Legal citation
+
+
+
+
+
+FOA Home
+
+ | UP: Citation: inter-document links
+
+
+
+Legal citation
+
+The use of citation in legal documents is interesting for a number of
+reasons [REF1113] . First, within the
+common law tradition adjudicating legal behavior is based on arguments
+of stare decis: Stand by previous decision. The ability to
+reference prior judicial opinions provides the core of many forms of
+documents, including the judicial opinions themselves, briefs, even
+legislation. It is no wonder, then, that legal prose has developed an
+extensive system of conventions for representing how judicial opinions
+relate to one another .
+
+
+As with scientific papers, the fact of citation ‹
+reference by one judge to the opinion of another ‹ is never in doubt.
+But when referring to prior cases, the relevance of prior
+decisions often depends on the judges interpretation of the
+relation holding between the two opinions.
+
+
+In fact, an entire
+industry exists within legal publishing to do nothing but elaborate the
+syntactic fact of reference to a prior ruling with an interpretation of
+the purpose for which the citation is made. This process is performed
+especially well by Shepherd/McGraw Hill. So critical are the arguments
+captured by these citations that the process of checking a prior ruling
+a lawyer wishes to reference, to be sure that it hasn't been overruled
+or otherwise rendered obsolete, is known as SHEPHERDIZING a case.
+
+
+
+Figure (FOAref) shows the entire range of Shepard citation
+labels. These are broken into two categories, the first dealing with the
+history of a case and the second with its treatment.
+
+
+To make sense of
+this distinction a brief digression into the purpose of legal citation
+is necessary. Cases, as they proceed from lower to higher courts, have
+basically a binary outcome: they are either won or lost. There is never
+ambiguity as to whether a higher court agrees with or overrules the
+opinion of a lower court. These unambiguous statements are what are
+captured as the history of a case.
+
+
+But in a common law tradition, a much
+larger number of citations refer to cases and decisions in those cases
+by other judges. The relationship between these cases and the one before
+the author-judge is less clear. But as Figure ?? (figure) makes
+explicit, the two cases (citing and cited) have at least two important
+dimensions along which they may be similar or dissimilar. First, the set
+of facts associated with one case may be very close to those in the
+other, or they may be much different facts. Second, the rules of law
+which are to be applied may be consistent between one judge and the
+other, or they may be contrary. Figure(FOAref) shows these two
+dimensions and orders Shepard's treatment labels roughly along
+dimensions of this two dimensional similarity space.
+
+
+
+
+Top of Page
+
+ | UP: Citation: inter-document links
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

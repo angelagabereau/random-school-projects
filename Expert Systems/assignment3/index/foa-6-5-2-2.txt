@@ -1,0 +1,83 @@
+
+
+FOA: 6.5.2.2 Querying and retrieval
+
+
+
+
+
+FOA Home
+
+ | UP: Spreading activation search
+
+
+
+Querying and retrieval
+
+Users begin a session with AIR by describing their information need,
+using a very simple query language. An initial query is composed of one
+or more clauses. Each clause can refer to one of the three types of
+``features'' represented in AIR's network: keywords, documents or
+authors, and all but the first clause can be negated. This query causes
+activity to be placed on nodes in AIR's network corresponding to the
+features named in the query. This activity is allowed to propagate
+throughout the network and the system's response is the set of nodes
+that become most active during this propagation.
+
+
+The traditional result
+of a query is only documents. AIR also provides keywords and authors.
+Keywords retrieved in this manner are considered RELATED TERMS
+that users may use to pursue their searches. Retrieved authors are
+considered to be closely linked to the subject of interest. There are
+many ways in which a user might find related terms and centrally
+involved authors a valuable information product in their own right.
+
+
+Figure
+(figure) shows AIR's response to a typical query: \small {\tt
+((:TERM ``ASSOCIATIVE'')(:AUTH ``ANDERSON,J.A.''))} This is the network
+of keywords, documents and author's considered relevant to this query.
+The nodes are drawn as a tri-partite graph, with keywords on the top
+level, documents in the middle and authors on the bottom. Associative
+links that helped to cause a node to become retrieved (and only those
+links) are also displayed. Heavier lines imply stronger associative
+weights. AIR uses directed links, and this directionality is represented
+by the concavity of the arcs; a clockwise convention is used. For
+example, a link from a document node (in the middle level) to a keyword
+node (in the top level) goes clockwise, around to the left.
+
+
+Actually,
+this is only a picture of the final state of the system's retrieval. The
+network is actually drawn {incrementally}, with the first nodes to
+become significantly active being drawn first and in the middle of the
+pane. As additional nodes become active at significant levels, they are
+drawn farther out along the three horizontal axes and the links through
+which they became active are drawn as well. This dynamic display has at
+least two real advantages. First, the fact that AIR provides the first
+part of its retrieval almost immediately means that the user is not
+impatiently waiting for the retrieval to complete (typically 5-10
+seconds in this implementation). Second, displaying the query's dynamics
+helps to give the user a tangible feeling of ``direct manipulation'' [<A
+HREF="bibrefs.html#REF654">REF654] ; the user ``prods'' the network
+in a certain place, and then watches as waves of activity flow outward
+from that place.
+
+
+
+
+Top of Page
+
+ | UP: Spreading activation search
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

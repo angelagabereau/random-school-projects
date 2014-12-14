@@ -1,0 +1,69 @@
+
+
+FOA: 3.2.1.3 Herbert Simon's explanation
+
+
+
+
+
+FOA Home
+
+ | UP: Looking for meaning in all the wrong places \\         (at the character level)
+
+
+
+Herbert Simon's explanation
+
+Simon considered a much different model, focused on the author's
+activity constructing a text. Simon's model is based on two assumptions.
+First, that new words --- NEOLOGISMS --- introduced by the author
+and not previously used, are introduced at some constant probability.
+Second, that the probability of a word having occurred exactly $i$ times
+is proportional to the total number of occurrences of all words that
+have appeared exactly $i$ times. These assumptions allow Simon to use
+the basic mathematics of ``pure birth processes'' to account for word
+frequency rankings.
+
+
+Simon was interested in models for the
+``associative'' processes underlying authors' cognition ``... sampling
+earlier segments of the word sequence'' [p. 434] as they compose. He
+acknowledged that authors also use processes of ``imitation: sampling
+segments of word sequences from other works of other authors, and, of
+course, from sequences he has heard.'' Simon imagined this model as
+potentially applying to three different distributions: \item the
+distribution of word frequencies in the whole historical sequence of
+words that constitute a language; \item the distribution of word
+frequencies in a continuous piece of prose; \item the distribution of
+word frequencies in a sample of prose assembled from compositive
+sources. He seems most engaged by the second of these alternatives,
+considering the activity of a particular author. (He uses James Joyce's
+{\em Ulysses} as an example.)
+
+
+Obviously this word-based model provides a
+much different explanation of Zipf's Law than Mandelbrot's and Miller's
+character-based ones. Simon was familiar with such models, but argues
+[Simon55] that his own ``averaging
+rather than [Miller's] maximizing assumptions'' are more desirable. But
+as Miller notes, ``The assumption of maximization can be replaced by the
+assumption of random spacing.'' Worse, in terms of the empirical
+bottom-line, Simon's equation does not fit available data as well.
+
+
+
+
+Top of Page
+
+ | UP: Looking for meaning in all the wrong places \\         (at the character level)
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

@@ -1,0 +1,42 @@
+
+
+FOA: 3.3 A statistical basis for keyword meaning
+
+
+
+
+
+FOA Home
+
+ | UP: Weighting and matching against Indices
+
+
+
+A statistical basis for keyword meaning
+Subsections
+
+	 3.3.1 Lexical consequences, internal/external perspectives
+	 3.3.2 Word occurrence as a  Poisson process
+	 3.3.3 Resolving power
+	 3.3.4 Language distribution
+	 3.3.5 Weighting the index relation
+	 3.3.6 Informative signals versus noise words
+	 3.3.7 Inverse document frequency
+
+
+
+
+Top of Page
+
+ | UP: Weighting and matching against Indices
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

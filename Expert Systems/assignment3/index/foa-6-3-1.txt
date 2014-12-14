@@ -1,0 +1,63 @@
+
+
+FOA: 6.3.1 Automatic thesaurus construction
+
+
+
+
+
+FOA Home
+
+ | UP: Keyword structures
+
+
+
+Automatic thesaurus construction
+
+Before going on to consider WordNet,another elaborate thesaurus, it is
+useful to relate these , manually-constructed representations with
+automatic, statistically-derived analogs. Such comparisons have been
+part of IR research since its beginnings [<A
+HREF="bibrefs.html#Joyce58">Joyce58] [<A
+HREF="bibrefs.html#Dennis64">Dennis64] [<A
+HREF="bibrefs.html#Soergel74">Soergel74] . Section <A
+HREF="foa-5-2-5.html">&sect;5.2.5 has discussed how the same
+information used to cluster documents can be used with keywords as well.
+The semantics of relations based strictly on co-occurrence frequencies
+are not obvious [vanR77] , but seem to
+provide evidence for the \textbf{RT} (related term, or synonymy
+relation) discussed above.
+
+
+Using this information to construct hierarchic
+relations among keywords corresponds to (hierarchic) clustering
+techniques. Thesaurus-specific techniques generally exploit a heuristic
+that high frequency keywords correspond to broad, general terms while
+low frequency keywords correspond to narrow, specific ones [<A
+HREF="bibrefs.html#Srinivasan92">Srinivasan92] . This heuristic can
+be used to organize keywords into levels of a taxonomy, with the
+hierarchic parent/child relation formed between those keywords with
+similar document distributions. RelFbk can also be used to provide
+theaurus structure [Guntzer89] .
+Whether constructed manually or automatically, thesuarus structures
+support many new forms of naviagation [<A
+HREF="bibrefs.html#REF1077">REF1077] [<A
+HREF="bibrefs.html#REF1079">REF1079] .
+
+
+
+
+Top of Page
+
+ | UP: Keyword structures
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

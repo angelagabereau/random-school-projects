@@ -1,0 +1,150 @@
+
+
+FOA: 2.3.1 Stemming and other morphological processing
+
+
+
+
+
+FOA Home
+
+ | UP: Intra-document parsing
+
+
+
+Stemming and other morphological processing
+
+From the perspective of linguistics, many of the early design issues we
+address are considered MORPHOLOGICAL TRANSFORMATIONS of language;
+i.e., an analysis of what we can infer about language based on
+structural features. As discussed briefly in Chapter 1, the
+arbitrary way in which whitespace may or may not separate tokens whose
+meanings are inter-dependant (e.g., recall the German word
+\term{GESCHWINDIGKEITSBESCRANKUNG}/English phrase \term{SPEED LIMIT}
+example) will make us interested in phrasal units of indexing
+as well. In many Asian texts, the relationship between
+characters and words is quite radically altered. The
+Kanji alphabet and Unicode standards help to define the problem, but
+bring biases of their own [Fuji93] .
+
+
+For
+now we will focus on one of the most common morphological tricks,
+STEMMING . Stemming is a quite direct attempt to remove certain
+SURFACE MARKINGS from words so as to reveal ROOT form.
+Beyond deciding just which characters are to be combined into tokens,
+Chapter 1 discussed how important it can be to use a token's root form
+as an index term: We can hope that our retrieval is robust even when the
+query contains the PLURAL form \term{CARS} while the document
+contains the singular \term{CAR}. Linguists would say that the
+NUMBER feature (whether a noun is singular or plural) is
+morphologically MARKED . Linguists also distinguish between
+INFLECTIONAL morphology like plurals, and DERIVATIONAL
+morphology which can change a word's syntactic category (e.g., changing
+the noun {\tt PRODUCT} to the verb {\tt PRODUCTIZE}) and meaning
+more radically.
+
+
+In stemming, suffixes are dropped. Even in the simple
+case of plural endings, it isn't as simple as removing 's. Consider:
+
+
+Conversely,
+we also cannot assume that every time there is an ending ``S'' we can
+remove it; stemming and \term{CHESS} to \term{CRISI} and \term{CHES}
+would damage their meaning.
+
+
+The most common approach to this problem [<A
+HREF="bibrefs.html#Frakes92b">Frakes92b] is to identify more
+elaborate patterns over character sequences that reliably pare tokens
+down to their root forms. A broad range of such patterns can be defined
+in terms of a CONTEXT-SENSITIVE TRANSFORMATION GRAMMAR .
+
+
+For
+example, (.*)SSES & \rightarrow & /1 SS \\ (.*[A E I O U].*) ED &
+\rightarrow & /1 \\ (.*[A E I O U].*) Y & \rightarrow & /1 I Rule
+(FOAref) says that strings ending in {\tt -SSES} should be
+transformed by taking the stem (i.e., characters prior to these four)
+and adding only the two characters {\tt SS}. Rule (FOAref) says
+that stems containing a vowel and ending in {\tt -ED} should be
+transformed to leave only the stem; Rule (FOAref) says that
+stems containing a vowel and ending in {\tt -Y} should be transformed to
+the stem with an {\tt I} replacing the {\tt Y}.
+
+
+A complete algorithm for
+stemming involves the specificaton of many such rules, and then a regime
+for handling conflicts when multiple rules match the same token. An
+early and influential algorithm due to Lovins [<A
+HREF="bibrefs.html#Lovins68">Lovins68] specified 260 suffix patterns
+and then used an ITERATIVE LONGEST MATCH heuristic. This means
+first that preference is given to the pattern (left-hand side of the
+grammar rule) that matches most characters in a target token (since this
+prefers more specific matches over shorter, more generally applicable
+ones), and then that rules are iteratively re-applied until no more
+rules match.
+
+
+The Porter stemmer [<A
+HREF="bibrefs.html#Porter80">Porter80] (included as part of the FOA
+software) is a simplified version of Lovin's technique that uses a
+reduced set of about 60 rules, and organizes them into sets, with
+conflicts within one subset of rules resolved before going on to the
+next. In fact, if only the first set of rules in Porter's stemmer
+(focusing exclusively on plurals and the most straight-forward suffices
+like {\tt -ED} and {\tt -ING}) are used, the result has been called
+WEAK STEMMING [Walker89] . A
+key advantage of all such rule-based grammatical representations of the
+stemming process (and of efficient implementations of them, such as that
+provided by Fox) is that modifications to the rules and to ordering
+among the rules can be accomplished by changing the grammar rather than
+by endless {\em ad hoc} hacking (ad hacking?:) in response to particular
+character sequences.
+
+
+The use of any stemmer obviously reduces the size of
+the keyword vocabulary, and consequentially results in a compression of
+the index files. Such compression can vary from 10-50depending on the
+total size of the keyword vocabulary and how aggressively (e.g., how
+many suffix rules are used) the stemmer is.
+
+
+The primary affect of
+stemming, however, is that two keywords that were once treated
+independently are considered interchangeable. Stemming is therefore an
+example of a recall increasing operation since it will cause a
+keyword used in the query to match more documents.
+
+
+The fundamental
+problem with any stemming technique, of course, is that the
+morphological features being stripped away may well obscure differences
+in the words' meaning. For example, the token {\tt GRAVITY} has
+two WORD SENSES , one describing an attractive force between any
+two masses and the other having to do with a serious mood. But once the
+word GRAVITATION has been stemmed, we have lost the
+information that might constrain us to the first interpretation. Krovetz
+[Krovetz93] considers several more
+sophisticated approaches to keyword morphology, including augmenting
+Porter's stemmer with a dictionary that is checked after each phase of
+stemming rules has been applied.
+
+
+
+
+Top of Page
+
+ | UP: Intra-document parsing
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

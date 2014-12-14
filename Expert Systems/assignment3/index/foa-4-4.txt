@@ -1,0 +1,104 @@
+
+
+FOA: 4.4 RAVe: A Relevance Assessment VEhicle
+
+
+
+
+
+FOA Home
+
+ | UP: Assessing the retrieval
+
+
+
+RAVe: A Relevance Assessment VEhicle
+
+Section &sect;4.3.2 argued that the
+opinions of many users concerning the relevance of a document to a query
+provides a more robust characterization than any single expert. It
+seems, however, that our move from omniscent to consentual relevance has
+only made the problem of evaluation that much more difficult: Test
+corpora must be large enough to provide robust tests for retrieval
+methods, and multiple queries are necessary in order to evaluate the
+overall performance of an IR system. Getting even a single person's
+opinion about the relevance of a document to a particular query is hard,
+and we are now interested in getting many!
+
+
+This section describes RAVe, a
+Relevance Assessment VEhicle that demonstrates it is possible to
+operationally define relevance in the manner we suggest. RAVe is a suite
+of software routines that allow an IR experimenter to effectively
+collect large numbers of relevance assessments for an arbitrary document
+corpus. It has been used with a number of different classes of students
+to collect the relevance assessments used for evaluation with respect to
+the AIT corpus; your teacher may be having you participate in a similar
+experiment. It can also be used to collect assessments for other
+document corpora and query sets.
+
+
+In this chapter we began by making some
+assumptions about users of an search engine in order to figure out just
+how well the system is doing at satisfying users' information needs. We
+focused on two separate notions of assessment: first, assessing the
+relevance of documents retrieved by the system in response to a
+particular query, and second, assessing the search engine's overall
+utility through aggregating relevance judgements provided by many users
+performing many queries.
+
+
+Section 4.1 discussed both metric and non-metric
+relevance feedback, and the difficulties in getting users to provide
+relevance judgements for documents in the retrieved set. We saw,
+however, that relevance feedback could be used to suggest query
+refinements to the users and/or be used to modify the underlying
+document representations to improve future system performance.
+
+
+The
+concept of consentual relevance introduced in Section 4.2 addresses an
+issue raised in Chapter 1 in which we asked what success criteria can be
+used in evaluating a search engine. Consentual relevance tells us that
+relevant documents are those documents that many users find to be
+useful. We can ask how useful a particular search engine is, or compare
+one search engine with another, by posing the question: How useful
+(relevant) do users find the documents retrieved in response to queries?
+
+
+To
+answer that question we quantified several measures of system
+performance. The generality of a query is a measure of what fraction of
+documents in the corpus are relevant to the query. Fallout measures the
+fraction of irrelevant documents found in the retrieved set of a given
+query. The key notions of recall, the fraction of relevant documents in
+the retrieved set, and precision, the fraction of retrieved documents
+that are relevant, allow us to make direct comparisons between two
+search engines' performances on any query. Other methods of comparison
+include sliding ratio, point alienation, expected search length, and
+operating characteristic curves.
+
+Subsections
+
+	 4.4.1 RAVeUnion
+	 4.4.2 RAVePlan
+	 4.4.3 Interactive RAVe
+	 4.4.4 RAVeCompile
+
+
+
+
+Top of Page
+
+ | UP: Assessing the retrieval
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

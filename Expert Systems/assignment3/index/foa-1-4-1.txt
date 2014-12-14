@@ -1,0 +1,77 @@
+
+
+FOA: 1.4.1 Structured aspects of documents
+
+
+
+
+
+FOA Home
+
+ | UP: Documents
+
+
+
+Structured aspects of documents
+
+In addition to their free text, many documents will also carry
+META-DATA that gives some facts about the document. We may have
+PUBLICATION INFORMATION , e.g., that this document appeared in
+this journal on this day on this page. We are likely to know the
+author(s) of the document. Queries will often refer to aspects of both
+free-text and meta-data:
+
+
+ I'm interested in documents about Fools'
+Gold that have been published in children's magazines in the last five
+years.
+
+
+ The first portion of this query depends on the same relation that
+is at the core of our FOA process. But the last two criteria, concerning
+publication type and date, seem to be just the sort of query against
+structured attributes that database systems perform very successfully.
+In most real-life applications a hybrid of database and IR technologies
+will be necessary. (We distinguish between these techniques in Section
+&sect;1.6 .)
+
+
+The most interesting examples
+concern characteristics that do not clearly fall into either IR or
+database categories. For example, can you define precisely what you
+mean by a `children's magazine', in terms of unambiguous
+attributes on which a database would depend? Consider another query:
+
+
+
+What sort of work has K. E. Smith done on metabolic proteins affecting
+neurogenesis?
+
+
+ Finding an exact match for the string in the
+\term{AUTHORS} attribute is straightforward. But the conventions in much
+of medical and biological publication (as well as in some areas of
+physics) sometimes lead to dozens of authors on papers, from the
+director of the institute through all of the laboratory assistants.
+While K. E. Smith might well fulfill the syntactic requirements of
+authorship on a particular paper, users searching for ``the work of''
+this person might well have a more narrowly-defined {\em semantic}
+relationship in mind.
+
+
+
+
+Top of Page
+
+ | UP: Documents
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

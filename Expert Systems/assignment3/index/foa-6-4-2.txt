@@ -1,0 +1,88 @@
+
+
+FOA: 6.4.2 An emprical foundation for a philosophy of Science
+
+
+
+
+
+FOA Home
+
+ | UP: Social relations among authors
+
+
+
+An emprical foundation for a philosophy of Science
+
+One advantage of studying a focused corpus like the A.I.T. is that we
+have an especially good chance of understanding some of these social
+relations. A history of A.I. often begins with a seminal conference that
+took place at Dartmouth in 1956 [<A
+HREF="bibrefs.html#McCorduck85">McCorduck85] [<A
+HREF="bibrefs.html#Russell95">Russell95] . If we treat the attendees
+at that meeting as ``founding fathers'' (in a population genetic
+sense!), we can attempt to track their ``genetic'' impact on the current
+field of A.I.
+
+
+In an attempt to capture other significant intellectual
+influences beyond the advisor, the AIG questionnaire asks for committee
+members other than the chairman. The role of committee members varies a
+great deal from department to department, and campus to campus. But all
+of these numbers can be expected to exert some intellectual influence as
+well. Asking for committee members is a step towards other, non-advisor
+influencors, and it is also a matter of record. Research institutions
+are another way to capture intellectual interactions among
+collaborators.
+
+
+Even if/when the AI-PhD family tree is completed, it will
+certainly not have captured all of what we mean by ``artificial
+intelligence research.'' For example: \item The Dartmouth ``founding
+fathers'' probably provide (direct) lineage for a {\em minority} of AI
+PhD's currently working in the field.
+
+
+PhD theses, themselves, are
+probably some of the {\em worst} examples of research, in AI or
+elsewhere. By definition, we are talking about students who are doing
+some of their first work. They had {\em better} improve with time! \item
+PhD's account for only a fraction of AI research.
+
+
+ Nevertheless, Science
+is primarily concerned with {accumulating} knowledge, at least as much
+as it is about its initial discovery. A primary argument for interest in
+the AIG is that traditional academic relationships, as embodied by PhD
+genealogies, form a sort of ``skeleton'' around which the rest of
+scientific knowledge coalesces. Certainly individuals can pursue their
+own research program, and corporations can fund extended investigations
+into areas that are not represented in academia whatsoever. But it is
+hard to imagine extended research programs (like that ``fathered'' by
+Roger Schank, for example) that do not involve multiple ``generations''
+of investigators; academia is almost certainly the most successful
+system for such propagation. Kuhnian and post-Kuhnian [<A
+HREF="bibrefs.html#REF623">REF623] [<A
+HREF="bibrefs.html#REF588">REF588] analyses highlight the importance
+of {\em social} aspects of Science. ``Paradigms'' are extremely
+appealing constructs, but they're also amorphous. For all of its faults,
+the AI-PhD tree represents incontrovertible {\em facts}, just as word
+frequencies do.
+
+
+
+
+Top of Page
+
+ | UP: Social relations among authors
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

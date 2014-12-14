@@ -1,0 +1,205 @@
+
+
+FOA: 3.2.2 More recent Zipfian sightings
+
+
+
+
+
+FOA Home
+
+ | UP: Rembember Zipf
+
+
+
+More recent Zipfian sightings
+
+The debate concerning these models date back almost 40 years, but
+Zipfian distributions and attempts to explain them contine to arise. For
+example, many have been struck by language-like properties exhibited by
+the long sequences of {genetic} codes found in all living species' DNA.
+That a simple ``alphabet'' of four nucleic acid BASE-PAIRS (BPs)
+({\tt A,C,G,T} in DNA) are broken into three-letter CODONS that
+mean one of twenty possible ``words'' corresponding to amino
+acids has lead many to wonder what we might learn by viewing the genome
+as a linguistic object [Sereno91] .
+
+
+Mantegna
+et al. [Mantegna94] was led to
+consider the ``word'' frequency distributions of such words in the DNA
+``corpus.'' Further, they considered differences in the distributions
+across coding regions of the genome as well as non-coding regions that
+never are expressed. Their first result is that this sequence data does
+indeed contain ``linguistic features,'' especially in the non-coding
+regions. By Analyzing various genentic corpora (e.g., approximately one
+million BPs taken from 14 mammalian sequences), they found that, in
+contrast to what we might expect of completely random sequences, the
+rank-frequency distribution of six-BP words could be well fit by a
+(log-log linear) Zipf exponent= -0.28. They conclude: \bq These results
+are consistent with the possible existence of one (or more than one)
+structured biological languages present in non-coding DNA sequences.
+These results are consistent with the possible existence of one (or more
+than one) structured biological languages present in non-coding DNA
+sequences. These results are consistent with the possible existence of
+one (or more than one) structured biological languages present in
+non-coding DNA sequences. ese results are consistent with the possible
+existence of one (or more than one) structured biological languages
+present in non-coding DNA sequences. e results are consistent with the
+possible existence of one (or more than one) structured biological
+languages present in non-coding DNA sequences. results are consistent
+with the possible existence of one (or more than one) structured
+biological languages present in non-coding DNA sequences. sults are
+consistent with the possible existence of one (or more than one)
+structured biological languages present in non-coding DNA sequences. lts
+are consistent with the possible existence of one (or more than one)
+structured biological languages present in non-coding DNA sequences. s
+are consistent with the possible existence of one (or more than one)
+structured biological languages present in non-coding DNA sequences. are
+consistent with the possible existence of one (or more than one)
+structured biological languages present in non-coding DNA sequences. e
+consistent with the possible existence of one (or more than one)
+structured biological languages present in non-coding DNA sequences.
+consistent with the possible existence of one (or more than one)
+structured biological languages present in non-coding DNA sequences.
+nsistent with the possible existence of one (or more than one)
+structured biological languages present in non-coding DNA sequences.
+istent with the possible existence of one (or more than one) structured
+biological languages present in non-coding DNA sequences. tent with the
+possible existence of one (or more than one) structured biological
+languages present in non-coding DNA sequences. nt with the possible
+existence of one (or more than one) structured biological languages
+present in non-coding DNA sequences. with the possible existence of one
+(or more than one) structured biological languages present in non-coding
+DNA sequences. ith the possible existence of one (or more than one)
+structured biological languages present in non-coding DNA sequences. h
+the possible existence of one (or more than one) structured biological
+languages present in non-coding DNA sequences. the possible existence of
+one (or more than one) structured biological languages present in
+non-coding DNA sequences. e possible existence of one (or more than one)
+structured biological languages present in non-coding DNA sequences.
+possible existence of one (or more than one) structured biological
+languages present in non-coding DNA sequences. ssible existence of one
+(or more than one) structured biological languages present in non-coding
+DNA sequences. ible existence of one (or more than one) structured
+biological languages present in non-coding DNA sequences. le existence
+of one (or more than one) structured biological languages present in
+non-coding DNA sequences. existence of one (or more than one) structured
+biological languages present in non-coding DNA sequences. xistence of
+one (or more than one) structured biological languages present in
+non-coding DNA sequences. stence of one (or more than one) structured
+biological languages present in non-coding DNA sequences. ence of one
+(or more than one) structured biological languages present in non-coding
+DNA sequences. ce of one (or more than one) structured biological
+languages present in non-coding DNA sequences. of one (or more than one)
+structured biological languages present in non-coding DNA sequences. f
+one (or more than one) structured biological languages present in
+non-coding DNA sequences. one (or more than one) structured biological
+languages present in non-coding DNA sequences. one (or more than one)
+structured biological languages present in non-coding DNA sequences. one
+(or more than one) structured biological languages present in non-coding
+DNA sequences. e (or more than one) structured biological languages
+present in non-coding DNA sequences. (or more than one) structured
+biological languages present in non-coding DNA sequences. r more than
+one) structured biological languages present in non-coding DNA
+sequences. more than one) structured biological languages present in
+non-coding DNA sequences. re than one) structured biological languages
+present in non-coding DNA sequences. than one) structured biological
+languages present in non-coding DNA sequences. han one) structured
+biological languages present in non-coding DNA sequences. n one)
+structured biological languages present in non-coding DNA sequences.
+one) structured biological languages present in non-coding DNA
+sequences. e) structured biological languages present in non-coding DNA
+sequences. structured biological languages present in non-coding DNA
+sequences. tructured biological languages present in non-coding DNA
+sequences. uctured biological languages present in non-coding DNA
+sequences. tured biological languages present in non-coding DNA
+sequences. red biological languages present in non-coding DNA sequences.
+d biological languages present in non-coding DNA sequences. biological
+languages present in non-coding DNA sequences. ological languages
+present in non-coding DNA sequences. ogical languages present in
+non-coding DNA sequences. ical languages present in non-coding DNA
+sequences. al languages present in non-coding DNA sequences. languages
+present in non-coding DNA sequences. anguages present in non-coding DNA
+sequences. guages present in non-coding DNA sequences. ages present in
+non-coding DNA sequences. es present in non-coding DNA sequences.
+present in non-coding DNA sequences. resent in non-coding DNA sequences.
+sent in non-coding DNA sequences. nt in non-coding DNA sequences. in
+non-coding DNA sequences. n non-coding DNA sequences. non-coding DNA
+sequences. non-coding DNA sequences. non-coding DNA sequences. n-coding
+DNA sequences. coding DNA sequences. ding DNA sequences. ng DNA
+sequences. DNA sequences. NA sequences. sequences. equences. uences.
+nces. es. . \eq
+
+
+Subsequent analysis, however, makes it quite clear that
+any such interpretations are ill-founded [<A
+HREF="bibrefs.html#Bonhoeffer96">Bonhoeffer96] . Deviations from
+fully random sequence behavior can be attributed to two simple
+characteristics of biological sequence data. First, define $H(n)$ to be
+the entropy of the distribution of $n$-length nucleotides sequences.
+Then the redundancy $R(1)$ of length $n=1$ words is: R(n) = 1 -
+\frac{H(n)}{2n} $R(1)$ then reflects a simple increase with the {\em
+variance} of the four base pairs; but the fact that the bases occur with
+much different frequencies is a well-known biolgical fact. Second, very
+short range correlations between nucleic acids (which are very easy to
+imagine given the basic three letter genetic code) and the fact that in
+DNA the most common words are simply combinations of the most probable
+letters because recombinations events cross over, especially in regions
+of short repeats like this. There are still interesting questions (e.g.,
+why coding and non-coding regions differ in their nucleic acid
+frequencies) but does undermine any large scale language-like properties
+within DNA sequence.
+
+
+A final, very recent example of how Zipf-like
+distributions arise is offered by analyses of WWW SURFING
+behaviors [Huberman98] , and makes
+this same point (but cf. Section &sect;8.1
+for more recent, apparently contradictory data generated from massive
+AltaVista logs). Consider each page click by a browsing user to be a
+character, and the amount of time spent by the same user on the same
+host to be the length of a ``word.'' Then (surprise!), empirical data
+capturing the rank-frequency distribution of each WWW surfing ``ride''
+again shows a (log-log linear) Zipfian relationship with slope equal to
+-1.5, as shown in Figure (figure) .
+
+
+Huberman et al. also propose
+a model explaining this empirical data. Assume that the ``value'' (what
+we might think of as perceived relevance) $V(L)$ of each page in a
+browsing sequence of length $L$ goes up or down according to identical,
+independently distributed (iid) Gaussian random variables $\[ V(L) =
+V(L-1) + \epsilon_L \] Using economic reasoning, Huberman et al. then
+hypothesize: \bq ... an individual will continue to surf until the
+expected cost of continuing is perceived to be larger than the
+discounted expected value of the information to be found in the
+future.... Even if the value of the current page is negative, it may be
+worthwhile to proceed, because a collection of high value pages may
+still be found. If the value is sufficiently negative, however, then it
+no longer worth the risk to continue. \eq If users's browsing behaviors
+follow a random walk governed by these consideration, Huberman et al.
+show that the passage times to this cutoff threshold is given by the
+inverse Dousian distribution: \Pr (L)=\sqrt{\frac{\lambda }{2 \pi
+L^{3}}} \exp \left[ \frac{-\lambda (L-\mu )^{2}}{2\mu ^{2}L}\right]
+\label{eq:websurf} where $\mu $ is the mean of the random walk length
+variable $L$, $\mu ^{3}/\lambda $ is its variance and $\lambda $ is a
+scaling parameter.
+
+
+
+
+Top of Page
+
+ | UP: Rembember Zipf
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

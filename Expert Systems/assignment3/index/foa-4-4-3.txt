@@ -1,0 +1,56 @@
+
+
+FOA: 4.4.3 Interactive RAVe
+
+
+
+
+
+FOA Home
+
+ | UP: RAVe: A Relevance Assessment VEhicle
+
+
+
+Interactive RAVe
+
+The interactive portion of RAVe is an HTML document, as shown in Figure
+(figure) . The top of RAVe¹s window displays the three queries
+against which the subject is to judge each document. Two queries are
+short sentences or phrases, in this case REASONING ABOUT
+UNCERTAINTY and LEGAL APPLICATIONS and the third is
+a scrolling pane containing the text of the long, \RelFbk-defined
+document (in this example, the thesis A PLANNING MODEL WITH
+PROBLEM ANALSIS \ldots). While the subject is asked to judge the
+documents shown to him or her for being about the two short
+queries, the task associated with the \RelFbk-doument query is to find
+``documents like this.''
+
+
+Below each query the RAVe window contains four
+radio-buttons labeled ``Not (relevant)'', ``Possibly (relevant)'',
+``Relevant'', and ``Critically (relevant)''. Since we asked our subjects
+to spend two hours each, but could not assume their participation would
+necessarily be continuous, there is a ``QUIT'' button which allows the
+subject to suspend the session; when the subject launches RAVe again,
+the session will be resumed where he or she left off. Finally, the
+``Next'' button is pressed after the subject has read and recorded his
+or her relevance assessments for a document.
+
+
+
+
+Top of Page
+
+ | UP: RAVe: A Relevance Assessment VEhicle
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

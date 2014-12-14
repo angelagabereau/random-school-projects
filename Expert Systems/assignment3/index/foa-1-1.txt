@@ -1,0 +1,315 @@
+
+
+FOA: 1.1 Finding Out About - a cognitive activity
+
+
+
+
+
+FOA Home
+
+ | UP: Overview
+
+
+
+Finding Out About - a cognitive activity
+
+We are all forced to make decisions regularly, sometimes at the spur of
+the moment. But often we have enough warning that it becomes possible to
+collect our thoughts and even do some research that makes our decision
+as sound as it can be. This book is a closer look at the process of
+FINDING OUT ABOUT (FOA), research activities that allow a
+decision-maker to draw on others' knowledge. It is written from a
+technical perspective, in terms of computational tools that speed the
+FOA activity in the modern era of the distributed networks of knowledge
+collectively known as the World Wide Web (WWW). It shows you how to
+build many of the tools that are useful for searching collections of
+text and other media. The primary argument advanced is that progress
+requires that we appreciate the cognitive foundation we bring
+to this task as academics, as language users, and even as adaptive
+organisms.
+
+
+As organisms, we have evolved a wide range of strategies for
+seeking useful information about our environment. We use the term
+``cognitive'' to highlight the use of internal representations
+that help even the simplest organisms perceive and respond to their
+world; as the organisms get less simple, their cognitive structures
+increase in complexity. Whether done by simple or complex organisms,
+however, the process of {\em finding out about} (FOA) is a very active
+one - making initial guesses about good paths, using complex sets of
+features to decide if we seem to be on the right path, and proceeding
+forward.
+
+
+As humans, we are especially expert at searching through one of
+the most complex environments of all - {Language}. Its system of
+linguistic features is not derived from the natural world, at least not
+directly. It is a constructed, cultural system that has worked well
+since (by definition!) prehistoric times. In part languages remain
+useful because they are capable of change when necessary. New features
+and new objects are noticed, and it becomes necessary for us to express
+new things about them, form our reactions to them, and express
+these reactions to one another.
+
+
+Our first experience of language, as
+children and as a species, was oral - we spoke and listened. As children
+we learn { Sprachspiele}(word or language games) [<A
+HREF="bibrefs.html#REF640">REF640] - how to use language to get what
+we want. A baby saying ``Juice!'' is using the exclamation as a
+tool to make adults move; that's what a word \means. Such a
+functional notion of language, in terms of the jobs it accomplishes,
+will prove central to our conception of what keywords in documents and
+queries mean as part of the FOA task.
+
+
+Beyond the oral uses of
+language, as a species we have also learned the advantages of {writing
+down} important facts which we might otherwise forget. Writing down a
+list of things to do that you might forget tomorrow extends our limited
+memory. Some of these advantages accrue to even a single individual: We
+use language personally, to organize our thoughts and to conceive
+strategies.
+
+
+Even more important, we use writing to say things to others.
+Writing down important, memorable facts in a consistent, {conventional}
+manner, so that others can understand what we mean and vice
+versa, further amplifies the linguistic advantage. As a society, we
+value reading and writing skills because they let us interpret shared
+symbols and coordinate our actions. In advanced cultures scholarship,
+entire curricula can be defined in terms of what Robert McHenry (editor
+in chief of Encyclopedia Britannica) calls <A
+HREF="http://www.howtoknow.com/htktitle.html">``Knowing How To Know''
+.
+
+
+It is easiest to think of the organism's or human's search as being for
+a valuable object, sweet pieces of fruit in the jungle, or (in modern
+times!) a grocer that sells it. But as language has played an
+increasingly important role in our society, searching for valuable
+written passages becomes an end unto itself. Especially as members of
+the academic community, we are likely to go to libraries seeking others'
+writings as part of our search. Here we find rows upon rows of books,
+each full of facts the author thought important, and endorsed by a
+librarian who has selected it. The authors are typically people far from
+our own time and place, using language similar but not identical to our
+own.
+
+
+And the library contains books on many, many topics. We must Find
+Out About a topic of special interest, looking only for those things
+that are RELEVANT to our search. This basic skill is a
+fundamental part of the academic's job: \item we look for references in
+order to write a term paper; \item we read a textbook, looking for help
+in answering an exercise; \item we comb the scientific journals to see
+if a question has already been answered. We know that if we find the
+right reference, the right paper, the right paragraph, ..., our job will
+be made much easier. Language has become not only the means of our
+search, but its object as well.
+
+
+ Today we can also search the WORLD
+WIDE WEB (WWW) for others' opinions of music, movies, or software.
+Of course these examples are much less of an ``academic exercise'' -
+Finding Out About these information commodities, and doing it
+consistently and well, is a skill that the modern information society
+values. But while the infra-structure forming the modern WWW is quite
+recent, the promise offered by truly connecting all the world's
+knowledge has been anticipated for some time, for example by H. G. Wells
+[Wells38] .
+
+
+Many of the FOA searching
+techniques we will discuss in this text have been designed to operate on
+vast collections of apparently ``dead'' linguistic objects: files full
+of old email messages, CDROMs full of manuals or literature, Web servers
+full of technical reports, etc. But at their core each of these
+collections is evidence of real, vital attempts to communicate.
+Typically an AUTHOR (explicitly or implicitly) anticipates the
+interests of some imagined AUDIENCE and produces text that is a
+balance between what the author wants to say and what they think the
+audience wants to hear. A textual CORPUS will contain many such
+documents, written by many different authors, in many styles and for
+many different purposes. A person searching through such a corpus comes
+with their own purposes, and may well use language in a different way
+than any of the authors. But each of the individual linguistic
+expressions -- the authors' attempts to write, the searchers' attempts
+to express their questions and then read the authors' documents -- must
+be appreciated for the WORD GAMES [<A
+HREF="bibrefs.html#REF640">REF640] that they are. FOA is centrally
+concerned with \rikmeaning: the semantics of the words, sentences,
+questions and documents involved. We cannot tell if a document is
+about a topic unless we understand (at least something of) the
+semantics of the document and the topic. This is the notion of
+\about-ness most typical within the tradition of library science [<A
+HREF="bibrefs.html#Hutchins78">Hutchins78] .
+
+
+This means that our
+attempts to engineer good technical solutions must be informed by, and
+can contribute to, a broader philosophy of language. For example, it
+will turn out that FOA's concern with the semantics of entire documents
+is well-complemented by techniques from computational linguistics which
+have tended to focus on syntactic analysis of individual sentences. But
+even more exciting is the fact that the recent availability of new types
+of ELECTRONIC ARTIFACTS -- from email messages and WWW corpora to
+the browsing behaviors of millions of users all trying to FOA -- brings
+an {\em empirical} grounding for new theories of language that may well
+be revolutionary.
+
+
+At its core, the FOA process of browsing readers can be
+imagined to involve three phases: \item Asking a question; \item
+Constructing an answer; \item Assessing the answer.
+
+
+ This conversational
+loop is sketched in Figure (figure) .
+
+
+*{Step1. Asking a
+Question}
+
+
+The first step is initiated by people who (anticipating our
+interest in building a search engine) we'll call ``users,'' and their
+questions. We don't know a lot about these people, but we do know
+they are in a particular frame of mind, a special cognitive state - they
+may be aware knowing what it is that you don't know. Any use of the term
+``awareness'' in this context, therefore, should be interpreted
+loosely.} of a specific gap in their knowledge (or they be only vaguely
+puzzled), and they're motivated to fill it. They want to FOA ... some
+topic.
+
+
+Supposing for a moment that we were there to ask, the users may
+not even be able to characterize the topic, i.e., their knowledge gap.
+More precisely, they may not be able to fully define characteristics of
+the ``answer'' they seek. A paradoxical feature of the FOA problem is
+that if users knew their question, precisely, they might not even need
+the search engine we are designing - forming a clearly posed question is
+often the hardest part of answering it! In any case, we'll call this
+somewhat befuddled but not uncommon cognitive state the users'
+INFORMATION NEED .
+
+
+While a bit confused about their particular
+question, the users are not without resources. First, they can typically
+take their ill-defined, {internal} cognitive state and turn it into an
+{\em external} expression of their question, in some language. We'll
+call their expression the QUERY , and the language from which it
+is constructed the QUERY LANGUAGE .
+
+
+*{Step2. Constructing an
+Answer}
+
+
+So much for the source of the question; whence the answer? If the
+question is being asked of a person, we must worry about equally complex
+characteristics of the answerer's cognitive state:
+
+
+ \item Can
+they translate the user's ill-formed question into a better one? \item
+Do they know the answer themselves? \item Are they able to verbalize
+this answer? \item Can they give the answer in terms that the user will
+understand? \item Can they provide the necessary background knowledge
+for the user to understand the answer itself?
+
+
+ We will refer to the
+question-answerer as the SEARCH ENGINE , a computer program that
+algorithmically performs this task. Immediately each of the concerns
+(just listed) regarding the {\em human} answerer's cognitive state
+translate into extremely ambitious demands we might make of our {\em
+computer} system.
+
+
+Throughout most of this book, we will avoid such
+ambitious issues and instead consider a very restricted form of the FOA
+problem: We will assume that the search engine has available to it only
+a set of pre-existing, ``canned'' passages of text, and that its
+response is limited to identifying one or more of these passages and
+presenting them to the users; see Figure (figure) . We will
+call each of these passages a DOCUMENT , and the entire set of
+documents the CORPUS . Especially when the corpus is very large
+(e.g., assume it contains millions or even billions of documents),
+selecting a very small set (say 10-20) of these as potentially good
+answers to be RETRIEVED will prove sufficiently difficult (and
+practically important) that we will focus on it for the first few
+chapters of this book. In the final chapter consider how this basic
+functionality can be extended towards tools for ``Searching for an
+education'' (cf. Section &sect;8.3.4 ).
+
+
+*{Step3.
+Assessing the answer}
+
+
+Imagine a special instance of the FOA problem: You
+are the user, waiting in line to ask a question of a professor. You're
+confused about a topic that is sure to be on the final exam. When you
+finally get your chance to ask your question, we'll assume that the
+professor does nothing but select the three or four preformed pearls of
+wisdom he or she thinks comes closest to your need, delivers these
+``documents,'' and sends you on your way. ``But wait!'', you want to
+say. ``That isn't what I Or, ``Let me ask it another way.'' Or, ``That
+helps, but I still have this problem.''
+
+
+The third and equally important
+phase of the FOA process is a ``closing of the loop'' between asker and
+answerer, whereby the user(asker) provides an assessment of just how
+RELEVANT they find the answer provided. If after your first
+question and the professor's initial answer you are summarily ushered
+out of the office, you have a perfect right to be angry because the FOA
+process has been violated. FOA is a dialog between
+question-asker and -answerer; it does not end with the search engine's
+first delivery of an answer. This initial exchange is only the first
+iteration of an ongoing conversation by which asker and answerer
+mutually negotiate a satisfactory exchange. In the process, the asker
+may {\em recognize} elements of the answer they seek and be able to
+re-express their information need in terms of threads taken from
+previous answers.
+
+
+Since the question-answerer has been restricted to a
+simple set of documents, the asker's RELEVANCE FEEDBACK must be
+similarly constrained - for each of the documents retrieved by the
+search engine, the asker reacts by saying whether they find the document
+relevant or not. Returning to the student/professor scenario, we can
+imagine this as the student saying ``Thanks, that helps.'' after those
+pearls that do, and remaining silent, or saying ``Huh?'' or ``What does
+that have to do with anything?!'' or ``No, that's not what I meant!''
+otherwise. More precisely, relevance feedback gives the asker the
+opportunity to provide more information with their reaction to each
+retrieved document - whether it is relevant (\Pos), irrelevant (\Neg),
+or neutral (\DCare). This is shown as a Venn diagram-like labeling of
+the set of retrieved documents in (figure) . We'll worry about
+just how to solicit and make use of relevance feedback judgements in
+Chapter 3.
+
+Subsections
+
+	 1.1.1 Working within the IR Tradition
+
+
+
+
+Top of Page
+
+ | UP: Overview
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

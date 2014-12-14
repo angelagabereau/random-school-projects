@@ -1,0 +1,51 @@
+
+
+FOA: 4.3 INDIVIDUALS' assessment: search engine  performance
+
+
+
+
+
+FOA Home
+
+ | UP: Assessing the retrieval
+
+
+
+INDIVIDUALS' assessment: search engine  performance
+
+The last section considered the assessment problem from the perspective
+of a single individual, the browsing user. Now we would like to
+generalize on this individual performance to attempt to obtain
+statistically significant observations.
+
+Subsections
+
+	 4.3.1 Underlying assumptions
+	 4.3.2 Consensual relevance
+	 4.3.3 Traditional evaluation methodologies
+	 4.3.4 Basic measures
+	 4.3.5 Ordering the \Ret set
+	 4.3.6 Normalized recall and precision
+	 4.3.7 Multiple retrievals across varying queries
+	 4.3.8 One-parameter criteria
+	 4.3.9 Test corpora
+	 4.3.10 Other measures
+
+
+
+
+Top of Page
+
+ | UP: Assessing the retrieval
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

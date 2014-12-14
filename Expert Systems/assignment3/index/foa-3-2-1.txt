@@ -1,0 +1,71 @@
+
+
+FOA: 3.2.1 Looking for meaning in all the wrong places \\         (at the character level)
+
+
+
+
+
+FOA Home
+
+ | UP: Rembember Zipf
+
+
+
+Looking for meaning in all the wrong places \\         (at the character level)
+
+The ubiquity of data obeying Zipf's Law has made it a lightning rod,
+attracting a number of ``explanations.'' More, these explanations come
+from an extremely impressive set of original thinkers, from widely
+ranging disciplines: \item Noam Chomsky, the most influential linguist
+of the last 30 years; \item George Miller, the mathematical psychologist
+famous for such insight as the ``$7\pm2$ chunks'' of memory limitation;
+\item Herbert Simon, the Nobel Prize winning economist and one of the
+fathers of artificial intelligence; \item Benoit Mandelbrot, the
+computational physicist most famous for his work on fractals.
+
+
+ Herbert
+Simon, a keen observer of much cognitive activity, suggests the ubiquity
+of Zipf's Law across heterogeneous collections should make us somewhat
+suspicious of its ability to address the ``fine structure'' of
+linguistics: No one supposes that there is any connection between horse
+kicks suffered by soldiers in the German army and blood clots on a
+microscope slide other than that the same urn scheme provides a
+satisfactory abstract model of both phenomena. It is in the same
+direction that we shall look for an explanation of the observed close
+similarities among the five classes of distributions listed above. [<A
+HREF="bibrefs.html#Simon55">Simon55] \eq (With ``urn'' Simon is
+referring to mathematical models, e.g., related to Poisson
+processes.\dhfoot{Poisson processes} See <A
+HREF="foa-3-2-1-3.html">&sect;3.2.1.3 for more on the ``five
+classes'' of Simon's models.)
+
+
+We therefore begin this section by
+reviewing a number of early attempts to explain the phenomena underlying
+ZIpf's Law; its mathematical derivation is reserved for Chapter 5.
+
+Subsections
+
+	 3.2.1.1 Zipf's own explanation
+	 3.2.1.2 Benoit Mandelbrot's explanation
+	 3.2.1.3 Herbert Simon's explanation
+
+
+
+
+Top of Page
+
+ | UP: Rembember Zipf
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

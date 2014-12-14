@@ -1,0 +1,124 @@
+
+
+FOA: 3.3.3 Resolving power
+
+
+
+
+
+FOA Home
+
+ | UP: A statistical basis for keyword meaning
+
+
+
+Resolving power
+
+Zipf observed that the frequency of words' occurrence varies
+dramatically, and Poisson models explore deviations of these occurrence
+patterns from purely random processes. We now make the first important
+move towards a theory of why some words occur more frequently
+and how such statistics can be exploited when building an index
+automatically. Luhn, as far back as 1957, said clearly: It is hereby
+proposed that the frequency of word occurrence in an article furnishes a
+useful measurement of word significance. [<A
+HREF="bibrefs.html#Luhn57">Luhn57] That is, if a word occurs
+frequently, more frequently than we would expect it to within a corpus,
+then it is reflecting emphasis on the part of the author
+about that topic. But the raw frequency of occurrence in a
+document is only one of two critical statistics recommending good
+keywords.
+
+
+Consider a document taken from our AIT corpus, and imagine
+using the keyword with it. By construction, virtually every document in
+the AIT is about \term{ARTIFICIAL INTELLIGENCE}!? Assigning the
+keyword \term{ARTIFICIAL INTELLIGENCE} to any document in AIT would be a
+mistake, not because this document isn't about \term{ARTIFICIAL
+INTELLIGENCE}, but because this term can not help us {\em discriminate}
+one subset of our corpus as relevant to any query. If we change our
+search task to looking not only in our AIT corpus but through a much
+larger collection (for example, all computer industry newsletters) then
+associating \term{ARTIFICIAL INTELLIGENCE} with those articles in our
+AIT subcorpus becomes a good idea. This term helps to distinguish AI
+documents from others.
+
+
+The second critical characteristic of good indices
+now becomes clear - a good index term not only characterizes a document
+{absolutely}, as a feature of a document in isolation, but also allows
+us to discriminate it {\em relative} to other documents in the corpus.
+Hence keywords are not strictly properties of any single document, but
+reflect a relationship between an individual document and the collection
+from which it might be selected.
+
+
+These two, countervailing considerations
+suggest that the best keywords will not be the most ubiquitous,
+frequently occurring terms, nor those that occur only once or twice, but
+rather those occurring a moderate number of times. Using Zipf's rank
+ordering of words as a baseline, Luhn hypothesized a modal function of a
+word's rank he called RESOLVING POWER centered exactly at the
+middle of this rank ordering. If resolving power is defined as a word's
+ability to {\em discriminate} content, Luhn assumed that this quantity
+is maximal at the middle and then falls off at either very high or very
+low frequency extremes, as shown in Figure (figure) . The next
+step is then to establish maximal and minimal occurrence
+thresholds defining useful, mid-frequency index terms.
+Unfortunately, Luhn's view does not provide theoretical grounds for
+selecting these bounds, and so we are reduced to the engineering task of
+tuning them for optimal performance.
+
+
+We'll begin with the
+maximal-frequency threshold, used to exclude words that occur too
+frequently. For any particular corpus, it is interesting to contrast
+this set of most-common words with the negative dictionary of noise
+words, defined in Section &sect;2.3.2 .
+While there may often be great overlap, the negative dictionary list is
+typically a list that has proven itself to be practically useful across
+many different corpora, while the most frequent tokens in a particular
+corpus may be quite specific to it.
+
+
+Establishing the other, low-frequency
+threshold is less intuitive. Assuming that our index is to be of limited
+size, including a certain keyword means we must exclude some other. This
+suggests that a word that occurs in exactly one document can't possibly
+be used to help discriminate that document from others regularly. For
+example, imagine a word -- suppose it is -- that occurs exactly once, in
+a single document. If we took out that word \term{DERIVATIVE} and put in
+any other word, for example \term{FOOBAR}, in terms of the word
+frequency co-occurrence statistics that are the basis of all our
+indexing techniques, the relationship between that document and all the
+other documents in the collection will remain unchanged! In terms of
+overlap between what the word \term{DERIVATIVE} \means, in the FOA sense
+of what this and other documents are \about, a single word occurrence
+has no rd occurrence has no ce has no \rikmeaning!
+
+
+The most useful words
+will be those that are not used so often as to be roughly common to all
+of the documents, and not so rare so as to be (nearly) unique to any one
+(or small set) of documents. We seek those keywords whose
+combinatorial properties, when used in concert with one another
+as part of queries, help to compare and contrast topical areas of
+interest against one another.
+
+
+
+
+Top of Page
+
+ | UP: A statistical basis for keyword meaning
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

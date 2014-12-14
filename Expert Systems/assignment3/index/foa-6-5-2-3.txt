@@ -1,0 +1,62 @@
+
+
+FOA: 6.5.2.3 \RelFbk in AIR
+
+
+
+
+
+FOA Home
+
+ | UP: Spreading activation search
+
+
+
+\RelFbk in AIR
+
+Queries subsequent to the first are performed much differently. After
+AIR is done retrieving the network of features, the user responds with
+indicating which features are considered (by that user) relevant to the
+query and which are not. Using a mouse, the user marks features with the
+symbols: {\bf ++, +, --} and {\bf -- --}, indicating that the feature
+was {\tt Very Relevant, Relevant, Irrelevant}, or {\tt Very Irrelevant},
+respectively. Not all features need be commented upon.
+
+
+The system
+constructs a new query directly from this feedback. First, terms from
+the previous query are retained. Positively marked features are added to
+this query, as are the negated versions of features marked negatively.
+Equal weight is placed on each of these features, except that features
+marked {Very Relevant} or {\tt Very Irrelevant} are counted double.
+
+
+From
+the perspective of retrieval, this RelFbk becomes a form of {\em
+browsing}: positively marked features are directions which the user
+wants to pursue, and negatively marked features are directions which
+should be pruned from the search. From the perspective of learning,
+thisRelFbk is exactly the training signal AIR needs to modify its
+representations through learning. This unification of learning (i.e.,
+changing representations) and doing (i.e., browsing) was a central
+component of AIR's design. It mean that the collection of feedback is
+not an onerous, additional task for the user, but a natural part of the
+retrieval process.
+
+
+
+
+Top of Page
+
+ | UP: Spreading activation search
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

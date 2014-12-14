@@ -1,0 +1,145 @@
+
+
+FOA: 6.1.1 Bibliometric analysis of science
+
+
+
+
+
+FOA Home
+
+ | UP: Citation: inter-document links
+
+
+
+Bibliometric analysis of science
+
+Most extensive analysis of citation has been in science. Long before
+even Newton [Newton1776]
+appreciated ``standing on the shoulders of the giants that came
+before,'' scientists have realized that they need one another to
+advance. In some cases the reference is to arguments on which a new
+author builds; in other cases there is disagreement about hypotheses,
+data, etc.
+
+
+The field of BIBLIOMETRICS has found a great deal of
+interesting structure in graphs created by bibliographic citation links.
+That is, imagine each document in a corpus is represented by a node in a
+graph, and a directed edge is drawn from document $d_{j}$ to $d_{i}$
+just in case $d_{j}$ refers to $d_{i}$ in its bibliography.
+
+
+Figure
+(figure) [Price86] shows
+this citation structure when the references are ordered by a natural,
+temporal feature. In any subject area, papers can be indexed
+chronologically, and a dot placed at location $\langle i,j \rangle$ just
+in case document $d_{i}$ cites document $d_{j}$. Since citations can run
+only backward in time, this graph is upper triangular. phenomena
+investigated in the early 1900's. N-rays were a form of radiation first
+hypothesized to exist in 1904. After an extended period of
+investigation, the community of physicists investigating the question
+determined that in fact there were no such things as N-rays! This means
+the corpus of documents has a convenient, cleanly defined time period.
+The example also provides insight into the larger scientific process:
+This is what Science looks like when this engine is entirely divorced
+from any underlying phenomena. In general we can, with Plato, imagine
+that there is indeed an underlying reality, as well as a social process
+of science attempting to describe that reality. We can hope that in most
+cases any particular scientist's activities, or that of the community in
+which he participates is governed by both influences, that of the
+physical reality and of the social process. }
+
+
+As with many fields, this
+one begins with a small number of highly cross-linked papers in the
+upper left hand corner. Strong horizontal and vertical stripes can also
+be seen against a more uncorrelated background. Horizontal lines
+correspond to CLASSIC PAPERS citations: chestnuts that everyone
+includes in their bibliography. Vertical stripes are papers that have
+much more extensive bibliographies, and stretch much farther back in
+time than typical; these are often referred to as REVIEW ARTICLES
+. Note how these semantic deterimations can be derived from patterns in
+the syntactic facts of citation. Other inferences are also possible.
+
+
+Perhaps
+the most common use of citation graphs is IMPACT ANALYSIS . In
+terms of the bibliographic graph, a document's importance, its affect on
+a field, is proportional to its IN-DEGREE : the number of
+citation links pointing into a document node. Price provides motivation
+for this measure: Flagrant violations there may be, but on the whole
+there is, whether we like it or not, a reasonably good correlation
+between the eminence of a scientist and his productivity of papers. It
+takes persistence and perseverence to be a good scientist, and these are
+frequently reflected in a sustained production of scholarly writing. [<A
+HREF="bibrefs.html#Price86">Price86]
+
+
+ This suggests a simple
+heuristic, widely used by university deans who must quickly evaluate
+faculty up for promotion: important authors are those with higher impact
+than their peers! The Institute for Scientific Information (ISI) has
+made an entire industry of collating bibliographic citations and
+inverting them. Its Web of
+Science product now makes hypertext navigation of this valuable
+information straight-forward. Similar arguments can be extended to
+identify important academic departments, universities, even countries.
+This mode of analysis, used to evaluate individuals, scientific
+institutions and disciplines, consistently makes news when data and
+politics cross paths [May97] .
+
+
+Finally,
+as mentioned in &sect;5.2.5 ,
+CO-CITATION can be used as a basis for inter-document similarity:
+two documents are similar to the extent that their bibliographies
+overlap. Bar-Hillel has been credited with the first suggestion of using
+co-citation as a similarity metric between documents [<A
+HREF="bibrefs.html#BarHillel57">BarHillel57] [<A
+HREF="bibrefs.html#Swanson88">Swanson88] ; Henry Small, Eugene
+Garfield and others have provided some of the first empirical support
+for this hypothesis [Small73] [<A
+HREF="bibrefs.html#REF616">REF616] [<A
+HREF="bibrefs.html#REF620">REF620] [<A
+HREF="bibrefs.html#REF596">REF596] .
+
+
+So-called INVISIBLE
+COLLEGES [REF621] connecting
+cliques of self-referential colleagues who are relatively independent of
+the rest of science have been identified. Beyond fully isolated cliques,
+higher order structure over sets of documents can also be analyzed. we
+can imagine that the documents of one discipline have much higher
+connectivity among themselves than they do with papers in other
+disciplines. A new paper, whose bibliography cites papers coming from
+more than one discipline can therefore be imagined to be a new, cutting
+edge synthesis!?
+
+
+Bibliometrics has also made clear many dangers in using
+citation data. What we might call the NORM OF SCHOLARSHIP , the
+average number of citations in a document, seems to be about 10 to 20
+[Price86] . Some scientific
+disciplines rely on much longer bibliographies than others; within
+discipline, idiosyncratic author variations in bibliography length are
+also common.
+
+
+
+
+Top of Page
+
+ | UP: Citation: inter-document links
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

@@ -1,0 +1,78 @@
+
+
+FOA: 3.4.1 Keyword discrimination
+
+
+
+
+
+FOA Home
+
+ | UP: Vector space
+
+
+
+Keyword discrimination
+
+We can immediately use this vector space for something useful, as the
+source of yet another approach to the question of appropriate keyword
+weightings. Recall that in Figure (FOAref) our initial
+assumption was that each and every keyword was to be used as a dimension
+of the vector space. Now we ask: What would happen if we removed one of
+these keywords?
+
+
+The first step is to extend the measure
+\mathname{Sim}(\mathbf{q},\mathbf{d}) \) of document-query similarity to
+measure inter-document similarities \(
+\mathname{Sim}(\mathbf{d}_{i},\mathbf{d}_{j}) \) as well. Then, for an
+arbitrary measure of document-document similarity (e.g., the inner
+product measure mentioned above), we consider all pairs of documents,
+and then the AVERAGE SIMILARITY across all of them. {Fortunately,
+it turns out that there is a more efficient way to compute average
+similarity than actually comparing all ${n}\choose{2}$ document pairs.
+First, define the CENTROID document to be the average document;
+i.e., the resulting of adding all\( \mathname{NDoc} \) vectors and
+dividing it by \( \mathname{NDoc} \). Then the average similarity can
+also be defined in terms of the distance of each document from this
+center. \overline{\mathname{Sim}_k}&\equiv&{1\over
+\mathname{NDoc}^2}\sum_{i,j} \mathname{Sim}(d_i, d_j) \\ &=
+&\alpha\sum_{i=1}^{\mathname{NDoc}} \mathname{Sim}(d_i, D^*) }
+
+
+Recall
+that our goal is to devise a representation of documents that makes it
+easiest for queries to discriminate them. Since each keyword corresponds
+to a dimension, {removing} one results in a {\em compression} of the
+space into $K-1$ dimensions, and we can expect that the representation
+of each of the documents will change at least slightly. More precisely,
+removing a dimension along which the documents varied significantly
+means that vectors which were far apart in the $K$-dimensional space are
+now much closer together.
+
+
+This observation can be used to ask just how
+useful each potential keyword is. If it is discriminating, removing it
+will result in a signficant compression of the documents' vectors; if
+removing it changes very little, the keyword is less helpful. Using the
+average similarity as our measure of just how close together the
+documents are, and asking this question for each and every keyword, we
+arrive at yet another measure of keyword discrimination:
+
+
+
+
+Top of Page
+
+ | UP: Vector space
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

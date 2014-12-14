@@ -1,0 +1,44 @@
+
+
+FOA: 1.2.1 Elements of the query language
+
+
+
+
+
+FOA Home
+
+ | UP: Keywords
+
+
+
+Elements of the query language
+
+If the query comes from a student during office hours, or from a patron
+at a reference librarian's desk, the QUERY LANGUAGE they'll use
+to frame their question is all of NATURAL LANGUAGE, that most
+expressive ``mother tongue'' familiar to both question-asker and
+-answerer. But for the software search engines we will consider, we must
+assume a much more constrained, ``artificial'' query language. Like
+other languages, ours will have both a meaningful VOCABULARY --
+the set of important keywords any users are allowed to mention in any of
+their queries -- and a {\em syntax} that allows us to construct more
+elaborate query structures.
+
+
+
+
+Top of Page
+
+ | UP: Keywords
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

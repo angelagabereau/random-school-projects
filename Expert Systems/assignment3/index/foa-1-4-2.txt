@@ -1,0 +1,47 @@
+
+
+FOA: 1.4.2 Corpora
+
+
+
+
+
+FOA Home
+
+ | UP: Documents
+
+
+
+Corpora
+
+We have focused on individual documents, but of course the FOA problem
+would not interest us except that we are typically faced with a corpus
+of {millions} of such documents, and interested in finding only a
+handful of interest. The actual number of documents and their cumulative
+size will matter a great deal, as some of our IR methods have time or
+space complexities that make them viable only within certain parameters.
+To pick a simple example, if you are trying to find a newspaper article
+(you read it a few days ago) for a friend, exhaustively searching
+through all the pages is probably quite effective if you know it was in
+today's paper, but not if you need to search through an entire month's
+recycling pile! Similarly, a standard utility like the Unix grep command
+can be a very practical alternative if the corpus is small and the
+queries simple.
+
+
+
+
+Top of Page
+
+ | UP: Documents
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

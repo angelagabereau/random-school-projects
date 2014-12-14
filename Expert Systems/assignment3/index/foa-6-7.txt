@@ -1,0 +1,121 @@
+
+
+FOA: 6.7 FOA(The Law)
+
+
+
+
+
+FOA Home
+
+ | UP: Inference beyond the \Index
+
+
+
+FOA(The Law)
+
+The careful reader will have noticed that there have been an unusually
+large number of examples drawn from the legal domain. There are a number
+of things it can teach us about general principals of FOA [<A
+HREF="bibrefs.html#REF398">REF398] . The Common Law tradition is
+very old, and has been connected to an organized corpus of documents in
+free text for a very long time. As the Doonesbury cartoon (part of Gary
+Trudeau's Bicentennial series) in Figure (figure) suggests,
+legal documents help to demonstrate just how long prose can live beyond
+its drafting. Hafner was one of the first to recognize this, manually
+representing a wide range of attributes for a small number of documents
+in the legal domain [REF131] . This
+work has now become a part of a larger effort within AI to model the
+legal reasoning process (e.g., reasoning by analogy [<A
+HREF="bibrefs.html#Ashley90">Ashley90] ). Here we are most concerned
+with what can we learn from lawyers who have FOA the Law which might
+generalizes to other corpora and searchers.
+
+
+First, the fact that judicial
+opinions have been written for so long and in such a particular
+``voice'' has meant that it is also possibel to consider special
+linguistic characteristics of this legal genre [<A
+HREF="bibrefs.html#Goodrich87">Goodrich87] [<A
+HREF="bibrefs.html#Levi82">Levi82] .
+
+
+Second, notions of citation are
+especially well-used within this corpus. Simple concepts like impact
+have been described [REF1074] , and
+theories of legal citation proposed [<A
+HREF="bibrefs.html#REF128">REF128] [<A
+HREF="bibrefs.html#REF1069">REF1069] [<A
+HREF="bibrefs.html#REF1071">REF1071] . Obviously, manipulation of
+access to the legal printed record (for example by controlling which
+judges' opinions are made available!) has enormous political
+ramifications [Brenner92] . This
+become even more true as recent consolidation of the media industry
+means that one or two corporations effectively control the entire
+process of legal publication.
+
+
+Third, the backbone of the legal process is
+an adversarial argument. This dialectic is often explicit, for example
+as marked by the { cf., but cf.} citation conventions (cf. Section <A
+HREF="foa-6-1.html">&sect;6.1 ). The presense of such syntactic
+marker makes it conceivable to analyze polazrization across an entire
+legal literature. Of course the arguments contained in briefs and
+opinions contain a great deal more structure than simple opposition. The
+analysis of legal ARGUMENT STRUCTURES , in conjunction with the
+textual foundations of Common Law, is perhaps the most important feature
+of the legal domain to FOA. One the one hand, it is possible to model
+individual documents and their {\em logical} features so as to reason
+about them [REF131] [<A
+HREF="bibrefs.html#REF124">REF124] . Special DEONTIC LOGICS
+have been developed especially to deal with the concepts of ``rights''
+and ``obligations'' that are at the heart of many legal relations [<A
+HREF="bibrefs.html#REF730">REF730] .
+
+
+{Statistical} analyses of large
+document corpora may seem contrary to {\em logical} analyses of the
+arguments contained in each of them, and in fact this chasm runs very
+deep. Not only does it suggest quite different technology bases from the
+arsenal of (roughly inductive vs. deductive) AI techniques, but reflects
+a tension within the law itself. Rose [<A
+HREF="bibrefs.html#REF1113">REF1113] refers to a spectrum of legal
+philosophies ranging from ``formalism'' to ``realism.'' On the one hand,
+many legal documents certainly seem to function logically, with careful
+definitions and reasoning that Langdell [<A
+HREF="bibrefs.html#Langdell87">Langdell87] has idealized as
+``mechanical jurisprudence.'' At the same time analyses such as the
+Critical Legal Studies [Unger83] have
+helped to demonstrate that the Law is just another social process.
+
+
+It is
+exactly this dual nature of the Law and hence legal texts that make it
+especially interesting as an example of FOA [<A
+HREF="bibrefs.html#Nerhot91">Nerhot91] . Individual applications
+include LITIGATION SUPPORT systems which allow lawyers to search
+through the truckloads of documents involved in extended trials. On a
+much larger scale, systems like West Group's <A
+HREF="http://www.westlaw.com/">WestLaw and Reed Elsevier's <A
+HREF="http://www.lexis.com">LEXIS systems provide access to the bulk
+of statuatory and case law to all practicing lawyers [<A
+HREF="bibrefs.html#REF1064">REF1064] [<A
+HREF="bibrefs.html#REF733">REF733] .
+
+
+
+
+Top of Page
+
+ | UP: Inference beyond the \Index
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

@@ -1,0 +1,53 @@
+
+
+FOA: 3.4.3 Summary: SMART weighting specification
+
+
+
+
+
+FOA Home
+
+ | UP: Vector space
+
+
+
+Summary: SMART weighting specification
+
+While the variety of potential keyword weighting schemes (signal/noise,
+IDF, keyword discrimination, etc.) may seem large, there is in fact a
+systematicity to this variation.
+
+
+SMART is an extremely influencial and
+widely used software system for investigating IR techniques [<A
+HREF="bibrefs.html#REF153">REF153] [<A
+HREF="bibrefs.html#REF869">REF869] . One secret of its success is
+that SMART provides a simple parameter-driven mechanism for easily
+changing from one form of index weighting to another.
+
+
+In SMART, the
+weight is decomposed into three factors:
+
+
+Each of these components can
+then be specified independently:
+
+
+
+
+Top of Page
+
+ | UP: Vector space
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

@@ -1,0 +1,149 @@
+
+
+FOA: 6.5.3 Discovering latent knowledge within a corpus
+
+
+
+
+
+FOA Home
+
+ | UP: Modes of inference
+
+
+
+Discovering latent knowledge within a corpus
+
+Nothing is more frustrating than spending many, many hours on a
+technical problem, unless it is then finding out that someone else had
+{previously solved} this same problem! One of the motivations shared by
+many working on search engine technology is the hope that we can reduce
+the number of times the same wheel is reinvented.
+
+
+D.R. Swanson has
+concentrated on the scientific and medical literature, and viewed it as
+``a potential source of new knowledge.'' [<A
+HREF="bibrefs.html#Swanson90">Swanson90] [<A
+HREF="bibrefs.html#Swanson97">Swanson97] . Each new medical report
+contains new knowledge about some particular disease or treatment. But
+Swanson has gone the next step, to imagine what modes of inference might
+be most appropriate across a {\em network} of such papers each
+describing potential causal relations: Each scientific article
+contributes to a web of logical connections that interlace the
+literature of science. Some of these connections are made explicit
+through references from one article to another, citatipns that reflect,
+among other things, authors' perceptions of how their own work is
+related to that of others and how it fits into the scheme of existing
+knowledge. However, there may exist many implicit logical interarticle
+connections that are unintended and not marked by citations; such
+implicit links are the focus of this paper. (The word ``logical'' here
+is used informally; a ``logical connection'' is formed by statements
+that are related by any process of scientific reasoning or argument.)
+Scientific articles can be seen as clustering into more or less
+independent sets or ``literatures." Within each set, common probiems are
+addressed, common arguments are advanced, and articles ``interact'' by
+citing one another. Distinct literatures that are essentially unrelated
+are in general "noninteractive" in that they do not cite or refer
+directly to each other, have no articles in common, and are not cited
+together by other articles. On the other hand, if two literatures are
+linked by arguments that they respectively put forward -- that is, are
+``logically'' related or connected -- one would expect them to cite each
+other. If they do not, then the logical connections between them would
+be of great interest, for such connections may be unintended, unnoticed,
+and unknown-therefore potential sources of new knowledge.... The number
+of possible pairs of literatures (that might be connected) increases
+very nearly as the square of the number of literatures; the number of
+possible connections increases at even a greater rate if triple or
+higher combinations are taken into account rather than just pairs. From
+this perspective, the significance of the "information explosion" may
+lie not in an explosion of quantity per se, but in an incalculably
+greater combinatorial explosion of unnoticed {\em logical} connections.
+(p. 29,35)
+
+
+ Swanson's first and most well-known example of new knowledge
+discovered in this fashion identified fish oil as a treatment for
+Raynaud's syndrome, a circulatory problem resulting in poor blood supply
+to the extremities. Figure (figure) shows a second example of
+Swanson's method. Beginning with a syndrome like migraine headaches,
+Swanson searches the literature for features mentioned in the context of
+migraines which also have been mentioned in a second, disjoint,
+``mutually oblivious'' literature. Working backwards from the syndrome
+to be explained, a query is formed against a medical corpus like
+MEDLINE. The resulting set of (in this case 63) documents is then
+analyzed and clustered into related sets; it is in this clustering that
+Swanson's {\em manual}, intellectual effort is most obvious. The
+clusters are then used to suggest additional, new queries. Finally, the
+single common ``cause'' of MAGNESIUM is identified. Fig.
+(FOAref) also shows an attempt to classify the relationship
+between common phrases in the retrieved literature and the relation to
+the syndrome. Further, the relationship between these same phrases, or
+lexical variations on them! and the common cause magnesium is also
+forced into structured relationships.
+
+
+It is hard to imagine a more
+exciting prospect for the analysis of all literature. The identification
+of such ``undiscovered public knowledge'' is almost certainly possible
+in many other situations. The question becomes how we might
+algorithmically search for all of them. Note especially the liberties
+taken in interpreting the literature and phrases used consistently
+within it as they have been transformed into the {structured relations}
+of Fig. (FOAref) . These relations are meant to suggest more
+formal and powerful modes of inference between causes and effects
+mentioned within each paper. Some of the arrowheads show suggest causal
+relationships; some relationships (e.g., {\tt associated\_with}) are
+neutral with respect to correlation versus causation; others ({\tt
+type\_of}) suggest hierarchic relations between classes.
+
+
+Swanson is
+well-aware of these difficulties: ... [the] form and structure of
+logically connected arguments are in general recognizable by scientists
+irrespective of their specialty, a point that may have implications for
+research on futuristic, more fully automated systems. However, the
+simple structure of the syllogistic model does not in many respects
+reflect the depth or range of actual problems that would be encountered
+if one tried to build a database of logical connections\ldots. The
+objective, moreover, is not simply to draw mechanistic logical
+inferences, but rather to deter- mine whether certain plausible
+connections or hy- potheses appear to be worth testing. Most articles
+harbor, either explicitly or implicitly, an enormous number of logical
+connections. Which connections are relevant and important can be de-
+termined only in the light of a specific context, hy- pothesis, problem,
+or question; but such contexts and questions are always changing. The
+degree to which one can hope to encode logical connections in any form
+suitable for all future uses may therefore be quite limited. (p. 35)
+
+
+
+Recognizing that even if fully automatic discovery of new facts is
+currently too hard, Gordon and Lindsey have investigated forms of
+``discovery support'' [Gordon96] .
+Gordon and Dumais have also explored the use of LSI techniques (cf.
+Section &sect;5.2.3 ) as part of the
+literature-based discovery process [<A
+HREF="bibrefs.html#Gordon98">Gordon98] . The formulization of SVD,
+eigenstructure analysis of the relationship between a query and
+documents (step 2) and then the analysis of these intermediate
+literatures and ultimate causes (step 3) is an important extension
+beyond the manual investigations originally proposed by Swanson.
+
+
+
+
+Top of Page
+
+ | UP: Modes of inference
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

@@ -1,0 +1,476 @@
+(define build-record
+  (lambda (state parent depth weight)
+    (list state parent depth weight)
+    )
+  )
+(define get-state
+  (lambda (record)
+    (list-ref record 0)
+    )
+  )
+(define get-parent
+  (lambda (record)
+    (list-ref record 1)
+    )
+  )
+(define get-depth
+  (lambda (record)
+    (list-ref record 2)
+    )
+  )
+(define get-weight
+  (lambda (record)
+    (list-ref record 3)
+    )
+  )
+(define up ;moves tile b up one place in 8 puzzel.  Only works when only 1 b tile exists in 8 puzzel
+  (lambda (state)
+    (let ((b-subset (member 'B state)) ;b-subset is the sublist of state, of which B is (car b-subset)
+          (blank-pos -1)
+          )
+      (cond ((not b-subset) '()) ; if b-subset is false return empty list.
+             ((< 6 (length b-subset)) '()) ; if the blank is in the top row return empty list.
+             (else (set! blank-pos
+                         (- 9 (length b-subset))); blank-pos is set to 9 miuns the length of b-subset
+                   (swap state 'B (list-ref state (- blank-pos 3))) ;subtract 3 from blank-pos b/c a move up is equal to moving element 3 places back in list.
+                   )
+             )
+            )
+      )
+    )
+(define down
+  (lambda (state)
+    (let ((b-subset (member 'B state)) ;b-subset is the sublist of state, of which B is (car b-subset)
+          (blank-pos -1)
+          )
+      (cond ((not b-subset) '()) ; if b-subset is false return empty list.
+             ((< (length b-subset) 4) '()) ; if the blank is in the bottom row return empty list.
+             (else (set! blank-pos
+                         (- 9 (length b-subset))); blank-pos is set to 9 miuns the length of b-subset
+                   (swap state 'B (list-ref state (+ blank-pos 3))) ;add 3 from blank-pos b/c a move down is equal to moving element 3 places forward in list.
+                   )
+             )
+            )
+      )
+  )
+(define left
+  (lambda (state)
+        (let ((b-subset (member 'B state)) ;b-subset is the sublist of state, of which B is (car b-subset)
+          (blank-pos -1)
+          )
+      (cond ((not b-subset) '()) ; if b-subset is false return empty list.
+             ((= (modulo (length b-subset) 3) 0) '()) ; if the blank is in the left row return empty list.
+             (else (set! blank-pos
+                         (- 9 (length b-subset))); blank-pos is set to 9 minus the length of b-subset
+                   (swap state 'B (list-ref state (- blank-pos 1))) ;subtract 1 from blank-pos b/c a move left is equal to moving element 1 place back in list.
+                   )
+             )
+            )
+      )
+  )
+(define right
+  (lambda (state)
+        (let ((b-subset (member 'B state)) ;b-subset is the sublist of state, of which B is (car b-subset)
+          (blank-pos -1)
+          )
+      (cond ((not b-subset) '()) ; if b-subset is false return empty list.
+             ((= 1 (modulo (length b-subset) 3)) '()) ; if the blank is in the right row return empty list.
+             (else (set! blank-pos
+                         (- 9 (length b-subset))); blank-pos is set to 9 minus the length of b-subset
+                   (swap state 'B (list-ref state (+ blank-pos 1))) ;add 1 from blank-pos b/c a move right is equal to moving element 1 place forward in list.
+                   )
+             )
+          )
+    )
+  )
+(define swap ; swap the element in list ls1 (which wil be 'B) with the element1
+  (lambda (state t1 t2)
+    (define new-tile -1) 
+    (do ((k (- (length state) 1) (- k 1))
+         (new-state '() (cons new-tile new-state))
+         )
+      ((= -1 k) 
+        new-state
+       )
+      (set! new-tile (cond ((equal? (list-ref state k) t1) t2)
+                              ((equal? (list-ref state k) t2) t1)
+                              (else (list-ref state k))
+                              )
+            )
+      )
+    )
+  )
+(define retrieve-by-state ;checks if child's state is already on record-ls
+  (lambda (child-state record-ls)
+    (if (or (null? record-ls) (null? child-state) )
+        #f    
+          (do ((record-state (get-state (car record-ls)) (get-state (car record-ls))))
+            ((or (equal? child-state record-state) (= 1 (length record-ls)))
+             (if (equal? child-state record-state)
+                 #t ;child-state is a member of record-ls
+                 #f ; record-ls is null and thus child-state is not a member of record-ls
+                 )
+             )
+            (set! record-ls (cdr record-ls))
+            )
+        
+        )
+    )
+  )
+(define generate-descendants
+  (lambda (state depth moves)
+    (if (null? moves)
+        '()
+        (let ((child ((car moves) state)) ;get a child state
+              (rest (generate-descendants state depth (cdr moves))) ; rest stores result from recursive call to generate descendants with one less move.
+              )
+          (cond ((null? child) rest) ;HOW WOULD THIS BE NULL????????
+                ((retrieve-by-state child rest) rest) ;is the child state on rest
+                ((retrieve-by-state child open) rest) ;is the child state on open
+                ((retrieve-by-state child closed);is the child state on closed 
+                 (begin;if the record for child state on closed has a smaller depth replace the record on closed with the child state
+                   (replace_record_with_smaller_depth_record (build-record child state depth (+ depth (heuristic child )))) 
+                   rest)
+                 ) 
+                (else (cons (build-record child state depth (+ depth (heuristic child ))) rest));build a record from child state and add it to rest. 'weight' is evaluated here f=g+h, where g is depth  and h is result of call to heuristic
+                )
+          )
+        )
+    )
+  )
+(define record-index-finder ; given a state find it's record on the list closed, return record
+  (lambda(state) ;find the record in closed for given state
+    (do ((counter 0 (+ 1 counter))
+         (record '())
+         )
+      ((or (= counter (length closed));if the end of closed has been reached
+           (not (null? record));or if the record has been found
+           )
+       (- counter 1);return the record containing state, null is returned if search fails
+       )
+      (let* ((closed-record (list-ref closed counter))
+             (closed-state (get-state closed-record))
+             )
+        (if (equal? state closed-state); if the current record on closed under examination contains state as it's state set record
+            (set! record closed-record)
+            )
+        )
+      )
+    )
+  )
+(define replace_record_with_smaller_depth_record ;check if the state has a smaller depth then the state on closed, if so replace the state on closed list with the given state.
+  (lambda(record) 
+    (let* ((state (get-state record))
+           (state-depth (get-depth record))
+           (closed-record-index (record-index-finder state)); find the index of the record in closed that has state equal to given record's state
+           (closed-record (list-ref closed closed-record-index))
+           (closed-subset (list-tail closed closed-record-index));get the sublist of closed from closed-record-index to end of list
+           (closed-state-depth (get-depth closed-record))
+           (new-closed '())
+           ) 
+      (if (< state-depth closed-state-depth)
+          (begin
+            ;remove closed-record because it has a highr depth than given record
+            (set! closed-subset (cdr closed-subset))
+            ;create a new closed list from 2 sublists and the given record
+            (newline)
+            (set! new-closed (cons record new-closed))
+            ;get the sublist of closed from 0 to closed-record-index and append to new-closed
+            (set! new-closed (append (list-header closed closed-record-index) new-closed))
+            (set! new-closed (append closed-subset new-closed))
+            ;sort closed list.
+            (set! closed (sort-records new-closed))
+            )
+          )
+      )
+    )
+  )
+(define display-path ;takes a list of the states leading to the goal state and displays them
+  (lambda (path-list)
+    (if (null? path-list)
+        (display "Goal Reached!")
+        (begin
+          (display (car path-list))
+          (newline)
+          (display-path (cdr path-list))
+          )
+        )
+    )
+  )
+(define record-finder ; given a state find it's record on the list closed, return record
+  (lambda(state) ;find the record in closed for given state
+    (do ((counter 0 (+ 1 counter))
+         (record '())
+         )
+      ((or (= counter (length closed));if the end of closed has been reached
+           (not (null? record));or if the record has been found
+           )
+       record;return the record containing state, null is returned if search fails
+       )
+      (let* ((closed-record (list-ref closed counter))
+             (closed-state (get-state closed-record))
+             )
+        (if (equal? state closed-state); if the current record on closed under examination contains state as it's state set record
+            (set! record closed-record)
+            )
+        )
+      )
+    )
+  )
+
+(define build-solution ;takes a list and returns a list of states, tracing the path from start-state to state 
+  (lambda (record)
+    (if (null? record)
+        '()
+        (letrec ((state (get-state record))
+                 (solution-path '())
+                 (parent-state (get-parent record))
+                 ; --------------------------------------------------------
+                 ;recusion
+                 (path-builder (lambda(state parent-state);constructs the list recursively
+                                 (let ((new-record '()))
+                                   (if (null? parent-state);start state has been reached
+                                       (cons state solution-path);push final state onto list and return
+                                       (begin
+                                         (set! solution-path (cons state solution-path));push state onto list
+                                         (set! new-record (record-finder parent-state));find parent-state's record
+                                         (if (null? new-record)
+                                             (path-builder '() '())
+                                             (path-builder (get-state new-record) (get-parent new-record))
+                                             )
+                                         )
+                                       )
+                                   )
+                                 )
+                               )
+                 )
+          ; ---------------------------------------
+          (path-builder state parent-state)
+          )
+        )
+    
+    )
+  )
+(define list-header ;return a sublist of ls from beginning to the k-1 elememt
+  (lambda (ls k)
+    (let ((sublist '()))
+      (do ((counter (- k 1 ) (- counter 1)))
+        ((< counter 0 )
+         sublist
+         )
+        (set! sublist (cons (list-ref ls counter) sublist))
+        )
+      )
+    )
+  )
+
+(define insert-by-weight ; creates a new sorted list from descendants and open, returns new open list
+  (lambda (descendants)
+    (sort-records descendants);sort descendants and return sorted list
+    )
+  )
+
+(define sort-records
+  (lambda (ls)
+    (let ((n (length ls)))
+      (if (= n 1)
+          ls
+          (let ((i (quotient n 2)))
+            (merge-records (sort-records (list-header ls i))
+                   (sort-records (list-tail ls i))
+                   )
+            )
+          )
+      )
+    )
+  )
+
+(define merge-records
+  (lambda (l1 l2)
+    (cond 
+      ((null? l1) l2)
+      ((null? l2) l1)
+      ((< (get-weight (car l2)) (get-weight (car l1)))
+       (cons (car l2)(merge-records l1 (cdr l2)))
+       )
+      (else (cons (car l1)(merge-records (cdr l1) l2)))
+      )
+    )
+  )
+(define tiles-out-of-place
+  (lambda (state)
+    (do ((i 0 (+ 1 i))
+         (count 0))
+      ((= i (length goal))
+       count
+       )
+      (if (not (equal? (list-ref goal i) (list-ref state i))) 
+           (set! count (+ 1 count))
+          )
+      )
+    )
+  )
+(define manhattan-distance
+  (lambda (state)
+    (do ((i 0 (+ 1 i))
+         (count 0))
+      ((= i (length goal))
+       count
+       )
+      ;look at the tile in a cell in stat
+      ;find the number of rows from state-tile to goal-tile
+      ;find the number of columns from state-tile to goal-tile
+      ;add row-count and column-count to count
+      (let* ((state-tile (list-ref state i))
+            (state-tile-cell-row (+ 1 (quotient i 3)))
+            (state-tile-cell-column (+ 1 (modulo i 3)))
+            (goal-tile-cell-index (get-tile-index state-tile goal)); this is the index for the current tile in goal state
+            (goal-tile-cell-row (+ 1 (quotient goal-tile-cell-index 3)))
+            (goal-tile-cell-column (+ 1 (modulo goal-tile-cell-index 3)))
+            (row-count (abs (- state-tile-cell-row goal-tile-cell-row)) )
+            (column-count (abs (- state-tile-cell-column goal-tile-cell-column)) )
+            )
+        (if (not (equal? 'b state-tile));do not count distance that blank must move
+            (set! count (+ count row-count column-count))
+         )
+        )
+      )
+    )
+  )
+(define get-tile-index
+  (lambda (tile state);find the index of tile in state
+    (do ((i 0 (+ 1 i)))
+      ((equal? tile (list-ref state i))
+       i
+       )
+    )
+  )
+  )
+(define nilssons-sequence-score 
+  (lambda (state)
+    (letrec ((sequence '(0 1 2 5 8 7 6 3 0))
+             (count 0)
+             ; --------------------------------------------------------
+             ;recusion
+             (score-sequence (lambda(sequence);constructs the list recursively
+                               (if (not (= 1 (length sequence)))
+                                   (let ((t1 (list-ref state (car sequence)))
+                                         (t2 (list-ref state (list-ref sequence 1)))        
+                                         ) 
+                                     (cond ((equal? 'B t1) (set! t1 (list-ref state 4)) (set! count (+ 1 count))); if tile is blank set it to the middle tile value and add 1 to count, this is only done once, when b'==t1
+                                           ((equal? 'B t2) (set! t2 (list-ref state 4)))
+                                           )
+                                     (if (not(and (= 8 t1) (= 1 t2)));do not add to score if 1 follows 8
+                                         (if (not (= (+ 1 t1) t2));is t2==(t1+1) is t1 followed by it's successor? 
+                                             (begin
+                                               (set! count (+ 2 count));add 2 if it is
+                                               )
+                                             )
+                                         )
+                                     (score-sequence (cdr sequence))
+                                     )
+                                   )
+                               )
+                             )
+             )
+      ; ---------------------------------------
+      (score-sequence sequence)
+      (+ count (manhattan-distance state))
+      )
+    )
+  )
+
+(define depth-counter 0)
+
+(define best-first ;HOW DO YOU GET THE START STATE!!!!!!!!
+  (lambda ()
+    (display "BEST-FIRST")
+    (newline)
+    (if (null? open)
+        '() ;if open list is open return empty list, search has failed.
+        (let ((record (car open))) ;grab next state from open list.
+          ;(set! open (cdr open)); take record off of open
+          (set! closed (cons record closed)) ;move state to closed list
+          (if (equal? (get-state record) goal) ;is this state the goal state? 
+              (begin
+                (newline)
+                (display "path length: ")
+                (display (length (build-solution record)))
+                (newline)
+                (display-path (build-solution record))
+                (newline)
+                );display the successful path MUST DEFINE DISPLAY-PATH AND BUILD-SOLUTION
+              (begin
+                (set! open (insert-by-weight 
+                            (append
+                             (generate-descendants (get-state record) (+ 1 (get-depth record)) (list up down left right))
+                             (cdr open)
+                             )
+                            
+                            )
+                      )
+                
+                (set! depth-counter (+ 1 depth-counter))
+                (display "STEP: ")
+                (display depth-counter)
+                (newline)
+                (display "OPEN:");
+                (newline)
+                (display open)
+                (newline)
+                (display "CLOSED:");
+                (newline)
+                (display closed)
+                (newline)
+                (newline)
+                (best-first)
+                )
+              )
+          )
+        )
+    )
+  )
+(define build-record
+  (lambda (state parent depth weight)
+    (list state parent depth weight)
+    )
+  )
+(define heuristic ;evaluates and returns heuristic value of state
+  (lambda (state)
+    (tiles-out-of-place state)
+    )
+  )
+(define initiate
+  (lambda()
+    (let ((next-state '())(moves (list up down left right)))
+      (let next-move ((state goal) (n 20))
+        (if (> n 0)
+            (begin
+              (set! next-state ((list-ref moves (random-integer 4)) state))
+              (if (null? next-state)
+                  (next-move state n)
+                  (next-move next-state (- n 1))))
+            state
+            )
+        )
+      )
+    )
+  )
+(define goal '(1 2 3 8 B 4 7 6 5))
+(define open '())
+(define closed '())
+(define 8-puzzle
+  (lambda (start-state)
+    (let ((start-record (build-record start-state '() 0 (heuristic start-state)))) 
+      (set! open (cons start-record open))
+      (best-first)
+      )
+    )
+  )
+(display "TILES OUT OF PLACE")
+(newline)
+(define state (initiate))
+(display "START STATE: ")
+(display state)
+(newline)
+(8-puzzle state)

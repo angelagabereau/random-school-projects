@@ -1,0 +1,171 @@
+
+
+FOA: 1.4.5 Beyond text
+
+
+
+
+
+FOA Home
+
+ | UP: Documents
+
+
+
+Beyond text
+
+Our definition of `documents' has hewn closely to the printed forms that
+still dominate the FOA retrievals most people now do. But print media
+are not the only form of answer we might reasonably seek, and we must
+ensure that our methods generalize to the other media that are
+increasingly part of the Net. Sound, images, movies, maps, and more are
+all appearing as part of the WWW, and typically intermixed with textual
+materials. We need to be able to search all of these.
+
+
+One reason for
+casting the central problem of this text as ``finding out about'' is
+that many aspects of multimedia retrieval remain the same from this
+perspective. We still have users, with information needs. We can still
+reasonably use the term ``document'' to include any potential answer to
+users' queries, but now expand this term to include whatever media are
+available. Most centrally, we must still characterize what each document
+is about in order to match it to these queries, and users can
+still assess how well the search engine has done.
+
+
+At the same time, many
+parts of the FOA problem change as we move away from textual documents
+to other media. Most important is the increased difficulty of
+algorithmically extracting clues related to the documents' semantic
+content from their syntactic features. The primary source of semantic
+evidence used within text-based IR is the relative frequencies of
+keywords in document corpora, and a major portion of this text will show
+that this is a powerful set of clues indeed. We will also discuss the
+role other syntactic clues (e.g., bibliographic links) associated with
+texts can play in understanding what they are As we move to other media,
+the important question becomes what consistent features these new media
+have that we can also process to reliably infer semantic content. For
+example, what can we know about an image from the distribution of
+its pixel values? Do all \term{SUNSETS} share a brightness profile (dark
+below a horizontal line, bright above it) that is reliable enough that
+this clue can be exploited to identify just these scenes? {Takeo Kanada
+of the Carnegie Mellon Vision laboratory asserts that a very simple
+predicate can be used to distinguish purely {\em natural} scenes from
+those containing human artifacts: Natural scenes never contain more than
+a single horizontal line!} If so, can this mode of analysis be
+generalized sufficiently to allow retrieval of images based on more
+typical descriptors such as \term{CHILDREN FEEDING ANIMALS}?
+
+
+Even if we
+imagine that certain obvious, superficial aspects of some images may be
+extracted our hopes must not blind us to the rich vocabulary that many
+images use every day. Consider a query like and consider Figure
+(figure) Would any reasonable person claim that they could
+provide an exhaustive list of all the things that these
+pictures ``say''? Did you include the set of Hilary's jaw? The angle of
+Bill's gaze? The attitudes about divorce prevalent when the the
+Doles' picture was taken, and now? The tacit commentary by New York
+Times editors produced by the juxtaposition of these two photos? Note
+also that this picture (and its selection for use in this text!)
+occurred years before anyone had even heard of Monica Lewinsky! {This
+phenomenal news event, and the enormous amount of electronic ink spent
+covering it did produce an interesting data set. M. Best [<A
+HREF="bibrefs.html#Best00">Best00] has used it to provide some of
+the first empirical testing of interesting hypotheses concerning
+cultural change often attributed to Richard Dawkins [<A
+HREF="bibrefs.html#REF346">REF346] : just as biological evolution
+sifts through the gene pool to find fit individuals, cultural evolution
+sifts through available MEMES (paradigms, theories, hypotheses,
+ideas, words, etc.) to find the most fit. But theories of {\em
+biological} evolution are notoriously subtle, and the data concerning
+them is much better! While it is only a beginning, Best's statistical
+analysis of phenomena like the rise and fall of the token {\tt MONICA}
+within newspapers and Usenet newsgroups provides some of the first
+concrete data to bear on some very interesting questions.}
+
+
+Figure
+(figure) gives a second example. This is a photograph of a
+locking display case, containing a concert performance schedule. Pasted
+over the glass of the case is a sign, saying: ``IGNORE THIS CALENDAR:
+These dates are 3 years old.'' But the photo also reveals a number of
+more subtle clues - that the key to the case has been lost (for 3
+years!), that some frustrated teacher finally got tired of dealing with
+confused parents, that none of the school's administrators can think of
+a more imaginative solution.
+
+
+These examples may seem far-fetched. But
+those of you old enough to remember the Cold War may also remember that
+there was an entire job category known as ``Kremlinologist:'' someone
+expert at divining various power shifts among the Politburo based on
+evidence such as where various participants were placed within group
+photos! The conventional wisdom is that ``a picture is worth a thousand
+words'' and while some images may not require much explanation, others
+speak volumes. As we move from still images to movies entirely
+new channels for meaning (conveyed with the camera's attentional
+focus, sound track, etc.) are available to a skilled director. Music
+itself has an equally rich but distinct vocabulary. Of course music,
+film and motion pictures all predate their representations on computers.
+And the ability to easily record and transmit digital SPOKEN
+DOCUMENTS (sppech) makes this form of audio especially worthy of
+analysis [SparckJones96] . The
+convenience and availability of all these electronic media makes it more
+possible and even more important to analyze them.
+
+
+Once again, text
+becomes an excellent place to begin. SEMIOTICS is one label for
+the sub-field of linguistics concerned with words as symbols,
+as conveyors of \rikmeaning. Words in a language represent a
+particularly coherent system of symbol use, but so do the symbols used
+by photo journalists, painters and movie directors. And the meaning of
+these symbols changes with time; recall the pictures of the Clintons and
+Doles, their interpetation at the time of publication and their
+interpretation now. What these pictures mean is different if we
+ask about the original context of 1996 and its meaning
+now. And again complex, shifting meanings is typical not only of images
+but of documents as well: Watson and Crick's publication of the DNA code
+in {\em Nature} in 1953 [Watson53]
+was important even then, but what that paper means now could not
+have been anticipated.
+
+
+The prospects for associating contentful
+descriptors with images and even richer media are not quite as bleak as
+they might seem. In many important cases (e.g., the archives of news
+photos maintained by magazines and newspapers), images are accompanied
+by CAPTIONS , and video streams with TRANSCRIPTS . This
+additional {\em manually-constructed}, {\em textual} data means that
+techniques for inferring semantic content directly from images can
+piggy-back on top of the text-based IR techniques. In conjunction with
+the machine learning techniques we will discuss (cf. Chapter <A
+HREF="foa-7.html">&sect;7 ), statistically-reliable associations
+found in captioned image and video corpora can be extrapolated to
+situations where we have images without captions and video without
+transcripts.
+
+
+In the interim, we will again return to the narrower,
+text-only notion of a document with which we began and consider FOA
+solutions for this simpler (!) case.
+
+
+
+
+Top of Page
+
+ | UP: Documents
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

@@ -1,0 +1,99 @@
+
+
+FOA: 4 Assessing the retrieval
+
+
+
+
+
+FOA Home
+
+ | UP: foa-book.tex
+
+
+
+Assessing the retrieval
+
+We've come a long way since Chapter 1 first sketched the full range of
+activities we might consider FOA. As Chapter 2 considered the various
+ways of breaking text into indexable features, and Chapter 3 the various
+ways of weighting combinations of these features to identify the best
+matches to a query, I hope you have been aware how many
+alternatives have been mentioned! That is, rarely has there
+been a single method which is proveably optimal to all others. IR has
+traditionally been driven by empirical demonstrations, and the range of
+commercial competitors now trying to provide the ``best'' search of the
+WWW makes it likely this performance orientation will continue. Whether
+we are scientists interested in objectively assessing the results of one
+particular technique, or a consumer of WWW search engine technology
+interested in buying/using the best, a solid basis of performance
+assessment is critical.
+
+
+Several perspectives on assessment are
+possible. In the first chapter FOA was viewed as a personal
+activity, adopting the users' points of view. Section <A
+HREF="foa-4-1.html">&sect;4.1 will continue in this theme,
+considering how users assess the results of their retrievals and how
+they can express their opinions using RELEVANCE FEEDBACK
+(\RelFbk). Oddy is credited with first identifying this important stream
+of data, naturally provided by users as a part of their FOA browsing [<A
+HREF="bibrefs.html#REF179">REF179] [<A
+HREF="bibrefs.html#Belkin82">Belkin82] .
+
+
+But in this book we are also
+concerned with FOA from the IR system builder's point of view.
+Ideally, we would like to construct a search engine that finds the
+``right" documents, those that are most relevant for each query, and for
+each user. The second section of this chapter discusses performance
+measures of statistical properties that are reliable across
+large numbers of users and their highly variable queries. The key to
+these measures is having some insight into which documents
+should have been retrieved, typically because some
+``omniscent'' expert has determined (within a specially-constructed
+experimental situation) that certain documents ``should'' have been
+retrieved. Alternatively the RelFbk of many users can be combined
+to form a CONSENTUAL opinion of relevance, as described in
+Section &sect;4.4 .
+
+
+A concrete notion of
+RELEVANCE would seem fundamental precondition for understanding
+either an indivudal's RelFbk or how this can be used to assess a
+search engine. But in this respect information retrieval generally and
+RelFbk in particular is like many other academic areas of study
+(artificial intelligence, genetics, information retrieval come to mind)
+in that the lack of a fully satisfactory definition of the core concept
+(information, intelligence, genes, respectively) has not entirely
+stopped progress. That is, a great deal can be done by
+``operationalizing'' RelFbk to be simply the production of certain
+RELEVANCE ASSESSMENT behaviors as part of a FOA dialog. This
+operational simplification will hold us until fundamental issues of
+language and communication are again addressed in Section <A
+HREF="foa-8-2-1.html">&sect;8.2.1 .
+
+Subsections
+
+	 4.1 INDIVIDUAL'S assessment of relevance
+	 4.2 Extending the dialog with \RelFbk
+	 4.3 INDIVIDUALS' assessment: search engine  performance
+	 4.4 RAVe: A Relevance Assessment VEhicle
+
+
+
+
+Top of Page
+
+ | UP: foa-book.tex
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

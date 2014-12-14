@@ -1,0 +1,4 @@
+3
+a acb
+c a
+b cbcc

@@ -1,0 +1,43 @@
+
+
+FOA: 4.3.10 Other measures
+
+
+
+
+
+FOA Home
+
+ | UP: INDIVIDUALS' assessment: search engine  performance
+
+
+
+Other measures
+
+The performance measures already listed are by far the most common ways
+in which search engine are evaluated in the literature. Several others,
+however, have been important in the past and may again prove useful in
+some situations.
+
+Subsections
+
+	 4.3.10.1 Expected search length
+	 4.3.10.2 Operating characteristic curves
+
+
+
+
+Top of Page
+
+ | UP: INDIVIDUALS' assessment: search engine  performance
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

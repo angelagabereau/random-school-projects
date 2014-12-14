@@ -1,0 +1,167 @@
+
+
+FOA: 6.1.5 Analyzing WWW adjacency
+
+
+
+
+
+FOA Home
+
+ | UP: Citation: inter-document links
+
+
+
+Analyzing WWW adjacency
+
+To a computer scientist, the WWW looks much like the directed graphs
+(digraph) we have studied in data structure classes for decades. It's
+big, it's dynamic, we have special questions about it, etc., but many of
+the same analyses we would apply to any digraph are good starting points
+for the WWW. A useful first step is to define the ADJACENCY
+MATRIX $A$ connecting all the documents $d_{i}$ of the WWW: A_{ij}
+&=&1 A_{ij} &=&1\ \textstyle{if}\ d_{i}\ \textstyle{cites}\ d_{j} \\
+&=&0\textstyle{ otherwise} \end{eqnarray}
+
+
+As an example, the <A
+HREF="http://www.google.com/">Google search engine imagines the WWW
+graph as the basis of a \defn{Markov process}, where the probability of
+jumping from one page is uniform across all of its anchor/citations.
+
+
+If
+$is defined to be this (small) probability, the STATIONARY
+DISTRIBUTION of this Markov process provides some insight into how
+likely a browsing user is to find themselves at a particular page. NEC's
+CiteSeer is another example
+of useful citation information can be as part of a tool for searching
+computer science literature.
+
+
+A more extensive analysis [<A
+HREF="bibrefs.html#Chakrabarti98a">Chakrabarti98a] [<A
+HREF="bibrefs.html#Kleinberg98">Kleinberg98] has analyzed the WWW,
+looking especially for methods that extract AUTHORITATIVE pages
+from the vast numbers of other pages the WWW also contains:). The first
+component of their method corresponds approximately to the notion of
+IMPACT discussed in section <A
+HREF="foa-6-1-1.html">&sect;6.1.1 . ... the fundamental difficulty
+lies in what could be called the Abundance Problem: The number of pages
+that could reasonably be returned as ``relevant" is far too large for a
+human user to digest. Thus, to provide effective methods for automated
+search under these constraints, one does not necessarily need stronger
+versions of classical information retrieval notions such as relevance;
+rather one needs a method of providing a user, from a large set of
+relevant pages, a small collection of the most "authoritative" or
+"definitive" ones.... Unfortunately, ``authority" is perhaps an even
+more nebulous concept than ``relevance," again highly subject to human
+judgment.... We claim that an environment such as the WWW is explicitly
+annotated with precisely the type of human judgment that we need in
+order to formulate a notion of authority. Specifically, the creation of
+a link in the WWW represents a concrete indication of the following type
+of judgment: the creator of page $p$, by including a link to page $q$,
+has in some measure conferred authority on $q$. [<A
+HREF="bibrefs.html#Chakrabarti98a">Chakrabarti98a] Second, they
+define HUB documents to be ones which are particularly exhaustive
+in their reference to other pages. This is roughly analogous to review
+papers also mentioned in Section <A
+HREF="foa-6-1-1.html">&sect;6.1.1 . To a first approximation,
+authoritative pages are ones with high in degree while hubs are ones
+with high out degree. But Kleinberg imposes an additional, important
+constraint: a COMMUNITY of hubs and authority pages must be
+mutually self-referential. The thinking underlying Kleinberg's method is
+provacative: Authoritative pages relevant to the initial query should
+not only have large in-degree; since they are all authorities on a
+common topic, there should also be considerable overlap in the sets of
+pages that point to them. Thus, in addition to highly authoritative
+pages, we expect to find what could be called hub pages: these are pages
+that have links to multiple relevant authoritative pages. It is these
+hub pages that ``pull together" authorities on a common topic, and allow
+us to throw out unrelated pages of large in-degree. Hubs and authorities
+exhibit what could be called a mutually reinforcing relationship: a good
+hub is a page that points to many good authorities; a good authority is
+a page that is pointed to by many good hubs. (p.4)
+
+
+ Two quantities, $$
+and $\mathbf{x}$, are associated with each document, corresponding to
+how good an authority or hub, resp., the document is, based on the
+adjacency matrix $A$. x_{i} &\equiv &\mathname{Authority}(d_{i}) \\
+y_{i} &\equiv &\mathname{Hub-ness}(d_{i}) \mathbf{x} &\equiv &\;
+\\ \mathbf{y} &\equiv &\;
+
+
+ $$ and $\mathbf{y}$ values are
+iteritively updated by pre-multiplication with the adjacency matrix or
+its transpose: \mathbf{x}^{t+1} &=&A^{T} \; \mathbf{y}^{t} \\
+\mathbf{y}^{t+1} &=&A \; \mathbf{x}^{t} It is also important to
+re-normalize these vectors to unit length after each update.
+
+
+Under
+reasonable assumptions, this update procedure is guaranteed to converge
+on values with $^{*}$ being the principle eigen vector of $A^{T}A$ and
+$\mathbf{y}^{*}$ the principle eigen vector of $AA^{T}$. \mathbf{x}^{*}
+&=&\omega _{1}(A^{T}A) \\ \mathbf{y}^{*} &=&\omega _{1}(AA^{T})
+
+
+ Using
+this notation, similarity of documents $d_{i}$ and $d_{j}$ can be
+conveniently measured in terms of co-citation as the $$ entry of
+$AA^{T}$. [Kessler63] }.
+
+
+While we
+can conceive of applying these techniques to the graph
+corresponding to the entire WWW, the computational time and space
+required still makes such an analysis intractable. Kleinberg et al.
+typically recommend applying this adjacency analysis to a subset of
+pages pulled together by a query against some search engine. In their
+experiments they augment this initial hit list with documents either
+pointing to, or pointed to from, documents in the hit list itself, as
+shown in Figure (figure)
+
+
+ Note that the values for authority and
+hub on which this analysis converges corresponds to the first, primary
+eigen vector. Using these values to identify high hub and anchor nodes,
+gives rise to the first, primary community of documents in the graph.
+Another interesting application of adjacency analysis is to consider
+communities other than the one corresponding to the first, largest eigen
+value. A particularly striking application of this analysis concerns
+bi-modal queries: consider results arising from a query
+ABORTION, shown in Figure (FOAref) . After first
+identifying a community of pages extensively citing both pro-choice and
+pro-life documents, the second eigen vector $\omega _{2}$ clearly
+separates pages associated with pro-choice organizations (with
+relatively high positive values and pro-life with negative values!
+
+
+
+Another important feature of this analysis is that it depends on only
+first order adjacency information. That is, while it is always easy to
+find all of the documents pointed to by a target document simply by
+inspecting the document for its anchors, the in-neighborhood of a
+document can be identified through direct inspection of other documents.
+This means, for example, that search engine crawlers which look at every
+single documents can, as part of their normal search, simultaneously
+collect this adjacency data.
+
+
+
+
+Top of Page
+
+ | UP: Citation: inter-document links
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

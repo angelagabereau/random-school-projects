@@ -1,0 +1,46 @@
+
+
+FOA: 6.5 Modes of inference
+
+
+
+
+
+FOA Home
+
+ | UP: Inference beyond the \Index
+
+
+
+Modes of inference
+
+If deduction is the process of proceeding from a set of rules to the
+implications of those rules, and if induction is the process of forming
+rules based on patterns across many examples, and abduction the process
+of forming hypotheses worthy of asking, FOA can also be viewed as an
+inference process: the process of forming questions that illicit
+desirable answers.
+
+Subsections
+
+	 6.5.1 Theorem-proving models for relevance
+	 6.5.2 Spreading activation search
+	 6.5.3 Discovering latent knowledge within a corpus
+
+
+
+
+Top of Page
+
+ | UP: Inference beyond the \Index
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

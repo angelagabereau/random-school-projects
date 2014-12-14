@@ -1,0 +1,101 @@
+
+
+FOA: 1.7 How well are we doing?
+
+
+
+
+
+FOA Home
+
+ | UP: Overview
+
+
+
+How well are we doing?
+
+Suppose you build a FOA search tool, and I do too; how might we decide
+which does the better job? How might a potential customer decide on
+their relative values? If we use a new search engine that seems to work
+much better, how can we determine which of its many features are
+critical to this success? If we are to make a science of FOA, or even if
+we only wish to build consistent, reliable tools, it is vital that we
+establish a methodology by which the performance of search engines can
+be rigorously evaluated.
+
+
+Just as your evaluation of a human
+question-answerer (professor, reference librarian, etc.) might well
+depend on subjective factors (how well you ``communicate''), and factors
+which go beyond the performance of the search engine (does any available
+{document} contain a satisfying answer?!), evaluation of search engines
+is notoriously difficult. The field of IR has made great progress
+however, by adopting a methodology for search engine evaluation that has
+allowed objective assessment of a task that is closely related to FOA.
+Here we will sketch this simplified notion of the FOA task.
+
+
+The first
+step is to focus on a particular query. With respect to this query, we
+identify the set of documents that are determined to be relevant to it.
+Then a good search engine is one which can retrieve all and only the
+documents in \Rel . Figure (figure) shows both \Rel and \Ret,
+the set of documents actually retrieved in response to the query, in
+terms of a Venn diagram. Clearly, the number of documents that were
+designated relevant and also retrieved, $\mRet \cap \mRel$, will be a
+key measure of success.
+
+
+But we must compare the size of the set $|\cap
+\mRel|$ to something, and several standards of comparison are possible.
+For example, if we are very concerned that the search engine retrieve
+each and every relevant document, then it is appropriate to compare the
+intersection to the number of documents marked as relevant, $|\mRel|$.
+This measure of search engine performance is known as RECALL :
+
+
+However,
+we might instead be worried about how much of what the users see is
+relevant, and so an equally reasonable standard of comparison is what
+number of the documents retrieved $|are in fact relevant. This measure
+is known as PRECISION :
+
+
+Note that even in this simple measure of
+search engine performance, we have identified two legitimate criteria.
+In real applications, our users will often vary as to whether
+hi-precision or hi-recall is most important. For example, a lawyer
+looking for each and every prior ruling (i.e., judicial opinions,
+retrievable as separate documents) that is ON POINT for his or
+her case will be more interested in HIGH RECALL behavior. The
+typical undergraduate, on the other hand, who is quickly searching the
+Web for a term paper due the next day knows all too well that there may
+be many, many relevant documents somewhere out there. But s/he cares
+much more that the first screen of HITS be full of relevant
+leads. Examples of high-recall and high-precision retrievals are also
+shown in Figure (FOAref) .
+
+
+To be useful, this same analysis must
+be extended to consider the order in which documents are retrieved, and
+it must consider performance across a broad range of typical queries
+rather than just one. These and other issues of evaluation are taken up
+in Chapter &sect;4 .
+
+
+
+
+Top of Page
+
+ | UP: Overview
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

@@ -1,0 +1,73 @@
+
+
+FOA: 4.3.10.1 Expected search length
+
+
+
+
+
+FOA Home
+
+ | UP: Other measures
+
+
+
+Expected search length
+
+The ordered list of relevance assessments described in Section
+(FOAref) also recommends another, holistic evaluation of the
+entire retrieval's behavior; this method is known as EXPECTED SEARCH
+LENGTH (ESL). ESL considers the length of a ``path'' as users walk
+down the ordered hit list, measuring how many irrelevant documents were
+seen on this path before each relevant document; ``expected'' refers to
+the average length of each path ending in a relevant document. Cooper
+initially proposed this model to measure the work a search engine saves,
+in comparison to searching the entire collection at random [<A
+HREF="bibrefs.html#Cooper68">Cooper68] .
+
+
+Given that a search engine
+retrieves documents in hitlist order, ESL also requires some criterion
+by which the users' wandering paths are stopped. discusses a number of
+predicates that might be used to terminate the search: some fixed number
+of relevant documents, some fraction of all relevant documents, etc.
+Since the generality of queries can vary considerably, it is desirable
+to terminate the ESL after some {\em fixed} fraction $E$ of relevant
+documents have been retrieved.
+
+
+For this same reason, it makes sense to
+normalize ESL with respect to the number of relevant documents we might
+expect to retrieve, if we were retrieving simply at random. If we use $$
+for the number of retrieved documents (i.e., those satisfying the
+predicate mentioned above), we can estimate the expected random search
+length $\mathname{RandSL}$ as: \beq \mathname{RandSL} \equiv
+{{\mathname{NRet}\cdot(\mathname{NDoc}-\mathname{Rel})}\over{\mathname{Rel}}+1}
+\eeq then the EXPECTED SEARCH LENGTH REDUCTION FACTOR :
+
+
+\mathname{ESL-RF}
+\equiv {{\mathname{RandSL}-\mathname{ESL}}\over{\mathname{RandSL}}} \eeq
+captures the amount a real search method improves over the random case.
+Compute the ESL of a random retrieval using each of the two predicates:
+\benum \item $N$ relevant documents; \item $P$ percent of relevant
+documents. \eenum Discuss the effect of the measures relative to query
+generality.
+
+
+
+
+Top of Page
+
+ | UP: Other measures
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

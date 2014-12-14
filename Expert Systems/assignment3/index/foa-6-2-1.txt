@@ -1,0 +1,71 @@
+
+
+FOA: 6.2.1 Footnotes, hyper-footnotes and \emph{cf.
+
+
+
+
+
+FOA Home
+
+ | UP: Hypertext, intra-document links
+
+
+
+Footnotes, hyper-footnotes and \emph{cf.
+
+Footnote text embellishes a primary text. They provide a more detailed
+treatment of terms or concepts used in the priamry text. A lexical
+token, typically smaller in size, creates a correspondence between the
+primary text and the annotation on it.
+
+
+Perhaps the most direct claim of
+hypertext authors is that the standard linear presentation of text does
+violence to the more networked way in which we naturally conceive of the
+concepts being discussed. At the same time, the conventional sequential
+flow through text mandated by printed media does a great deal to support
+RHETORICAL ARGUMMENT . For this reason, this FOA text was written
+first as a traditional book, assumeing a basically linear flow. On this
+linear spine, two hypertext extensions have been added (cf. Section <A
+HREF="foa-8-2-1.html">&sect;8.2.1 ).
+
+
+For example, the primary purpose
+of last paragraph was to move (the primary, linear course of the
+textbook) from a discussion of the syntactic conventions of footnoting
+to a consideration of communication's ultimate purposes. Since these
+issues are covered in more depth in Section <A
+HREF="foa-8-2-1.html">&sect;8.2.1 , a parenthetical cf.
+reference to this other section is made. The cf. relation is
+bested viewed as an opportunity (offered by the author to a reader) to
+compare the two passages. } {cf. for conferre, Latin
+for TO COMPARE, BRING TOGETHER, CONTRIBUTE, CONSULT. [<A
+HREF="bibrefs.html#MW3">MW3] }
+
+
+In this FOA text I have also chosen to
+distinguish between standard footnotes, and HYPER-FOOTNOTES used
+to capture more extended digressions. The last paragraph allows readers
+with access to the CDROM version of FOA who arem interested in the Latin
+etymology of the cf. token to poke into that. Hyper-footnotes
+include a caption, providing more indication (than a simple number) as
+to what additional information lies on the other end of the hyper-jump.
+
+
+
+
+Top of Page
+
+ | UP: Hypertext, intra-document links
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

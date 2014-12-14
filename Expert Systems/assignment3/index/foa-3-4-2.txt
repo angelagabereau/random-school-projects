@@ -1,0 +1,68 @@
+
+
+FOA: 3.4.2 Vector length normalization
+
+
+
+
+
+FOA Home
+
+ | UP: Vector space
+
+
+
+Vector length normalization
+
+One good example involves the length of document and query
+vectors. So far, we have placed no constraint on the number of keywords
+associated with a document. This means that long documents which,
+caeteris paribus, can be expected to give rise to more keyword
+indices, can be expected to match (more precisely, have non-zero inner
+product with) more queries and be retrieved more often. Somehow (as
+discussed in Section &sect;1.4 ) this doesn't
+seem fair - the author of a very short document who worked hard to
+compress his words into a pithy few paragraphs is less likely to have
+his or her document retrieved, relative to some wordy guy who says
+everything six times, six different ways!
+
+
+These possiblities have been
+captured by Robertson and Walker in a pair of hypotheses regarding a
+document's SCOPE versus its VERBOSITY : document: Some
+documents may simply cover more material than others ... (the ``Scope
+hypothesis''). An opposite view would have long documents like short
+documents but longer: in other words, a long document covers a similar
+scope to a short document, but simply use more words (the ``Verbosity
+hypothesis''). (p. 235) [<A
+HREF="bibrefs.html#Robertson94">Robertson94] .
+
+
+ Once we have decided
+that {\about-ness is conserved} across documents, all documents' vectors
+therefore have constant length. If we make the same assumption about the
+query vector, then all of the vectors will lie on the surface of a
+sphere, as shown in Figure (figure) . Without loss of
+generality, we will assume the radius of the sphere is unity.
+
+Subsections
+
+	 3.4.2.1 Making weights sensitive to document  length
+
+
+
+
+Top of Page
+
+ | UP: Vector space
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

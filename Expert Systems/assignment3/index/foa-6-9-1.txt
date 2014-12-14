@@ -1,0 +1,68 @@
+
+
+FOA: 6.9.1 Grounding symbols in texts
+
+
+
+
+
+FOA Home
+
+ | UP: Text-based intelligence
+
+
+
+Grounding symbols in texts
+
+According to Harnad's grounding hypothesis, if computers are ever to
+understand natural language as fully as humans, they must have an
+equally vast corpus of experience from which to draw [<A
+HREF="bibrefs.html#REF425">REF425] . We propose that the huge
+volumes of natural language text managed by hypertext systems provide
+exactly the corpus of ``experience'' needed for such understanding. Each
+word in every document in a hypertext system constitutes a separate
+experiential ``data point'' about what that word \means. The exciting
+prospect of using search engines as a basis for natural language
+understanding systems is that their understanding of words, and then
+concepts built from these words, will reflect the richness of this huge
+base of textual ``experience.'' Their are of course differences between
+the text-base ``experience'' and first-person, human experience, and
+these imply fundamental limits on language understanding derived from
+this source.
+
+
+In this view, the computer's experience of the world is
+second-hand, via documents written by people about the world and
+subsequently through users' queries of the system. The ``trick'' used is
+to learn what words mean by interacting with users who already know what
+the words mean, with the documents of the textual corpus forming the
+common referential base of experience.
+
+
+The hypertext itself is in fact
+only the first source of information, viz., how authors use and
+juxtapose words. The second, ongoing source of experience is the
+subsequent interactions with users, a new popualtion of people who use
+these same words and then react positively or negatively to the system's
+interpretation of those words. Both the original authors and the
+browsing users function as the text-based intelligent system's ``eyes''
+into the real world and how it looks to humans. That insight is
+something no video camera will ever give any robot.
+
+
+
+
+Top of Page
+
+ | UP: Text-based intelligence
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

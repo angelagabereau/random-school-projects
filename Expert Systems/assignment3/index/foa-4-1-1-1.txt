@@ -1,0 +1,78 @@
+
+
+FOA: 4.1.1.1 Prototypic retrievals
+
+
+
+
+
+FOA Home
+
+ | UP: Cognitive assumptions
+
+
+
+Prototypic retrievals
+
+From the perspective of cognitive psychology, the task facing users who
+are asked to produce RELEVANCE FEEDBACK (\RelFbk) can best be
+described as one of OBJECT RECOGNITION , in the tradition of
+Rosch and others [REF392] [<A
+HREF="bibrefs.html#Rosch77">Rosch77] . The object to be recognized
+is an internally represented {\em prototypic} document satisfying the
+users' INFORMATION NEED. In this case, the prototype corresponds
+to the model the subjects maintain of ideally relevant documents. As
+users consider an actual, retrieved document's relevance, they evaluate
+how well it {\em matches} the prototype. Barry and others have suggested
+the many and varied features over which the prototypes can be defined
+[Barry94] . Only a small number of
+these may be revealed by any one of the users' queries, of course.
+
+
+Here
+we will simply assume the users are capable of grading the { quality} of
+this match. Users might be asked to score the quality of relevance match
+according to a five-point scale such as that shown in Figure
+(figure) . Users can qualify the middle ``Relevant'' response
+either by weakening it (``possibly relevant'') or strengthening it
+(``critically relevant''). Such distinctions are often made in
+experimental settings (e.g., in the use of the STAIRS retrieval system
+by lawyers [Blair85] ), and relate to
+the varying purposes for FOA different users may have. To make these
+concrete, we might imagine ``Critically relevant'' to apply only to
+those documents that must be read even for an undergrad term paper,
+while ``Possibly relevant'' would be much more broadly applied to those
+that a PhD student does as part of their literature review.
+
+
+For now,
+however, we will simplify the types of RelFbk to allow users to
+reply with only a single grade of ``Relevant'' ($\oplus$) and a single
+grade of ``Not relevant'' ($\ominus$). These two assesments require
+overt action on the part of subjects; ``No response'' (\#) is the
+default RelFbk assessment for documents not receiving any other
+responses. Again, this frees users from the much more cognitively
+demanding task of exhaustively assessing each and every retrieved
+document. Those documents that ``jump out'' at users as particularly
+good, or especially bad, examples of the prototype they seek provide the
+most informative \RelFbk. Figure (FOAref) also introduces a
+color-code convention: \blue will be used to indicate positive \RelFbk,
+and \red to indicate negative cate negative gative \RelFbk.
+
+
+
+
+Top of Page
+
+ | UP: Cognitive assumptions
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

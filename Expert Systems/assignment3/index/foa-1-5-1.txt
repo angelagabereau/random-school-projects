@@ -1,0 +1,100 @@
+
+
+FOA: 1.5.1 Automatically selecting keywords
+
+
+
+
+
+FOA Home
+
+ | UP: Indexing
+
+
+
+Automatically selecting keywords
+
+We begin by considering the document at its most mechanical level, as a
+string of characters. Our first candidates for keywords will be
+TOKENS , things broken by WHITESPACE . That is, each and
+every token in the document could be considered one of its keywords.
+
+
+How
+good is this simple solution? Suppose users ask for documents
+about \term{CARS} and the document we are currently indexing has
+the string \term{CAR}. It seems reasonable to assume that users are
+interested in this document, despite the fact that the query happens to
+contain the PLURAL form \term{CARS} while the document contains
+the singular \term{CAR}. For many queries we might like to consider
+occurrences of the words \term{CAR} and \term{CARS}, or even
+\term{RETRIEVAL} and \term{RETRIEVE}, as roughly interchangeable with
+one another; the suffixes do not affect meaning dramatically. And
+of course our problem doesn't end with plurals - we could make similar
+arguments concerning past tense -ED endings,
+-ING participles.
+
+
+This simple solution also depends too much
+on where spaces happen to be. Consider the word German noun ,
+corresponding to the English phrase \term{SPEED LIMIT}. In many ways,
+the fact that English happens to put a whitespace between the words, or
+that German does not, is not semantically critical to the meaning
+of these descriptors, and hence the documents in which they might occur.
+Such MORPHOLOGICAL features - used to mark relatively
+superficial, surface-structure features (such as tense, singular vs.
+plural, etc.) can be considered less important to their \rikmeanings.
+And differences between German and English are trivial when compared to
+Asian texts, where the relationship between characters and
+words will be radically altered.
+
+
+What about HYPHENATION ?
+Use of the word \term{DATABASE}, the phrase \term{DATA BASE} and the
+hyphenated phrase \term{DATA-BASE} is highly variable, depending on
+author preference and current practice at the time and place of
+publication. Yet we would hope that all occurrences of any of these
+tokens would be treated as references to approximately the same semantic
+category. Similarly, we should hope that the end-of-line hyphenation
+(breaking long words at syllable boundaries) would not create two
+keywords when we would expect only one. But simply adding ``-'' to the
+set of whitespace characters defining tokens would make
+\term{CLINTON-DOLE} and \term{A-Z} keywords, too?!
+
+
+Hyphenation is
+concerned with the situation where a potential keyword is broken up by
+punctuation; what about those situations where a space also breaks up a
+semantic unit? seems semantically cohesive, but what algorithm could
+distinguish it from other BIGRAMS (consecutive pairs of words)
+that just happen to occur sequentially? The problem only becomes that
+much more complicated if we attempt to consider longer noun phrases like
+\term{APPLES AND ORANGES} or \term{BACK PROPAGATION NEURAL NETWORK}, let
+alone more complicated syntactic compounds such as verb phrases, clauses
+or sentences. Identifying phrases is an important and active area of
+research from the perspectives of both IR and computational linguistics.
+
+
+Summarizing,
+we will take a token to be our default keyword since this is most
+straightforward. More sophisticated solutions will handle hyphenation,
+multi-words phrases, sub-token stems, etc. (cf. Section <A
+HREF="foa-2-3-1.html">&sect;2.3.1 ).
+
+
+
+
+Top of Page
+
+ | UP: Indexing
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

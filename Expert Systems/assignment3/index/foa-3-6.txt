@@ -1,0 +1,97 @@
+
+
+FOA: 3.6 Calculating TF-IDF Weighting
+
+
+
+
+
+FOA Home
+
+ | UP: Weighting and matching against Indices
+
+
+
+Calculating TF-IDF Weighting
+
+Following the careful empirical investigation of Salton and Buckley [<A
+HREF="bibrefs.html#Salton88a">Salton88a] [<A
+HREF="bibrefs.html#Salton90">Salton90] and many others since [<A
+HREF="bibrefs.html#Harman92a">Harman92a] , we will concentrate on
+the TF-IDF weighting which multiplies the raw TERM
+FREQUENCY (TF) of a term in a document by the term's INVERSE
+DOCUMENT FREQUENCY (IDF) weight: \mathname{idf}_{k} &=&\log \left(
+\frac{\mathname{NDoc}}{D_{k}}\right) \\ w_{kd} &=&f_{kd} \cdot
+\mathname{idf}_{k} where $f_{kd}$ is the frequency with which keyword
+$k$ occurs in document $d $; $\mathname{NDoc}$ is the total number of
+documents in the corpus; and $D_{k}$ is the number of documents
+containing keyword $k$.
+
+
+Due to the wide variety observed in users' query
+patterns, methods for weighting queries vary more, primarily depending
+on the length of the query. We will consider two weighting
+methods which are especially designed for ``short'' and ``long''
+queries. Short queries (of as few as one or two terms! cf. [<A
+HREF="bibrefs.html#Silverstein99">Silverstein99] ) seem typical of
+those issued by Web search engine users. For these, we can assume
+multiple occurrences of the same keyword will be rare, and also ignore
+length normalization. This leaves us with simply the term's inverse
+frequency weight: w_{kq_{\mathname{short}}}=\mathname{idf}_{k}
+
+
+
+Long queries are often generated indirectly, as the result of
+RelFbk from the users in response to prior retrievals. The long
+query corresponds to a particular {\em document} that the users like;
+searching for others like a known target is called
+QUERY-BY-EXAMPLE. By symmetry, it makes sense to use the same
+weighting of terms in this query cum document as we used for documents
+(Equation (FOAref) ) above:
+
+
+Notice that once the lengths of the
+$$ and $\mathbf{d}$ vectors in the denominator of Eq. (FOAref)
+are known, the computation of $\mathname{Sim}$ requires a simple
+sum-of-products over all terms shared by query and document. Since both
+these lengths can be computed independently, it makes sense to compute
+them first. {The fact that the keyword's total document frequency
+$D_{k}$ cannot be known until the entire corpus has been processed
+suggests a ``second pass.'' In some cases, lengths are computed for each
+document and stored in a doclen file, separate from the
+main kw-inv inverted postings file. (It would also be
+possible to normalize the frequencies $f_{kd}$ by document lengths and
+store this quotient in the postings file, but that would require the
+storage of floats rather than small integers.) For the small corpora we
+consider here, it proves easier to simply compute these values as the
+inverted index is read in, prior to the first matching against queries}.
+
+
+In
+fact, the document length $(\mathbf{d})$ can be computed before any
+query activity takes place: \mathname{Len}(\mathbf{d})
+&=&\sqrt{\sum\limits_{k\in d}w_{kd}^{2}} \\ &=&\sqrt{\sum\limits_{k\in
+d}\left( f_{kd}\,\mathname{idf}_{k}\right) ^{2}^{2}\ } \end{eqnarray}
+
+
+With
+these definitions in place, we can begin to design an algorithm for
+computing similarity.
+
+
+
+
+Top of Page
+
+ | UP: Weighting and matching against Indices
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

@@ -1,0 +1,109 @@
+
+
+FOA: 3.3.6 Informative signals versus noise words
+
+
+
+
+
+FOA Home
+
+ | UP: A statistical basis for keyword meaning
+
+
+
+Informative signals versus noise words
+
+We begin with a weighting algorithm derived from information theory.
+Information theory has proven itself to be an extra-ordinarily useful
+model of many different situations in which some message must
+be communicated across a noisy channel and our goal is to
+devise an encoding for messages that is most robust in the face
+of this noise.
+
+
+In our case, we must imagine that the ``messages''
+describe the content of documents in our corpus. On this account, the
+amount of information we get about this content from a word is
+inversely proportional to its probability of occurrence. In other words,
+the least informative word in our corpus is the one that occurs
+approximately uniformly across the corpus. For example, the word
+\term{THE} occurs at about the same frequency across every document in
+the collection; its probability of occurrence in any one document is
+almost uniform. We gain the least information about the document's
+contents from observing it. {Entire courses are given on information
+theory so we cannot do it justice here. But its basic features are so
+simple, and so important, that it is tempting to try.
+
+
+My favorite
+definition of information is due to Gregory Bateson [<A
+HREF="bibrefs.html#REF1008">REF1008] : ``Information is a difference
+that makes a difference.'' Information is about surprise, ways in which
+an expectation has been violated in some way. If I tell you that your
+grade is based on 1) a final and 2) a midterm, you wouldn't be very
+surprised. But if I tell you that your grade in this class will also
+depend on 3) how long you can stand on one foot without moving, you'd
+probably be much more surprised. There's more {\em information} in that
+part of my message.
+
+
+We can demonstrate this in terms of a conversation
+you might have after class with someone who missed it. ``What did you
+learn in class today?'' they will ask. ``Oh, not much really'' you'd say
+in the first case, because your expectation about grading, and your
+friend's (not to mention your friend's expectation that you can be
+relied upon to convey the information; cf. Section~ <A
+HREF="foa-8-2-1.html">&sect;8.2.1 ) have been confirmed. But in the
+second case you'd have to reply, ``You won't believe this - part of our
+grade is based on how long we can stand on one foot!'' You've learned
+something - you've gained information. }
+
+
+Salton and McGill [<A
+HREF="bibrefs.html#">] , following Dennis [<A
+HREF="bibrefs.html#Dennis67">Dennis67] , use Shannon's classic
+binary logarithm to measure the amount of information conveyed by each
+words occurrence in bits, and NOISE to be its inverse: p_k &=&
+\Pr(\mathrm{keyword\ } k \mathrm{\ occurs}) \nonumber \\
+\mathname{Info}_k &\equiv& -\log\; p_k \nonumber \\ \mathname{Noise}_k
+&\equiv& -\log\; (1 / p_k ) \\
+
+
+ Note that our evidence about the
+probability of a keyword occurring comes from
+statistics of how frequently it occurs. We must compare how
+frequently a keyword occurs in a particular document, relative to how
+frequently it occurs throughout the entire collection. We can calculate
+the expected NOISE associated with a keyword across the corpus,
+and from this infer its remaining SIGNAL . Signal then becomes
+another measure we can use to weight the frequency of occurrence of the
+keyword document:
+
+
+Two hypothetical distributions, for a noisy word and a
+useful index term, are shown in Figure (figure) . A noisy word
+is equally likely to occur anywhere; its distribution is nearly uniform.
+If on the other hand all of the occurrences of a keyword are localized
+in a few documents (conveniently clustered together in the cartoon of
+Figure (FOAref) ) and mostly zero every place else, this is an
+informative word. You've learned something about the document's
+content when you see it.
+
+
+
+
+Top of Page
+
+ | UP: A statistical basis for keyword meaning
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

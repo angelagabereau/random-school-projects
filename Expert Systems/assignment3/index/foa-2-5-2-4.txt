@@ -1,0 +1,52 @@
+
+
+FOA: 2.5.2.4 Document number
+
+
+
+
+
+FOA Home
+
+ | UP: Fine points
+
+
+
+Document number
+
+Because we have made the first stage of our processing flexible with
+respect to how a corpus extends across multiple files, in general, {two}
+numbers will uniquely identify each of your documents: its file number
+and document number within that file. For that reason, and because each
+posting must retain a unique identifier for each document, it becomes
+important to construct a single number that folds them together.
+Maintaining a single integer, instead of two integers, therefore becomes
+a worthwhile space saving.
+
+
+One simple way to accomplish this is to
+multiply the document's file number by some number larger than the
+maximum number of documents within any file, then add its document
+number. Just how large a number this must be, whether your
+machine/compiler efficiently supports integers this large (or whether
+you are better off keeping the two numbers separate) will vary
+considerably. For this reason it makes good sense to isolate these
+issues in a separate routine.
+
+
+
+
+Top of Page
+
+ | UP: Fine points
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

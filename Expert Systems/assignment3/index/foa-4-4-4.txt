@@ -1,0 +1,57 @@
+
+
+FOA: 4.4.4 RAVeCompile
+
+
+
+
+
+FOA Home
+
+ | UP: RAVe: A Relevance Assessment VEhicle
+
+
+
+RAVeCompile
+
+RAVeCompile processes the votes which the interactive RAVe
+records, creating a relevance assessment file and some statistics about
+each query and subject. The first step is to map the four-valued
+relevance assessments into the Boolean relevant/non-relevant
+discriminations typically used by standard IR evaluation techniques.
+RAVe Compile lets the experimenter configure a simple predicate of the
+following form: .
+
+
+where
+
+
+In one set of experiments [<A
+HREF="bibrefs.html#REF1133">REF1133] , the data used two predicates
+constructed in this fashion. These are:
+
+
+ \item[Permissive:] if (two or
+more POSSIBLE votes) or (at least one RELEVANT vote);
+
+
+ if (two or more
+RELEVANT votes) or (at least one CRITICAL vote)
+
+
+
+
+Top of Page
+
+ | UP: RAVe: A Relevance Assessment VEhicle
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

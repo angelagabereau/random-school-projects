@@ -1,0 +1,55 @@
+
+
+FOA: 4.3.6 Normalized recall and precision
+
+
+
+
+
+FOA Home
+
+ | UP: INDIVIDUALS' assessment: search engine  performance
+
+
+
+Normalized recall and precision
+
+The best/worst ``envelope'' surrounding an actual Re/Pre curve is
+related to a similar comparison known as NORMALIZED RECALL [<A
+HREF="bibrefs.html#Rocchio66">Rocchio66] . Imagine plotting the
+fraction of relevant documents retrieved as a function of the
+fraction of the total number of documents retrieved. Such a function is
+plotted in Figure (figure) . Comparing the area between the
+actual retrieval and worst-case (colored \yellow) to the total area
+between best and worst cases (that above the \blue region) is very much
+like the best-/worst-case envelope of Figure (FOAref) . We can
+derive expressions for this area. Let $r_i$ be the hitlist rank of the
+$i$-th relevant document. Then (if we define $r_0=0$): \beq
+\mathname{Actual} =
+\sum_{i=1}^{\mathname{NRel}}(r_i-r_{i-1}){i\over{\mathname{NRel}}} \eeq
+In the best case $r_i=i$: \mathname{Best} &=&
+\sum_{i=1}^{\mathname{NRel}} {(i-(i-1))\cdot i\over{\mathname{NRel}}}
+\nonumber \\ &=&{1\over\mathname{NRel}}\sum_{i=1}^{\mathname{NRel}}i
+\nonumber \\ &=&{\mathname{NRel}+1\over2} when $\mathname{NRel}
+\rightarrow$. In the worst case $r_i=NDoc-NRel+i$: \mathname{Worst}&=&
+\sum_{i=1}^{\mathname{NRel}} {{((\mathname{NDoc}-\mathname{NRel}+i) -
+(\mathname{NDoc}-\mathname{NRel}+i-1))\cdot i}\over \hbox{NRel}}
+\nonumber \\ &=& \hbox{NDoc}-\mathname{NRel}
+
+
+
+
+Top of Page
+
+ | UP: INDIVIDUALS' assessment: search engine  performance
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

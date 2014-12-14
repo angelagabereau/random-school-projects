@@ -1,0 +1,129 @@
+
+
+FOA: 6.4.1 A.I. Geneology
+
+
+
+
+
+FOA Home
+
+ | UP: Social relations among authors
+
+
+
+A.I. Geneology
+
+The AI Geneology project (AIG) is an attempt to collect information
+relating authors in artificial intelligence to one another through
+shared advisors. In analogy to geneological family trees, we can treat
+the advisor as parent to advisee. Students of students become
+grandchildren, etc. A subset of this data is shown in Figure
+(FOAref) . As an example, of how this additional information
+about authors can be exploited to understand more about the words used
+in documents, Steier has analyzed word-pair co-occurrance data as a
+means of finding potential index phrases [<A
+HREF="bibrefs.html#REF1097">REF1097] . Take, for example, the phrase
+{\tt CASE-BASED REASONING}. This phrase has a high degree of phrasal
+information content (using mutual information statistics to identify
+statistically-dependent word pairs) when these statistics are collcted
+across the entire AIT document corpus.
+
+
+ \small McCulloch, W. S. ----
+Minsky, Marvin ---- ---- Winston, Patrick H. ---- 1973 Waltz, David L.
+---- 1980 Finin, Timothy W. THE SEMANTIC INTERPRETATION... 1988 Kass,
+Robert John ACQUIRING A MODEL OF THE... 1989 Klein, David A. SEE CO-ADV
+SHORTLIFFE, TED 1987 Pollack, Jordan B. ON CONNECTIONST MODELS OF...
+1993 Angeline, Peter EVOLUTIONARY ALGORITHMS AND... 1994 Kolen, John
+COMPUTATION IN RECURRENT...
+
+
+Mey, Jacob 1969 Schank, Roger C. A CONCEPTUAL
+DEPENDENCY... ---- Kolodner, Janet L. ---- 1989 Shinn, Hong Shik A
+UNIFIED APPROACH TO... 1989 Turner, Roy Marvin A SCHEMA-BASED MODEL
+OF... 1991 Hinrichs, Thomas Ryland PROBLEM-SOLVING IN OPEN... 1992
+Redmond, Michael Albert LEARNING BY OBSERVING AND... ---- Dejong, Gerald
+Francis ---- 1987 Segre, Alberto Maria EXPLANATION-BASED LEARNING...
+1988 Shavlik, Jude William GENERALIZING THE STRUCTURE... 1991 Towell,
+Geoffrey Gilmer SYMBOLIC KNOWLEDGE AND... 1988 Mooney, Raymond Joseph A
+GENERAL EXPLANATION-BASED... 1992 Ng, Hwee Tou A GENERAL ABDUCTIVE
+SYSTEM... 1989 Rajamoney, Shankar Anandsubramaniam EXPLANATION-BASED
+THEORY... ---- Lehnert, Wendy G. ---- 1983 Dyer, Michael G. IN-DEPTH
+UNDERSTANDING: A... 1987 Mueller, Eric DAYDREAMING AND COMPUTATION:...
+1987 Zernik, Uri STRATEGIES IN LANGUAGE... 1988 Pazzani, Michael John
+LEARNING CAUSAL... 1988 Gasser, Michael SEE CO-ADV HATCH, EVELYN 1989
+Dolan, Charles Patrick TENSOR MANIPULATION... 1989 Alvarado, Sergio Jose
+UNDERSTANDING EDITORIAL... 1989 Dolan, Charles THE USE AND ACQUISITION
+OF... 1991 Lee, Geunbae DISTRIBUTED SEMANTIC... 1991 Reeves, John
+Fairbanks COMPUTATIONAL MORALITY: A... 1991 Nenov, Valeriy Iliev
+PERCEPTUALLY GROUNDED... 1991 Quilici, Alexander Eric THE CORRECTION
+MACHINE: A... 1993 Turner, Scott R. MINSTREL: A COMPUTER MODEL... 1990
+Williams, Robert Stuart LEARNING PLAN SCHEMAS FROM... 1976 Meehan, James
+R. THE METANOVEL: WRITING... 1978 Wilensky, Robert UNDERSTANDING
+GOAL-BASED... 1985 Jacobs, Paul A KNOWLEDGE-BASED APPROACH... 1986
+Norvig, Peter A UNIFIED THEORY OF... 1986 Arens, Yigal CLUSTER: AN
+APPORACH TO... 1987 Chin, David Ngi INTELLIGENT AGENTS AS A... 1992 Wu,
+Dekai AUTOMATIC INFERENCE: A... 1978 Carbonell, Jaime G. SUBJECTIVE
+UNDERSTANDING:... 1988 Minton, Steven LEARNING EFFECTIVE SEARCH... 1989
+Lehman, Jill Fain ADAPTIVE PARSING:... 1991 Perlin, Mark W. AUTOMATING
+THE CONSTRUCTION... 1991 Hauptmann, Alexander Georg MEANING FROM
+STRUCTURE IN... 1992 Veloso, Manuela M. LEARNING BY ANALOGICAL... 1980
+Lebowitz, Michael GENERALIZATION AND MEMORY IN... 1987 Hovy, Eduard
+Hendrik GENERATING NATURAL LANUGAGE... 1988 Hunter, Lawrence E. GAINING
+EXPERTISE THROUGH... 1989 Ram, Ashwin QUESTION-DRIVEN... 1989 Dehn,
+Natalie Jane COMPUTER STORY-WRITING: THE... 1990 Leake, David Browder
+EVALUATING EXPLANATIONS 1992 Domeshek, Eric Andrew DO THE RIGHT THING:
+A... 1993 Edelson, Daniel Choy LEARNING FROM STORIES:... \caption{A
+sample of the AIGenealogical record}
+
+
+ But a statistically-significant
+different distribution is observed within dissertations coming from a
+particular set of universities: Yale, Georgia Tech. and the University
+of Massachusetts. Within these particular university contexts, the
+constituent concepts of { CASE-BASED} and {\tt REASONING} are examined
+in detail and independently. Not only do these words occur together as
+{\tt CASE-BASED REASONING}, but they often occur separately (e.g. {\tt
+CASE-BASED PLANNING, CASE-BASED ARGUMENT, CASE-BASED PROBLEM,
+SCHEMA-BASED REASONING, ANALOGICAL REASONING, COMMONSENSE REASONING}).
+Within the limited context of these sub-corpora, the keywords occur more
+independently and hence are considered less phrase-like. As this phrase
+is ``exported'' into the general AI vocabulary, the semantic nuances are
+left behind, and the dominant use of the constituent words is as part of
+the phrase.
+
+
+But what is it that makes language use so much different at
+Yale, Georgia Tech. and the University of Massachusetts? Perhaps it is
+merely coincidence, but our hypothesis is that it is the common lineage
+traced to Roger Schank! Work across these geographically distant
+research institutions is pulled together by an intellectual tradition
+captured by the AIG data.
+
+
+Part of what is interesting about the AIT
+corpus is its demonstration within a single corpus of many of the
+representations discussed in this chapter. The AI genealogy captures
+some of the intellectual linkage relations arising from the Ph.D.
+advisor/advisee relationship. David Waltz' taxonomy of AI provides an
+excellent initial thesaurus over keywords [<A
+HREF="bibrefs.html#REF331">REF331] .
+
+
+
+
+Top of Page
+
+ | UP: Social relations among authors
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

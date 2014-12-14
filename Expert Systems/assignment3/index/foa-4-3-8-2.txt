@@ -1,0 +1,67 @@
+
+
+FOA: 4.3.8.2 Point alienation
+
+
+
+
+
+FOA Home
+
+ | UP: One-parameter criteria
+
+
+
+Point alienation
+
+The sliding ratio measure provides a more discriminating measure but
+depends entirely on the availability of metric
+$\mathname{Rel}(d_i)$ measures for retrieved documents. As discussed in
+Section &sect;4.1.1 , it is much easier to
+derive non-metric assessments directly from $\mathname{RelFbk}$ data
+given naturally as part of users' browsing: \beq \red{\ominus} \prec \#
+\prec \blue{\oplus} \eeq
+
+
+In an effort to exploit the nonmetric
+preferences often provided by human subjects, Guttman [<A
+HREF="bibrefs.html#Guttman78">Guttman78] has defined a measure known
+as POINT ALIENATION . Bartell has pioneered a variation of it for
+use with document rankings rated by $\mathname{RelFbk}$ [<A
+HREF="bibrefs.html#REF1093">REF1093] . The basic idea is deceptively
+simple: Compare the difference in rank between two differentially
+preferred documents to the absolute difference of these ranks:
+\beq J \equiv \sum_{d \succ d'}
+\frac{Rank(d)-Rank(d')}{|Rank(d)-Rank(d')|} \eeq
+
+
+If $d$ is really
+preferred over $d'$ -- $(d d')$ -- (e.g., if some user has marked $d$ as
+\Rel but said nothing about $d'$), we can hope that ${\bf
+\mathname{Rank}}(d) < {\bf \mathname{Rank}}(d')$ ()$ {\em increases}
+from most- to least-highly ranked document, so that the first element of
+the hitlist has ${\bf \mathname{Rank}}=1$.} and so the numerator $({\bf
+\mathname{Rank}}(d) - {\bf \mathname{Rank}}(d'))$ will be negative; if,
+on the other hand, the two documents are incorrectly ordered by the
+ranking, the numerator will be positive. Comparing this arithmetic
+difference to its absolute value, and then summing over the rankings for
+all pairs of documents $(d, d')$ which are differentially preferred $(d
+\succ d')$ gives Equation (FOAref) .
+
+
+
+
+Top of Page
+
+ | UP: One-parameter criteria
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

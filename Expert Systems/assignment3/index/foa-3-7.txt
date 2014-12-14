@@ -1,0 +1,156 @@
+
+
+FOA: 3.7 Computing partial match scores
+
+
+
+
+
+FOA Home
+
+ | UP: Weighting and matching against Indices
+
+
+
+Computing partial match scores
+
+With length normalization to the side, we can concentrate on the main
+calculation of matching, summing the weight products of terms shared by
+query $q$ and document $d$:
+
+
+But this mathematical characterization hides
+a number of messy details associated with actually computing it. We will
+need to make efficient use of two data structures in particular. The
+first is the inverted index (recall Figure (FOAref) .). The
+critical feature of this organization is that we can, for each term in
+the query, find the set of all doument postings associated with it. In
+particular, the freq statistic maintained with each posting
+allows us to compute the weight $w_{kd}$ we need for each. But even with
+these efficiencies, the need to consider every document posting for
+every query term can create a serious processing demand, and one that
+must be satisfied immediately - the users are waiting!
+
+
+Since the elements
+of the sum can be re-ordered arbitrarily, we will consider a PARTIAL
+RANKING (a.k.a. filtering, or pruning) algorithm that attempts to
+include the dominant elements of the sum but ignore small,
+inconsequential ones [Salton89] [<A
+HREF="bibrefs.html#Buckley85">Buckley85] [<A
+HREF="bibrefs.html#Harman90">Harman90] .
+
+
+The fact that both $w_{kq}$
+and $w_{kd}$ vary considerably suggests that, by ordering the inclusion
+of products into the sum, we may be able to truncate this process when
+they become smaller than we care to consider.
+
+
+We therefore begin by
+sorting the terms in decreasing order of query weights $w_{kq}$.
+Considering terms in this order means we can expect to accumulate the
+match score beginning with its largest terms. Then, the fact that our
+list of postings was similarly (and not coincidentally:) ordered by
+decreasing frequency means that: \left( \forall j>i\right)
+\,w_{kd_{i}}>w_{kd_{j}}
+
+
+ Once these weights diminish below some threshold
+$$, we can quit walking down the postings list. (In fact, it may be that
+the weight associated with the very first posting is too small and we
+can ignore all weights associated with this term.)
+
+
+The second important
+data structure is an ACCUMULATOR queue in which each document's
+match score is maintained. Since each query term may add an additional
+term to the match score for a particular document, these accumulators
+will keep a running total for each document. For moderate corpus sizes,
+it may not be unreasonable to allocate an accumulator for each document,
+but this can demand too much memory for very large corpora. Define
+$\mathname{NAccum}$ to be the number of accumulators we are willing to
+allocate. Then one obvious way to restrict this set is to only allocate
+an accumulator when a document's score becomes significant, again in
+comparison to some threshold $\tau_{insert}$. Since we will be
+processing query terms in decreasing $w_{kq}$ order and heuristically
+value the space associate with new accumulators more than the slight
+extra time to run down posting lists a bit farther, we can assume
+$\tau_{\mathname{insert}}>\tau _{\mathname{add}}$.
+
+
+Picking appropriate
+values for these two thresholds is something of a black art, but Persin
+[Persin94] reports one especially
+careful experiment in which both are made proportional to the most
+highly matched document's accumulator $A^{*}$ (i.e., $A^{*}$ is the
+maximum match score in any document's accumulator):
+\tau_{\mathname{insert}} &=&\eta _{\mathname{insert}}\,\cdot \,A^{*} \\
+\tau_{\mathname{add}} &=&\eta _{\mathname{add}}\,\cdot \,A^{*} Persin's
+experiments suggest that values of $\eta _{\mathname{insert}
+}=0.07,\,\eta _{\mathname{add}}=0.001$ give retrieval effectiveness near
+that of full matches (i.e., considering all query-document term
+products) while mininizing $\mathname{NAccum}$.
+
+
+These two thresholds
+divide the range of possible query-document term products into three
+conditions: & w_{kd}\cdot w_{kq} > \tau_{\mathname{insert}} &
+\mathrm{Always\ add;\ create\ new\ accumulator\ }A_{d}\mathrm{\ if\
+necessary} \\ \tau_{\mathname{add}} & < w_{kd}\cdot w_{kq} \leq
+\tau_{\mathname{insert}} & \mathrm{Add\ only\ if\ accumulator\
+}A_{d}\mathrm{\ already\ exists} \\ & w_{kd}\cdot w_{kq} \leq
+\tau_{\mathname{add}} & \mathrm{Ignore;\ move\ on\ to\ next\ query\
+term}
+
+
+ Since we want to remain flexible with respect to both long and
+short queries, we will assume that the query weights $w_{kq}$ are
+pre-computed and passed to our ranking procedure.
+
+
+ Using our definition
+for $w_{kd}$ and focusing first on the $_{\mathname{insert}}$ threshold:
+& w_{kd}\cdot w_{kq} > & \tau _{\mathname{insert}} \\
+\Longleftrightarrow & \left( f_{kd} \cdot \mathname{idf}_{k}\,\right)
+\cdot w_{kq} > & \tau_{\mathname{insert}} \\ \Longleftrightarrow &
+f_{kd}& f_{kd}\ > &
+\frac{\tau_{\mathname{insert}}}{\mathname{idf}_{k}w_{kq}} \\
+\Longleftrightarrow & f_{kd}\ > &
+\frac{\eta_{\mathname{insert}}\,\,A^{*}}{\mathname{idf}_{k}\,w_{kq}}
+\end{eqnarray} This finally becomes an operational question we can apply
+with respect to each posting's frequency $f_{kd}$. Note that this
+threshold must be updated every time we move to a new term of the query.
+And of course, the computation of $\tau _{\mathname{add}}$ proceeds
+similarly.
+
+
+All the basic features of a partial ranking algorithm are now
+in place, and a pseudo-code sketch is shown in Figure (FOAref)
+. It also includes a few minor complications. First, a hashtable is
+required to find accumulators associated with a particular
+docno. Second, the set of accumulators $A_{d}$ is described
+as a queue, but must be slightly trickier than most - it must maintain
+them in order so that only the top $\mathname{NAccum}$ are maintained,
+and must support length() queries and a pop()
+function when it is full. Nondeterministic skip lists [<A
+HREF="bibrefs.html#Pugh90">Pugh90] are recommended for this
+purpose.[Cutting97] .
+
+
+
+
+Top of Page
+
+ | UP: Weighting and matching against Indices
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

@@ -1,0 +1,146 @@
+
+
+FOA: 4.2.1 Using \RelFbk for query refinement
+
+
+
+
+
+FOA Home
+
+ | UP: Extending the dialog with \RelFbk
+
+
+
+Using \RelFbk for query refinement
+
+While Figure (FOAref) showed the retrieved set of documents as
+a simple set, it is interesting to impose the RelFbk labeling on the
+retrieved documents viewed in vector space. Figure (figure)
+shows a query vector and a number of retrieved documents, together with
+a plausible distribution of RelFbk over them. That is, we can
+expect that there is some localized region in vector space where
+\blue{$\oplus$} relevant documents are most likely to occur. If we
+believe that these positively labeled retrieved documents are in fact
+clustered, it becomes appropriate to consider a hypothetical
+CENTROID (average) document $d^{+}$ which is at the center of all
+those documents that users have identified as relevant.
+
+
+It is less
+reasonable, however, to imagine that the {negatively} labeled
+\red{$\ominus$} documents are similarly clustered. Documents which were
+inappropriately retrieved failed to be relevant for one reason or
+another. There might be a number of such reasons. These are shown as
+\green, discriminating planes in Figure (figure) .
+
+
+The vector
+space view also lets us easily portray two quite different uses to which
+RelFbk information might be applied. Most typically, RelFbk is used
+to refine the user's query. Figure (figure) represents this
+refinement in terms of two changes we can make to the initial query
+vector. The first of these is to ``take a step towards'' the centroid of
+the positive RelFbk cluster. The size of this step$ is treated as
+the right answer, the parameter alpha becomes analogous to neural net's
+learning rate.} reflects how confident we are that the positive cluster
+centroid is a better characterization of the user's interests than their
+original query.
+
+
+There is one important difference between the query and
+even a slight perturbation of it towards a cluster's centroid: While the
+original query is often very sparse and resulting from just those few
+words used in the user's original query, any movement towards the
+centroid will include (linear combinations of) keywords used in any of
+the positively labeled documents. The additional difficulty in
+implementing this much more densely-filled feature vector becomes a
+serious obstacle in many system implementations. The fact that refined
+queries involve many more non-zero keyword entries also means that query
+weighting and matching techniques may be sensitive to this difference.
+
+
+Seminal
+work on the use of RelFbk was done by Salton, especially with
+students Roccio, Brauen and Ide in the early 1970s [<A
+HREF="bibrefs.html#Rocchio66">Rocchio66] [<A
+HREF="bibrefs.html#REF567">REF567] [<A
+HREF="bibrefs.html#REF319">REF319] . More recent students have
+extended the theory of query refinement, and related it to topics in
+machine learning [Buckley94] [<A
+HREF="bibrefs.html#Buckley95">Buckley95] [<A
+HREF="bibrefs.html#Allan96">Allan96] .
+
+
+Some of these experiments
+explored a second modification to the query vector. In addition to
+moving towards the $d^{+}$ center of \blue{$\oplus$}, it is
+also plausible to move away from the irrelevant retrieved
+documents \red{$\ominus$}. As noted above, however, it is much less
+likely that these irrelevant documents are as conveniently clustered. As
+Salton [Salton83] reports: ...
+retrieval operation is most effective when the relevant documents as
+well as the non-relevant documents are tightly clustered and the
+difference between the two groups is as large as possible. .... The
+RelFbk operation is less favorable in the more realistic case where the
+set of non-relevant documents covers a wider area of the space. [p. 145]
+One possible strategy is to take a single element $d^{-}$ of the
+irrelevant retrieved documents (for example, the most highly ranked
+irrelevant retrieval) and define the direction of movement with respect
+to it alone.
+
+
+As we have discussed above in connection with Figure
+(FOAref) , RelFbk helps to link together individual
+queries into a browsing sequence. And so, while we have focused here on
+the the simplest form of query refinement, with respect to the users'
+initial queries, RelFbk can be given again and again. An initial
+query vector is moved towards the centroid of documents identified as
+relevant (perhaps away from an especially bad one), this modified query
+instigates a new retrieval which is again refined. In practice, it
+appears that such adjustments result in diminishing returns after only a
+few iterations of query refinement [<A
+HREF="bibrefs.html#Salton83">Salton83] [<A
+HREF="bibrefs.html#Stanfill86">Stanfill86] .
+
+
+However, Section <A
+HREF="foa-7-3.html">&sect;7.3 will discuss a type of FOA in which a
+document corpus is constantly changing and the user's interest in a
+topic is long-lived. In this case, we can imagine the query as a
+FILTER against which a constant stream (e.g., of newly published
+Web documents) is applied. RelFbk has also been used in this
+setting, to make ongoing changes to the query/filter that continue to
+improve its effectiveness [Allan96] .
+
+
+Using
+RelFbk for query refinement produces results which are immediately
+satisfying to the users. First, it automatically generates a new query
+with which they can continue their browsing process. Second, the
+statistical analysis of positively labeled retrieved documents can
+provide other forms of useful information to the users as well. For
+example, rather than simply retrieving a new set of documents, new {\em
+keywords} not originally in the users' queries but present in positive
+documents at statistically significantly levels, can be suggested to the
+users as new vocabulary. Conversely, words that were in the original
+query but {\em negatively} correlated with $d^{+}$ (and/or positively
+correlated with $d^{-}$) can be identified as well.
+
+
+
+
+Top of Page
+
+ | UP: Extending the dialog with \RelFbk
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

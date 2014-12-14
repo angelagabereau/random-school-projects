@@ -1,0 +1,69 @@
+
+
+FOA: 6.9 Text-based intelligence
+
+
+
+
+
+FOA Home
+
+ | UP: Inference beyond the \Index
+
+
+
+Text-based intelligence
+
+Knowledge representation has always been a central issue for AI, and as
+a sub-discipline within Computer Science it's primary contribution is
+probably the beginnings of a computational theory of knowledge. While it
+is still too early to speak of such a theory, some key aspects of good
+knowledge representation are becoming clear [<A
+HREF="bibrefs.html#REF438">REF438] .
+
+
+The text captured in document
+corpora was not entered with the { intention} of being part of a
+knowledge base. These are documents written by someone as part of a
+natural communication process, and any search engine technology simply
+gives this document added life. Alternatively, we can say that the
+document {\em was} intended to become part of a ``knowledge base,'' but
+one that pre-dates (at least the AI) use of that term: people publish
+their documents with the explicit hope that their ideas can become part
+of our collective wisdom and used by others.
+
+
+Note the ease with which
+author-as-knowledge engineer can express their knowledge. Hypertext
+knowledge bases are accessible to every writer. In this view, hypertext
+solves the key AI problem of the KNOWLEDGE ACQUISITION BOTTLENECK
+, providing a knowledge representation language with the ease,
+flexibility and expressiveness of natural language --- by actually using
+natural language! The cost paid is the weakness of the inferences that
+can be made from a textual foundation: contrast the strong
+theorem-proving notions of inference of Section <A
+HREF="foa-6-5-1.html">&sect;6.5.1 with the many confounded
+associations which arise in Swanson's analysis of latent knowledge in
+Section &sect;6.5.3 .
+
+Subsections
+
+	 6.9.1 Grounding symbols in texts
+
+
+
+
+Top of Page
+
+ | UP: Inference beyond the \Index
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

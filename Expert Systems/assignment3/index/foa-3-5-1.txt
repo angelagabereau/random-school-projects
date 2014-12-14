@@ -1,0 +1,96 @@
+
+
+FOA: 3.5.1 Measures of association
+
+
+
+
+
+FOA Home
+
+ | UP: Matching queries against documents
+
+
+
+Measures of association
+
+Given a vocabulary of lexical indexing features, our central concern
+will be how to moderate the raw frequency counts of these features in
+documents (and, to a lesser extent, queries) based on {distributional}
+characteristics of that feature across the corpus. While we will be led
+to use real-valued weights to capture these relations, we begin with
+cruder methods, simply counting shared keywords.
+
+
+The most direct way to
+say that a query and a document are similar is to measure the
+{intersection} of their respective feature sets. Let $K_q$ be the set of
+keyword features used in a query, and $K_d$ be the analogous set found
+in a document. COORDINATION LEVEL is exactly how many terms in
+the query overlap with terms in the document: \beq
+\mathname{CoordLevel}(\mathbf{q,d}) = \left| \left( K_\mathbf{q} \cap
+K_\mathbf{d} \right) \right| \eeq If we have many, many features and our
+query and documents are highly variable, then the presence of any
+significant overlap may be enough to identify the set of documents of
+interest. On the other hand, if there is a great deal of overlap between
+our query and many of the documents, then simply counting how big this
+intersection is will look like a gross measure. This fine line between
+one or two documents matching a query and an avalanche of thousands of
+matching documents occurs regularly as part of FOA.
+
+
+One part of the
+problem is NORMALIZATION - the coordination level of intersecting
+features shared by both query and document seems a good measure of their
+similarity, but compared to what?! It's easy to show that this
+normalization matters. Consider the case where
+$\mathname{CoordLevel}(q,d) =1$, and imagine first that $K_q = K_d = 1$
+also; i.e., a single word query and a one-word document. In this case
+the two match on the one feature they each have. Intuitively, this is a
+perfect match; you couldn't do any better. But now imagine that the
+query includes 10 keywords, the document contains 1000, but still
+$\mathname{CoordLevel}(q,d) =1$. The same intuition suggests that this
+should be judged a much poorer match, but our measure does not reveal
+this. Unless we normalize by something that reflects how many other
+features we might have matched, we can't have a useful measure of
+association.
+
+
+One natural normalizer is to take the {average} of the
+number of terms in the query and in the document and compare the size of
+the intersection to it. This gives us the Dice coefficient: \beq
+\mathname{Sim}_{Dice}(\mathbf{q,d}) = 2 \frac{\left| \left( K_\mathbf{q}
+\cap K_\mathbf{d} \right) \right|} {\mid K_\mathbf{q} \mid + \mid
+K_\mathbf{d} \mid} \eeq The average number of features may or may not be
+appropriate, again depending on what a typical query and typical
+document is. Often a document has many, many keywords associated with it
+while queries may have only one or two. This average is not a very good
+characterization of either.
+
+
+Another perspective on similarity says that
+missing features are as significant as shared ones. The SIMPLE
+MATCHING COEFFICIENT gives equal weight to those features {\em
+included} in both query and document and those {\em excluded} from both,
+and normalizes by the total number of keyword features $NKw$: \beq
+\mathname{Sim}_{simple}(\mathbf{q,d}) = \frac{\left| \left( K_\mathbf{q}
+\cap K_\mathbf{d} \right) \right| + \left| \left( (NKw - K_\mathbf{q})
+\cap (NKw - K_\mathbf{d}) \right) \right|} {\mid NKw \mid} \eeq
+
+
+
+
+Top of Page
+
+ | UP: Matching queries against documents
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

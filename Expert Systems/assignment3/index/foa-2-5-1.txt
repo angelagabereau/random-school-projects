@@ -1,0 +1,114 @@
+
+
+FOA: 2.5.1 Basic algorithm
+
+
+
+
+
+FOA Home
+
+ | UP: Implementation
+
+
+
+Basic algorithm
+
+Then, the basic flow of what we will call the ``postdoc" function
+operates as follows.
+
+
+For every document in the corpus we will iterate
+through a loop until we've exhausted every token in that document. So
+let's call { getNonNoiseToken } a routine which repeatedly builds tokens
+from the document's stream, does whatever character assessments are
+required, checks it against a negative dictionary, and returns a token.
+If stemming is to be applied, we'll stem the word at this point. Then we
+will save a POSTING for that token's occurrence in that document.
+A posting is simply a correspondence between a particular word and a
+particular document, representing the occurrence of that word in that
+document. That is, we have a document in front of us and it contains a
+set of tokens. We are now going to build a representation for each token
+that tells all of the documents in which it occurs. For each keyword we
+will maintain the token itself as the key used for subsequent access,
+and also the head of a linked list of all of postings, each containing
+the document number and the number of occurrences of the keyword in that
+document. A sketch of these data structures is shown in Figure
+(figure) .
+
+
+After having gone through every single document in
+the corpus in this fashion, we have a large collection of postings. Here
+we recommend SPLAY TREES as an appropriate data structure for
+these keywords and their postings. In the C implementation shown in
+Figure (FOAref) , the InstallTerm() function inserts a new
+posting into the Terms tree.
+
+
+$ is the same as the last time, and simply
+increment the appropriate counter in this case.
+
+
+Splay trees are
+appropriate technology because we can count on the many frequency-biased
+queries to cause the resulting tree to become well-balanced with use.}
+
+
+During
+the processing of each document, it will prove important to know how
+many keywords are extracted from it. This will be known as the
+DOCUMENT'S LENGTH , denoted $length_d$; this quantity is
+important when {\em normalizing} documents of different lengths. One way
+to implement this computation is to maintain a small, separate file {\tt
+doclend.d} containing only this one number for each document.
+
+
+When the
+set of documents has been exhausted, we need to write out this
+INVERTED representation to a file for subsequent processing. For
+every token in the splay tree (typically the traversal will be in
+lexicographic order), we will organize all its postings. First, we count
+the number of occurrences of the keyword across all the documents in the
+corpus; we will call this variable $totfreq_k$. A second, less obvious
+statistic we will also maintain is how many documents contain this
+keyword; this variable will be called $docfreq_k$. If there is exactly
+one occurrence of a keyword in each document, then these two numbers
+will be the same. But typically there are multiple occurrences of the
+same keyword in a single document and $totfreq_k > docfreq_k$. Both
+variables will be important to us in determining appropriate weights for
+the $Index$ relation (cf. Chapter 3.)
+
+
+After having gone through all of
+the documents, and accumulating for each one these two statistics, we
+must sort the postings in decreasing frequency order. The reason for
+this won't be apparent until we discuss the matching algorithms (cf.
+Section &sect;3.5 ), but it turns out to be
+important that documents that use a keyword most often are at the
+beginning of the list.
+
+
+Once the documents' postings have been sorted into
+descending order of frequency, it is likely that several of the
+documents in this list will happen to have the same frequency, and we
+can exploit this fact to compress their representation. Figure
+(figure) . shows the $\mathname{POSTING}$ list broken into a
+list of $\mathname{FPOST}$ sublists, one for unique frequency count.
+
+
+
+
+Top of Page
+
+ | UP: Implementation
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

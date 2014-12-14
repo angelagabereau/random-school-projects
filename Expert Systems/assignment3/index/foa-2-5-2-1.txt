@@ -1,0 +1,52 @@
+
+
+FOA: 2.5.2.1 Changing indices for dynamic corpora
+
+
+
+
+
+FOA Home
+
+ | UP: Fine points
+
+
+
+Changing indices for dynamic corpora
+
+One reason to keep raw frequency counts in the inverted keyword file
+used by our experimental implementation is that this provides maximum
+flexibility as we consider various keyword weighting schemes. But there
+is another reason that these raw statistics are useful in real
+applications, too.
+
+
+Often it is important to be able to {update} a corpus'
+index as documents are added and/or deleted to and from it. Retention of
+raw keyword frequency information allows these statistics to be updated
+as our corpus changes. Adding a new document simply requires that it be
+analyzed (as outlined above), simply incrementing existing counters for
+each key word. is used, however, incremental addition of document
+postings is slightly more awkward.} Similarly, deletion of documents
+from an index exploits the full text of the document itself to identify
+all keywords it contains. For each keyword then, posting counts are
+simply decremented. {The optimized{\tt fpost} data structure makes this
+update awkward as well.}
+
+
+
+
+Top of Page
+
+ | UP: Fine points
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

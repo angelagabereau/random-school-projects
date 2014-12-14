@@ -1,0 +1,68 @@
+
+
+FOA: 6.5.1 Theorem-proving models for relevance
+
+
+
+
+
+FOA Home
+
+ | UP: Modes of inference
+
+
+
+Theorem-proving models for relevance
+
+Imagine the current state of knowledge possessed by a browsing user as a
+set of axioms $ Then we can model their information need as a question:
+can we infer that a theorem $\tau$ is true or false from our current
+knowledge? \Sigma \stackrel{?}{\models} \tau The fact that they have an
+information need can be taken as an assumption that there must be
+additional knowledge, contained in some documents, which together with
+their current knowledge base does allow $\tau$ (or $\neg \tau$) to be
+proven. Relevant documents are exactly those which support such an
+inference. \mathname{Rel} \equiv \left\{ d \mid \Sigma \cup d \models
+\tau \right\} Practically speaking of course, this model is impossible.
+It would demand a complete and consistent logical description
+of the user's cognitive state. It also requires that the full set of
+all possible logical facts contained in each and every
+document be similarly encoded. (And then, of course, there is the
+minor problem of searching for the minimal set of documents which
+satisfy this inference!) of language, for example as documents are
+passed around a business organization [<A
+HREF="bibrefs.html#Winograd86">Winograd86] .}
+
+
+Still, this basic
+conception of existing knowledge being extended by new facts, and new
+inferences being possible when new facts become known, is a very
+provocative metaphor at the least. Sperber and Wilson's notion of
+connected information corresponds exactly to such new inferences (cf.
+Section &sect;8.2.2 ).
+
+
+van Reisbergen has
+talked about this strong notion of relevance as OBJECTIVE
+RELEVANCE \vanR{147}. In more recent work, van Reisbergen has
+extended this basic model to a full RELEVANCE LOGIC , based on a
+four-valued semantics over $2^{\{T,F\}}$ [<A
+HREF="bibrefs.html#vanR86">vanR86] .
+
+
+
+
+Top of Page
+
+ | UP: Modes of inference
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

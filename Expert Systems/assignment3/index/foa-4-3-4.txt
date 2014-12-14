@@ -1,0 +1,101 @@
+
+
+FOA: 4.3.4 Basic measures
+
+
+
+
+
+FOA Home
+
+ | UP: INDIVIDUALS' assessment: search engine  performance
+
+
+
+Basic measures
+
+Figure (figure) shows the relationship between relevant (\Rel)
+and retrieved (\Ret) sets as a Venn Diagram, against the backdrop of the
+universe $U$ of the rest of the documents of the corpus. Obviously our
+focus should be on those documents that are in the intersection
+of \Rel and \Ret, and making this intersection as large as possible.
+Informally, we will be most happy with a \Rel set when it best overlaps
+with the \Ret set, and therefore seek evaluation measures which reflect
+this. The basic relations between the sizes of these sets can
+also be captured in the CONTINGENCY TABLE of Figure
+(figure) $ is the number of documents not retrieved,
+$\mathname{NDoc}$ is the total number of documents, $\mathname{NRel}$ is
+the number of relevant documents, $\mathname{NNRel}$ is the number of
+irrelevant document.}
+
+
+We know we want the intersection of and \Ret sets
+to be large, but large relative to what?! As mentioned in Chapter 1, if
+we are most focused on the \Rel set and use it as our standard of
+comparison, we'd like to know what fraction of these we've retrieved.
+This ratio is called RECALL : \beq \mathname{Recall}\equiv
+{{\left| \mathname{Ret}\cap\mathname{Rel} \right| }
+\over{\left|\mathname{Rel}\right|}} \eeq
+
+
+Anticipating the probalistic
+analysis of Section &sect;5.5 , we can think
+of Recall as (an estimate of) the conditional probability that
+a document will be retrieved, given that it is relevant:
+$\mathname{Pr}(\mathname{Ret}|\mathname{Rel})$.
+
+
+Conversely, if we instead
+focus on the $$ set, we are most interested in what fraction of these
+are relevant; this ratio is precision: \beq \mathname{Precision}\equiv
+{{\left| \mathname{Ret}\cap\mathname{Rel} \right|}
+\over{\left|\mathname{Ret}\right|}} \eeq Similarly, this is the
+probability that a document will be relevant, given that it is
+retrieved:$\Pr(\mathname{Rel}|\mathname{Ret})$. A closely related but
+less common measure is called FALLOUT , where we (perversly!)
+focus on the irrelevant documents and the fraction of them retrieved:
+\beq \mathname{Fallout}\equiv
+{\left|{\overline{\mathname{Ret}}\cap\mathname{Rel}}\right| \over
+{\left|\overline{\mathname{Ret}}\right|}} \eeq This is
+$\Pr(\mathname{Ret}|\overline\mathname{Rel})$. These two measures,
+Recall and Precision, have remained the bedrock of search engine
+evaluation since they were first introduced by Kent in 1955 [<A
+HREF="bibrefs.html#Kent55">Kent55] [<A
+HREF="bibrefs.html#Saracevic75">Saracevic75] .
+
+
+The close relationship
+between these three measures can be defined precisely, if the generality
+$G$ of the query (cf. Sect. &sect;4.3.7 )
+is known: \beq \mathname{Precision}= {{\mathname{Recall}\cdot
+{G}}\over{{\mathname{Recall}\cdot {G}} + {\mathname{Fallout}\cdot
+(1-{G})}}} \eeq By far the most common measures of search engine
+performance are just the pair of measures, precision and recall.
+
+
+Ideally,
+of course, we'd like a system which has both high precision and
+high recall: only relevant documents and all of them. But real-world,
+practical systems must select documents based on features that are only
+statistically useful indicators of relevance; we can never be sure. In
+this case efforts made to improve recall must retrieve more documents,
+and it is likely that precision will suffer as a consequence. The best
+we can hope for is some balance.
+
+
+
+
+Top of Page
+
+ | UP: INDIVIDUALS' assessment: search engine  performance
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

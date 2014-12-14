@@ -1,0 +1,129 @@
+
+
+FOA: 4.1.1 Cognitive assumptions
+
+
+
+
+
+FOA Home
+
+ | UP: INDIVIDUAL'S assessment of relevance
+
+
+
+Cognitive assumptions
+
+``Garbage in, garbage out'' is one of the first insights every software
+developer learns, and FOA is no exception. The primary source of data
+considered by traditional IR methods, and the focus of Chapters <A
+HREF="foa-2-1.html">&sect;2.1 and &sect;3
+of this text, are the documents of the corpus, particularly the keywords
+they contain. (Chapter &sect;6 will consider
+the use of other document attributes.) A fundamental feature of the
+broader FOA view is that {\bf browsing users provide an equally
+important source of data} concerning what keywords mean and what
+documents are about. It is therefore appropriate to begin by
+characterizing just who these users are that we will be watching.
+
+
+We
+begin with one important cognitive assumption we must make about our
+users: How thorough a FOA search do they wish to perform? Is
+this an important search to which the users are willing to dedicate a
+great deal of time and attention, or will a quick, cursory answer
+suffice? For example, Chapter 1 mentioned how much less exhaustive the
+typical undergraduate (doing some quick research before submitting a
+term paper) is than the PhD candidate (who wants to ensure his or her
+proposed dissertation topic is new). The typical WWW searcher seems
+satisfied with only a few useful leads, but the professional searcher (a
+lawyer looking for any case that might help, a doctor looking for any
+science that might heal a patient) will search diligently if there is
+even a small chance of finding another relevant document. This kind of
+variability can be observed not only across different classes of users
+but even across the same user at different times. The idea is that a
+very pragmatic need might initially cause users to come to the \EB, but
+often continue to read as they learn that their initial query does not
+have a simple answer. Imagine that you want the answer to a simple,
+factual query, for example,the height of Mt. Everest. The first couple
+of paragraphs of the article on Mt. Everest would meet a simple version
+of this information need quite admirably: \bq Tibetan CHOMOLUNGMA,
+Chinese (Wade-Giles) CHU-MU-LANG-MA FENG, (Pinyin) QOMOLANGMA FENG,
+Nepali SAGARMATHA, peak on the crest of the Great Himalaya Range in
+Asia, the highest point on Earth. It lies on the border between Nepal
+and China (Tibet), at 27 [{degree}] 59' N, 86[{degree}] 56' E.
+
+
+Three
+barren ridges--the Southeast, Northeast, and West--culminate in two
+summits at 29,028 feet (8,848 m; Everest) and 28,700 feet (8,748 m;
+South Peak). The mountain can be seen directly from its northeastern
+side, where it rises about 12,000 feet (3,600 m) above the Plateau of
+Tibet. The lesser peaks of Changtse (north; 24,803 feet [7,560 m]),
+Khumbutse (northwest; 21,867 feet [6,665 m]), Nuptse (southwest; 25,791
+feet [7,861 m]), and Lhotse (south; 27,890 feet [8,501 m]), which rise
+around its base, hide the summit from Nepal.
+{}
+WW.EB.COM:180/CGI-BIN/G?DOCF=MICRO/199/84.html>}
+.EB.COM:180/CGI-BIN/G?DOCF=MICRO/199/84.html>}
+B.COM:180/CGI-BIN/G?DOCF=MICRO/199/84.html>}
+COM:180/CGI-BIN/G?DOCF=MICRO/199/84.html>}
+M:180/CGI-BIN/G?DOCF=MICRO/199/84.html>}
+180/CGI-BIN/G?DOCF=MICRO/199/84.html>}
+0/CGI-BIN/G?DOCF=MICRO/199/84.html>} CGI-BIN/G?DOCF=MICRO/199/84.html>}
+I-BIN/G?DOCF=MICRO/199/84.html>} BIN/G?DOCF=MICRO/199/84.html>}
+N/G?DOCF=MICRO/199/84.html>} G?DOCF=MICRO/199/84.html>}
+DOCF=MICRO/199/84.html>} CF=MICRO/199/84.html>} =MICRO/199/84.html>}
+ICRO/199/84.html>} RO/199/84.html>} /199/84.html>} 99/84.html>}
+/84.html>} 4.html>} html>} ml>} >} \eq
+
+
+But in fact there are at least
+three numbers that could legitimately be given as this answer, each
+associated with a separate expedition at a different point in history!
+The online version of the Encyclopedia Britannicamakes this additional
+``Research Note'': \bq The generally accepted figure of 29,028 feet
+(8,848 m) for the height of Mount Everest was established by the Indian
+government's Survey of India in 1952-54. This datum is used by, among
+others, the (U.S.) National Geographic Society.
+
+
+A Chinese survey in 1975
+obtained the figure of 29,029 feet, and an Italian survey, using
+satellite surveying techniques, obtained a value of 29,108 feet (8,872
+m) in 1987, but, owing to questions about the methods used, neither of
+these results is widely accepted. In 1986 a measurement of K2, regarded
+as the second highest mountain, seemed to indicate that it was higher
+than Everest, but this was subsequently shown to be an error. In 1992
+another Italian survey, using a global satellite positioning system and
+laser measurement technology, yielded the figure 29,023 feet (8,846 m)
+by subtracting from the measured height the 6.5 feet (2 m) of ice and
+snow on the summit; this value has not found general acceptance.
+{} \eq These sagas make
+for very interesting reading, but only if you have the additional time
+and energy available to benefit from such education. Section <A
+HREF="foa-8-3-4.html">&sect;8.3.4 will explore this connection
+between FOA and educational objectives in further detail. }
+
+Subsections
+
+	 4.1.1.1 Prototypic retrievals
+	 4.1.1.2 RelFbk is nonmetric
+
+
+
+
+Top of Page
+
+ | UP: INDIVIDUAL'S assessment of relevance
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

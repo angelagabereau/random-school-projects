@@ -1,0 +1,116 @@
+
+
+FOA: 6.3.3 Taxonomies
+
+
+
+
+
+FOA Home
+
+ | UP: Keyword structures
+
+
+
+Taxonomies
+
+As their central role in WordNet suggests, the hierarchic BT/NT or
+hypernymy relations are especially important. Because of the constant
+analytic pressure of the Western intellectual tradition, topics continue
+to be refined into smaller topics, which the next generation of scholars
+immediately refine further. This has led to a wide range of
+classification taxonomies associated with various social groups of
+scholars and scientists.
+
+
+Figure (figure) shows several different
+sources from which indexing information might be obtained. The most
+important single source of subject indexing is the Library of Congress
+(LoC). This indexing system is the basis of most large libraries because
+its indexing scheme covers all disciplines. For exactly the same reason,
+however, the indexers at LoC have far too much to do, and the resulting
+indices are admittedly crude. Partly as a response to the lack of
+adequate indexing structures, various professional groups have developed
+their own taxonomies to help organize the information within their
+particular technical specialty. For example, the Association of
+Computing Machinery has developed an <A
+HREF="http://ls6-www.informatik.uni-dortmund.de/CRclass.html">ACM
+Computing Reviews Classification for use by its {\em Computing
+Reviews} publication [REF396] . This
+taxonomy is much more specific, and therefore more widely used by
+computer specialists. It lacks, however, many of the advantages of the
+LoC system. In general, the keywords are assigned by the authors rather
+than by trained librarians. The system is rarely if ever integrated into
+the operations of libraries. And while the indexing structure is much
+more refined than that of the LoC, it is still too crude for most
+research currently going on in any one sub-specialty. This has caused
+some practitioners in various sub-specialties to develop their own
+extensions. For example, David Waltz was commissioned by Scientific
+Data-Link to extend the ACM's {\em Computing Reviews} taxonomy for the
+sub-specialty of artificial intelligence (AI) [<A
+HREF="bibrefs.html#REF331">REF331] . Waltz's extension is extremely
+refined and helpful to AI practitioners. At the same time, it is even
+more {\em ad hoc}, its ``sponsoring institution'' has less impact, and
+consequently it is even less well accepted within libraries.
+
+
+All three of
+these indexing systems are examples of TOP-DOWN KNOWLEDGE
+STRUCTURES. That is, they are developed by various social
+institutions as prescriptive languages used to represent the consensus
+opinion as to how information is to be organized. Such ``consensual''
+knowledge structures are critical if individuals are to {\em share}
+information. Each indexing system represents a compromise between
+increased scope and diminished resolution. Increased scope brings along
+with it broader acceptance and adherence. These advantages are bought at
+the expense of acceptance by users actively involved in technical
+specialties.
+
+
+The central role of hierarchic BT/NT relations in organizing
+keyword vocabularies should make us especially concerned with a precise
+semantics for this relationship. Most would agree that if {A} is a
+broader-term than {\tt B}, then {\tt B} ``is a'' {\tt A}. But as
+knowledge engineers within AI have known for a long time, the ubiquitous
+{\tt IS\_A} relation admits a number of interpretations which can
+support much different types of inference [<A
+HREF="bibrefs.html#REF55">REF55] [<A
+HREF="bibrefs.html#REF97">REF97] . In general, the BT/NT relation
+seems to correspond most closely to the ``a kind of'' implication
+relating predicates {\tt A} and {\tt B}: (\forall x) B(x) \rightarrow
+A(x)
+
+
+ Earlier generations of Internet users participated in the
+construciton of the extensive <A
+HREF="http://ftp://rtfm.mit.edu/pub/usenet-by-hierarchy/">UseNet
+hierarchy of discussion boards, on topics from {\tt
+ALT.SEX.FETISH.ROBOTS} to {\tt COMP.SYS.MAC.OOP.TCL}; see Section <A
+HREF="foa-7-4-5.html">&sect;7.4.5 for an example of the use of this
+hierarchy in text classification tasks. These days the most widely know
+taxonomies are WWW DIRECTORIES such as <A
+HREF="http://www.yahoo.com">Yahoo! , where employees of this company
+have constructed a hierarchy, primarily of places to spend money. One of
+the most exciting recent developments is the development of
+\defn{collaborative classification} efforts such as the <A
+HREF="http://dmoz.org/about.html">Open Directory Project (DMOZ)
+which involve large communities of experts, each working on making sense
+within their own are of expertise.
+
+
+
+
+Top of Page
+
+ | UP: Keyword structures
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

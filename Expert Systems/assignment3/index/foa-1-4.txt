@@ -1,0 +1,189 @@
+
+
+FOA: 1.4 Documents
+
+
+
+
+
+FOA Home
+
+ | UP: Overview
+
+
+
+Documents
+
+When ``documents'' were first introduced as part of the FOA process, it
+was as one of the set of potential, pre-defined answers to users'
+queries. Here we will ground this abstract view in practical terms that
+can be readily applied, for example to the searches that are now so
+common on the Web. Our goal will be to balance this practical
+description of how search engines work today with the abstract FOA view
+that goes beyond current practices to other kinds of search still to
+come.
+
+
+A useful working definition is that a DOCUMENT is a {\em
+passage of free text}. It is composed of text, strings of characters
+from an alphabet. We'll typically make the (English) assumption that
+uses the Roman alphabet, Arabic numerals and standard punctuation;
+complications like font styles (italics, bold), and especially non-Roman
+MARKED ALPHABETS that add characters like \term{\"{a}},
+\term{\c{C}}, \term{\~{N}}, \term{\ae}, etc., and the iconic characters
+of Asian languages, require even more thought.
+
+
+By ``free'' text we mean
+it is in natural language, the sort native readers and writers use
+easily. Good examples of free text might be a newspaper article, a
+journal paper, a dictionary definition. Typically the text will be
+grammatically well-formed language, in part because this is {written}
+language, not oral. People are more careful when constructing written
+artifacts that last beyond the moment. Informal texts like email
+messages, on the other hand, help to point to ways that some texts can
+retain the spontaneity of oral communication, for better and worse [<A
+HREF="bibrefs.html#REF803">REF803] .
+
+
+Finally, we will be interested
+in PASSAGES of such text, of arbitrary size. The newspaper
+example makes us imagine documents of a few thousand words, but journal
+articles make us think of samples ten times that large, and email
+messages make us think of something only a tenth as long. We can even
+think of an entire book as a single document. All such passages satisfy
+our basic definition - they might be appropriate answers to a search
+about some topic.
+
+
+The length of the documents will prove to be a
+critical issue in FOA search engine design, especially when the corpus
+contains documents of widely varying lengths. The reason is, roughly,
+that since longer documents are capable of discussing more topics, they
+are capable of being about more. Longer documents are more likely
+to be associated with more keywords, and hence more likely to be
+retrieved (cf. Section &sect;3.4.2 ).
+
+
+One
+possible response is to make a simple but very consequential assumption:
+
+
+
+All documents have equal \about-ness.
+
+
+ In other words, if we ask the ({a
+priori}) probability of any document in the corpus being considered
+relevant, we will assume all are equiprobable. This would lead us to
+{\em normalize} documents' indices in some way to compensate for
+differing lengths. The normalization procedure is a matter of
+considerable debate; we will return to consider it in depth later (cf.
+&sect;3.4.2 ).
+
+
+For now, we will take a
+different tack towards the issue of document length, as captured by an
+alternative pair of assumptions:
+
+
+ The smallest unit of text with
+appreciable \about-ness is the paragraph.
+
+
+ All manner of longer documents
+are constructed out of basic paragraph atoms.
+
+
+ The first piece of this
+argument is that the smallest sample of text that can reasonably be
+expected to satisfy a FOA request is a paragraph. The claim is that a
+word, even a sentence, does not by itself provide enough {context} for
+any question to be answered, or ``found out about.'' But if the
+paragraph has been well-constructed, as defined by conventional rules of
+composition, it should answer many such questions. And unless the text
+comes from James Joyce, Proust, or Lois Borges, we can expect paragraphs
+to occupy about half an average screen page -- nicely viewable chunks.
+
+
+Assumption
+(FOAref) alludes to the range of structural relationships by
+which the atomic paragraphs can typically be strung together to form
+longer passages. First and foremost is simple sequential flow, the order
+in which an author expects the paragraphs to be written. The sequential
+nature of traditional printed media, from the first papyrus scrolls to
+modern books and periodicals, has meant that a sequential ordering over
+paragraphs has been dominant. It may even be that the modern human is
+especially capable of understanding {\em rhetoric} of this form (cf. <A
+HREF="foa-6-2-3.html">&sect;6.2.3 ).
+
+
+In any case, a sequential
+ordering of paragraphs is just one possible way they might be related.
+Other common relationships include:
+
+
+ \item {\em hierarchical} structure
+composing paragraphs into sub-sections, sections, and chapters. \item
+{\em footnotes}, embellishing the primary theme; \item {\em
+bibliographic citations} to other, previous publications; \item
+references to other sections of the same document; especially \item {\em
+pedagogical prerequisite} relationships ensuring that conceptual
+foundations are established prior to subsequent discussion;
+
+
+ Of course
+each of these relationships has grown up within the tradition of printed
+publication. Special typographical conventions (boldface, italics, sub-
+and superscripting, margins, rules) have arisen to represent them and
+distinguish them from sequential flow.
+
+
+But new, electronic media now
+available to readers (and becoming available to authors) need not follow
+the same strictly linear flow. The new capabilities and problems of
+traversing text in nonlinear ways -- HYPERTEXT -- have been
+discussed by some visionaries [REF701]
+[Nelson87] for decades. This new
+technology certainly permits us to make some traversals more easily
+(e.g., jumping to a cited reference with the click of a button rather
+than via a trip to the library), but this same ease may make it more
+difficult for an author to present a cogent argument.
+
+
+For now we will not
+worry about just how arguments can be formed with nonlinear hypermedia.
+Assumptions(FOAref) and (FOAref) simply allow us to
+infer Assumption (FOAref) : If all the documents are
+paragraphs, we can expect them to have virtually uniform `aboutness'.
+These too are simplifying assumptions, however. In an important sense a
+scientific paper's abstract is about the same content as the rest
+of the paper, and a newspaper article's first paragraph attempts to
+summarize the details of the following story. These issues of a text's
+LEVEL OF TREATMENT will be discussed later.
+
+Subsections
+
+	 1.4.1 Structured aspects of documents
+	 1.4.2 Corpora
+	 1.4.3 Document proxies
+	 1.4.4 Genre
+	 1.4.5 Beyond text
+
+
+
+
+Top of Page
+
+ | UP: Overview
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

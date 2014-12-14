@@ -1,0 +1,58 @@
+
+
+FOA: 6.2.4 Intra- vs.  inter-document relations
+
+
+
+
+
+FOA Home
+
+ | UP: Hypertext, intra-document links
+
+
+
+Intra- vs.  inter-document relations
+
+It is interesting to see how similar many conventions for relating
+textual passages within a single document resemble those used
+to traditionally refer across documents. In part this reflect
+circumstantial features of a document's production --- whether it was
+printed on newsprint, archival paper, in a journal or a book, or a WWW
+page --- will disappear as a common technology underlies them all. And
+at the same time integrating new technologies into the publication
+process makes it clear how certain features will remain true onlyt
+within a single document.
+
+
+This can be described in terms of a
+``membrane'' that functionally defines what we will continue to consider
+the document. The defining membrane in this case has to do with a notion
+of AUTHORSHIP . The words expressed are the creation/opinion of a
+single author or multiple authors, each who have signed their names. For
+example, when one paragraph of a legal document refers to another
+passage within the same document: Except as provided in the case of
+certain unauthorized signatures (\S8-205), lack of genuineness of a
+certificated security or an initial transaction statement is a complete
+defense ... we can be assured that the document's authors were thinking
+about both passages and commit to a particular relation between them.
+Inter-documentment citations, on the other hand, reflect a new opinion
+about some pre-existing document.
+
+
+
+
+Top of Page
+
+ | UP: Hypertext, intra-document links
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

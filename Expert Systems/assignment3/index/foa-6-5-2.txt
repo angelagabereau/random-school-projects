@@ -1,0 +1,91 @@
+
+
+FOA: 6.5.2 Spreading activation search
+
+
+
+
+
+FOA Home
+
+ | UP: Modes of inference
+
+
+
+Spreading activation search
+
+The fact keywords can be associated with documents, that keywords can be
+associated with one another, documents become associated by citations,
+etc. lead early IR pioneers such as Doyle and Stiles to adopt simple
+association as a unifying relation connecting many objects of
+the FOA inquiry [REF317] [<A
+HREF="bibrefs.html#Doyle61">Doyle61] [<A
+HREF="bibrefs.html#Doyle62">Doyle62] [<A
+HREF="bibrefs.html#REF322">REF322] [<A
+HREF="bibrefs.html#Maron82">Maron82] [<A
+HREF="bibrefs.html#Giuliano63">Giuliano63] [<A
+HREF="bibrefs.html#Findler79">Findler79] . Integrating information
+across SEMANTIC NETWORKS of such associative relations has been
+an important example of knowledge representation within AI since the
+memory models of Collins and Qullian [<A
+HREF="bibrefs.html#REF170">REF170] . In its simplest form, a simple
+quantity known as ACTIVITY is allowed to propagate through a
+network like that shown in Figure (figure) from several
+sources. SPREADING ACTIVATION SEARCH is the name for a broad
+range techniques that find solutions (for example, a path from Start to
+Goal in Figure (FOAref) ) by controlling the propagation of
+activity through associative networks like this [<A
+HREF="bibrefs.html#REF321">REF321] [<A
+HREF="bibrefs.html#REF668">REF668] [<A
+HREF="bibrefs.html#REF667">REF667] .
+
+
+The Adaptive Information
+Retrieval (AIR) system was a prototype search engine built as part of my
+dissertation at the University of Michigan in the mid-1980s [<A
+HREF="bibrefs.html#REF222">REF222] [<A
+HREF="bibrefs.html#REF622">REF622] . This research was part one of
+several systems applying CONNECTIONIST (neural network) learning
+methods to the IR search engine problem [<A
+HREF="bibrefs.html#REF568">REF568] [<A
+HREF="bibrefs.html#REF732">REF732] [<A
+HREF="bibrefs.html#REF773">REF773] [<A
+HREF="bibrefs.html#REF430">REF430] .
+
+
+Figure (figure) shows
+how many of the features discussed here can interact as part of a single
+retrieval system. This figure comes from Dan Rose's SCALIR (Symbolic and
+Connectionist Approach to Legal Information Retrieval) system, built to
+investigate the use of both logical, ``symbolic'' modes of inference and
+probabalitic, ``subsymbolic'' ones. This figure shows containment
+relations between document elements, (like those shown in more detail in
+(FOAref) ) topical connections between keywords, and
+inter-document citations, all mixed and used as part of spreading
+activation-based inference.
+
+Subsections
+
+	 6.5.2.1 Basic representation
+	 6.5.2.2 Querying and retrieval
+	 6.5.2.3 \RelFbk in AIR
+	 6.5.2.4 Learning in AIR
+	 6.5.2.5 Generalized representation
+
+
+
+
+Top of Page
+
+ | UP: Modes of inference
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

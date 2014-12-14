@@ -1,0 +1,321 @@
+
+import java.io.*;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.geom.*;
+import java.util.*;
+
+
+//this version provides the visualization with the pattern beginning in the center and moving outwards in a circular/wheel form.
+public class AngelaA4v1 extends JComponent {
+	
+	static LSys lsys;
+	static float [] segmentData = new float[5];// color type is at
+														// index [_][0],
+														// originX[_][1],
+														// originY[_][1],endX[_][1],endY[_][1]
+	static private Vector paintData = new Vector(500);
+	static private 	int storageIndex = 0;// stores the axiom of the location in paintData
+	// that the next char data from production can
+	// be stored.
+
+	static private float HEIGHT =600;
+	static private float WIDTH = 600;
+	static private float HEIGHT_CENTER = HEIGHT/2;
+	static private float WIDTH_CENTER = WIDTH/2;
+	static private float segmentLength = 30;
+
+
+ public AngelaA4v1(){
+     super();
+
+ 		// for a reason i need to find out Dimension constructor will not
+			// take vars HEIGHT and WIDTH
+     setPreferredSize(new Dimension(600, 600));
+ }
+
+ public void paint(Graphics g) {
+	 
+		// Cast the graphics to type Graphics2D
+		Graphics2D twoDG = (Graphics2D) g;
+
+		Shape bkgd = new Rectangle2D.Float(0f, 0f, WIDTH, HEIGHT);// background
+		
+		// set the stroke
+		twoDG.setStroke(new BasicStroke(1));
+
+		// paint the fill and outline for the background
+		twoDG.setPaint(new Color(238, 238, 209));// light yellow 1
+		//twoDG.setPaint(Color.black);
+		twoDG.fill(bkgd);
+/*
+		Line2D.Float segment = new Line2D.Float(WIDTH_CENTER, HEIGHT_CENTER, WIDTH_CENTER, HEIGHT_CENTER);
+
+		float ellipseType;
+		int eSizeFactor = 2;
+		Shape e;
+		float [] segmentData = new float[5];
+		
+		ListIterator iter = (ListIterator) paintData.iterator();
+		System.out.println("WHERE");
+		/*
+ 	while(iter.hasNext()){
+ 		/*
+ 		segmentData = (float []) iter.next();
+ 		
+ 		ellipseType = segmentData[0];
+ 		System.out.println("ellipse type" + ellipseType);
+ 		e = new Ellipse2D.Float(segmentData[3] - segmentLength
+ 				/ (2 * eSizeFactor), segmentData[4] - segmentLength
+ 				/ (2 * eSizeFactor), segmentLength / eSizeFactor, segmentLength
+ 				/ eSizeFactor);
+ 		
+ 		if(ellipseType==1){
+ 			twoDG.setPaint(new Color(205, 16, 118));//deep pink3
+ 		}else if (ellipseType==2){
+ 			twoDG.setPaint(new Color(178, 223, 238));//light blue2
+ 		}else if (ellipseType==3){
+ 			twoDG.setPaint(new Color(127, 255, 0));//chartreuse1
+ 		}else{
+ 			twoDG.setPaint(new Color(238, 238, 209));// yellow bkgd
+ 		}
+ 		//twoDG.setPaint(Color.black);
+ 		twoDG.fill(e);
+ 		twoDG.setPaint(Color.black);
+ 		twoDG.draw(e);
+ 		twoDG.setPaint(Color.white);
+		segment.setLine(segmentData[1], segmentData[2], segmentData[3], segmentData[4]);
+		twoDG.draw(segment);
+
+		twoDG.setPaint(Color.gray);
+		segment.setLine(segmentData[1]-10, segmentData[2]-10, segmentData[3]-10, segmentData[4]-10);
+		twoDG.draw(segment);
+		
+ 	} 
+		
+		
+		*/
+		
+		
+		
+}
+
+ 
+ // this method calculates all the necessary data to visualize the l-sys
+public static void getPaintData(){
+ 	
+	System.out.println();
+	System.out.println("Entering getPaintData");
+	
+	float [] segmentData = new float[5];// color type is at
+	// index [_][0],
+	// originX[_][1],
+	// originY[_][1],endX[_][1],endY[_][1]
+	
+ 	int depth = lsys.getDepth();
+	String axiom = lsys.getAxiom();
+ 	int index = 0;
+ 	int startIndex = 0;// stores the index of the first char in current
+							// axiom, in paintData
+ 	int endIndex = 0;// stores the index of the last char in current
+							// axiom, in paintData, rather the location based
+							// the last char, open interval [ )
+ 
+		float originX = HEIGHT_CENTER;
+		float originY = WIDTH_CENTER;
+		float endX = originX;
+		float endY = originY;
+ 	// store char data and origin co-ordiantes in paintData
+ 	System.out.println("initilaize firts location---------");
+ 	System.out.println("originX: "+originX);
+ 	System.out.println("originy: "+originY);
+ 	System.out.println("endX: "+endX);
+ 	System.out.println("endy: "+endY);
+ 	System.out.println("-----------------------------------");
+ 	
+ 	// for the first entry, the origin, set everything to default.
+ 	segmentData[0]=0;
+ 	segmentData[1]=originX;
+ 	segmentData[2]=originY;
+ 	segmentData[3]=endX;
+ 	segmentData[4]=endY;
+ 	paintData.add(segmentData);
+ 	++storageIndex;
+ 	
+ 	// store char data and origin co-ordiantes in paintData
+ 	startIndex = storageIndex;
+ 	storeSegmentCharData(axiom, originX, originY);
+ 	endIndex=storageIndex;
+ 	calculateSegmentData(startIndex, endIndex); 
+
+ 	System.out.println("depth: "+depth);
+ 	for(int j = 0; j<depth;++j){
+ 		System.out.println();
+ 		System.out.println("We are at depth: " + j);
+ 		System.out.println();
+ 		
+ 		calculateSegmentData(startIndex, endIndex);
+ 		applyProduction(startIndex, endIndex);
+ 		startIndex = endIndex;
+ 		endIndex = storageIndex;
+ 	}
+ 	calculateSegmentData(startIndex, endIndex);
+	
+}
+
+//this method calculate the end points for the segments in paintData in range
+//[start,end).
+public static void calculateSegmentData(int start, int end){
+
+	System.out.println("calculate segment data start to end" + start + " to "+ end);
+	float [] segmentData = new float[5];
+	int numSegments = end-start;;
+	float opposite;
+	float adajacent;
+	int index = start;
+
+	float segmentAngle = (float) (Math.PI * 2) / numSegments;
+
+
+	// for each line segment calculate the end co-ordinates using trig
+	// and the segmentAngle
+	for(int i=0; i<numSegments; ++i) {
+		
+		float angle = (i) * segmentAngle;
+		
+		if((angle==0||angle==3.1415927)&&index%2==0)
+			angle+=Math.PI/4;
+		if((angle==0)&&index%2==0)
+			angle-=Math.PI/4;
+		System.out.println("angle: "+ angle);
+		opposite = segmentLength * (float) Math.sin(angle);
+		adajacent = segmentLength * (float) Math.cos(angle);
+		
+		//get segmentData array at index from paintData vector
+		
+		segmentData = (float []) paintData.get(index);
+		
+		
+		
+		// store end points
+		if(adajacent>0.5||adajacent<-0.5){
+			//System.out.print("paintData[index][1]: " + paintData[index][1] +" + adajacent: "+ adajacent);
+			segmentData[3]= segmentData[1] + adajacent;
+			//System.out.println(" = "+ paintData[index][3]);
+		}else{
+			segmentData[3]= segmentData[1];
+		}
+			
+		if(opposite>0.5||opposite<-0.5){
+			//System.out.print("paintData[index][2]: " + paintData[index][2] +" + opposite: "+ opposite);
+			segmentData[4]= segmentData[2] + opposite;
+			//System.out.println(" = "+ paintData[index][4]);
+		}else{
+			segmentData[4]= segmentData[2];
+		}
+		
+		paintData.set(index, segmentData);
+		++index;
+	}
+	return;
+}
+
+//this method stores the charData for given string in paintData, beginning at sIndex.
+//It also stores the origin X and Y co-ordinates for segment for each char in string, also in paintData
+public static void storeSegmentCharData(String s, float oX, float oY){
+
+	int numSegments = s.length();
+	float segmentAngle = (float) (Math.PI * 2) / numSegments;
+	float [] segmentData = new float[5];
+	
+	for(int i=0; i<s.length(); ++i){
+		
+		segmentData = (float []) paintData.get(i);
+		char c = s.charAt(i);
+		
+		if (c=='a'){
+			segmentData[0]=1;
+		}else if (c=='b'){
+			segmentData[0]=2;
+		}else if (c=='c'){
+			segmentData[0]=3;
+		}
+		segmentData[1]=oX;
+		segmentData[2]=oY;
+		paintData.add(segmentData);
+		
+		++storageIndex;
+	}
+	return;
+}
+
+//this method applys the production rules for the l-system to each char in paintData in range [start,end)
+//once the [word] returned by production rule application is then stored in paintData begining at the end of paintData.
+public static void applyProduction(int start, int end){
+	
+	float [] segmentData = new float[5];
+	int productionIndex = start;
+	while(productionIndex != end){
+		segmentData = (float []) paintData.get(productionIndex);
+		float charType = segmentData[0];
+ 		String s = "";
+ 		// find convert charType to char.
+ 		if (charType==1){
+ 			s="a";
+ 		}else if (charType==2){
+ 			s="b";
+ 		}else if (charType==3){
+ 			s="c";
+ 		}
+ 		// apply production to char and get word
+		String word = lsys.applyProductions(s);
+		//store the word and origin X and Y co-ordinates in paintData
+		storeSegmentCharData(word, segmentData[3], segmentData[4]);
+		++productionIndex;
+	}
+}
+
+
+
+
+ public static void main(String[] args) {
+
+		// if (args.length == 3) {
+
+			// RETRIEVE,STORE AND DISPLAY L-SYSTEM GIVEN AT COMMAND LINE
+
+			// example of command line format:
+			// java JohnnyA3 ex2.lsys a 6
+
+			// lsys = new LSys(args[0], args[1],
+			// Integer.valueOf(args[2]).intValue());
+			lsys = new LSys("fibonacci.lsys", "ab",3);
+			// open and parse external file containing L-System.
+			lsys.GetLSys();
+
+			// display L-System.
+			lsys.DisplayLSys();
+			
+			getPaintData();
+
+
+		// } else {
+		// System.out.println("Incorrect arguments given at command line");
+		// }
+
+		// Create a JFrame to hold everything
+		JFrame myFrame = new JFrame("Angela visualizes L-systems");
+
+		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		// create an instance of my own container
+		AngelaA4v1 theComp = new AngelaA4v1();
+
+		// add it to the frame, show it all.
+		myFrame.getContentPane().add(theComp);
+		myFrame.pack();
+		myFrame.setVisible(true);
+	}
+}
+

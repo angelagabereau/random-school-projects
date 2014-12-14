@@ -1,0 +1,80 @@
+
+
+FOA: 1.4.4 Genre
+
+
+
+
+
+FOA Home
+
+ | UP: Documents
+
+
+
+Genre
+
+A more subtle characteristic of documents that may need to concern us is
+their GENRE - the voice or style in which a document is written.
+You would, um, like, be pretty darn surprised to find stuff like this in
+a textbook, but not if it came to you over the phone. The genre of Email
+seems to be settling somewhere between typical printed media and spoken
+conversation, with special markings of sarcasm:) and expletives \#!?\%
+common. Newspaper journalists are carefully trained to produce articles
+consistent with what newspaper readers are expecting, and their editors
+are paid to ensure that these stories maintain a consistent voice.
+Scientific journal articles are written to be understood by peers in the
+same field, according to standards that pertain to that community [<A
+HREF="bibrefs.html#Bayermann88">Bayermann88] . An important
+component of this audience-focus is the vocabulary choice an
+author makes (cf. &sect;8.2.1 ); stylistic
+variations and document structure may differ as well. In a field like
+psychology, for example, it would be difficult to get a paper accepted
+in some journals if it is not subdivided into sections like
+``Hypothesis,'' ``Methodology,'' ``Subjects.'' Legal briefs are also
+written in highly conventionalized forms [<A
+HREF="bibrefs.html#BlueBook">BlueBook] , and legislation is drafted
+to satisfy political realities [<A
+HREF="bibrefs.html#Goodrich87">Goodrich87] [<A
+HREF="bibrefs.html#Levi82">Levi82] [<A
+HREF="bibrefs.html#Nerhot91">Nerhot91] [<A
+HREF="bibrefs.html#REF126">REF126] .
+
+
+In part these variations in
+genre are difficult to detect because they remain consistent within any
+single corpus. That is, the typical email message would jump out at you
+as out of place if it appeared in your newspaper, but probably not if it
+were in the Letters to the Editor page. These examples highlight how
+much {context} about the corpus we bring with us whenever we read
+a particular document. They also foreshadow problems Web searchers are
+just beginning to appreciate, as WWW search engines include every
+document to which they can crawl, intermixing their very different
+contexts and writing styles. Without the orienting features of the
+newspaper's masthead, the ``Letters to the Editor'' rubric, or the
+purposeful selection of a tool that scans only Usenet news, the browsing
+users' abilities to understand an arbitrary document is diminished.
+Individual textual passages have been stripped of much of the context
+that made them sensible. As more and more of us generate {\em content}
+-- in new hypermedia forms as well as traditional publications -- that
+more and more of us retrieve, the range of genres we will experience can
+only increase, and our methods for FOA must help to represent not just
+the document but contextual information as well.
+
+
+
+
+Top of Page
+
+ | UP: Documents
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

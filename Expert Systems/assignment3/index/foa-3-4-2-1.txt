@@ -1,0 +1,105 @@
+
+
+FOA: 3.4.2.1 Making weights sensitive to document  length
+
+
+
+
+
+FOA Home
+
+ | UP: Vector length normalization
+
+
+
+Making weights sensitive to document  length
+
+Unfortunately, this most-simple normalization is often inadequate, as
+can be shown in terms of the inverse document frequency (IDF) weights
+discussed in &sect;3.3.7 . IDF weighting
+highlights the distinction between inter- and
+intra-document keyword occurrences. Since its primary focus is
+on discrimination among documents, intra-document occurrences of the
+same keyword become insignificant. This makes IDF very sensitive to the
+definition of just how document boundaries happen to be defined (cf.
+Section &sect;2.2 ), as suggested by Figure
+(figure) .
+
+
+The IDF weight which results from encapsulating more
+text within the same ``document'' is , in a sense, the converse of
+normalizing the number of keywords assigned to every document. In either
+case, the advantage of using the paragraph as our canonical document
+(cf. Section &sect;1.4 ), and/or relying on
+all documents in the corpus to be of nearly uniform size (as in the AIT
+dissertation abstracts) is apparent.
+
+
+The OKAPI retrieval system of
+Robertson et al[Robertson94] has
+proven itself successful (in retrieval competitions like TREC; cf.
+Section &sect;4.3.3 ) by combining IDF
+weightings with corpus-specific sensitivities to the lengths of the
+document's retrieved . They propose that the the average length of all
+documents in a corpus, $\overline{\mathname{DLen}}$, provides a
+``natural'' reference point against which other documents' lengths can
+be compared.
+
+
+Define $(d)$ to be the number of keywords associated with
+the document. OKAPI then normalizes the first, keyword-frequency
+component of our weighting formula by a term that is sensitive to each
+documents deviation from this corpus-wide average: w_{kd}={f_{kd} \over
+\frac{k \cdot \mathname{Len}(d)}{\overline{\mathname{DLen}}} + f_{kd}}
+\cdot \left(\log {(\mathname{NDoc}- D_k)+0.5\over D_k + 0.5}\right)
+Robertson and Walker report that $k \approx 1.0-2.0 \mid Q \mid$ seems
+to work best, where $\mid Q \mid$ the number of query terms.
+
+
+Singhal et
+al[Singhal96] approach the problem
+of length normalization by doing a post hoc analysis of the
+distributions of retrieved versus relevant documents (in the TREC
+corpus), as a function of their length . A sketch of typical curves is
+shown in Figure (figure) .A. The fact that these two
+distributions cross suggests a corpus-specific LENGTH NORMALIZATION
+PIVOT value, $p$, below which match scores are reduced and above
+which they are increased. The amount of this linear increase/decrease,
+shown as the LENGTH NORMALIZATION SLOPE $m$ of the length
+normalization function of Figure (FOAref) .B, is the second
+corpus-specific parameter of Singhal et al's model. Returning to the
+``generic'' form of the weighting function originally given in Equation
+(FOAref) , the pivot-based length normalization is:
+w_{kd}={f_{kd} \over (1-m) \cdot p + m \cdot \mathname{norm}} \cdot
+\mathname{discrim}_k where $\mathname{norm}$ is whatever other
+normalization factor (e.g., cosine) is already in use; several possible
+values are given in the next section.
+
+
+Both OKAPI and pivot-based document
+length normalization rely on the specification of additional
+corpus-specific parameters ($k_{1}$ and $p,m$, resp.). While the
+addition of yet more ``nobs to twiddle'' is generally to be avoided in a
+retrieval system, recent experience with machine learning techniques
+suggest the possibility of training such parameters so as to
+best match each corpus. This approach is sometimes called a
+REGRESSION technique and is discussed more fully in Chapter <A
+HREF="foa-7.html">&sect;7 .
+
+
+
+
+Top of Page
+
+ | UP: Vector length normalization
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

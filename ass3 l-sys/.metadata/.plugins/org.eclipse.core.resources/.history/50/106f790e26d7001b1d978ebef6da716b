@@ -1,0 +1,452 @@
+///////////////////////////////////////////////////////////
+//	Angela Gabereau
+//	ID# 4867815
+//	CART 363 - Advanced Languages of Programming
+//	Assignment 3 - L-Systems
+///////////////////////////////////////////////////////////
+//
+//	This class handles all the functionality of this assignment.
+
+import java.io.*;
+import java.util.*;
+
+public class LSys {
+	
+	private String fileName;//the name of the file in which an L-Sytem is stored.
+	private String axiom;//the input string, to which production rules will be applied, or from which 							//L-Systems will be generated
+	private int numProductions;//the number of productions in L-System.
+	private int depth;//number of iterations of the applications of the production rules
+	private char[] alphabet = {'a','b','c'};
+				//,'d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','y','z'};
+	private int MAX_PRODUCTION_SIZE = 3;//specifies the maximum size of the [word] in generated L-Systems production rules
+	private int MAX_PRODUCTION_RULES = 5;//specifies the maximum number of production rules in generated L-Systems
+	private Map<String, String> productions = new HashMap<String, String>();//stores production rules. the key is the 										//[letter], the value is the [word]
+	
+	//CONSTRUCTORS
+	
+	//This constructor is used to create an LSys object which
+	//applies a LSys from an external file to a input axiom 
+	//to a given depth.
+	public LSys(String fileName, String axiom, int depth) {
+		super();
+		this.fileName = fileName;
+		this.axiom = axiom;
+		this.depth = depth;
+	}
+	
+	//This constuctor is used to create a LSys object which
+	//generates LSys based on input axiom and saves it in a 
+	//file named by input fileName
+	public LSys(String fileName, String axiom) {
+		super();
+		this.fileName = fileName;
+		this.axiom = axiom;
+
+	}
+	
+	//**************************************************************************
+	//*	METHOD GET LSYS - PART A
+	//**************************************************************************
+	//*	This method opens file containing L-System and stores production rule
+	//*	in map productions with the [letter] as the key and the [word] as the
+	//*	value.
+	//**************************************************************************
+	
+	public void GetLSys(){ 
+		 
+		 //READ INPUT L-SYS FILE using file streams
+	     
+	     File file = new File(fileName);
+
+	     try {
+	         FileReader fIS = new FileReader(file);
+	         BufferedReader bR = new BufferedReader(fIS);
+	         String line;
+
+	         //get the number of productions in file from the first line of file
+	         try {
+	        	 	numProductions = Integer.parseInt(bR.readLine());
+
+	         } catch (Exception e) {
+	             System.out.println("Error in converting strings to numbers.");
+	             e.printStackTrace();
+	         }
+	         
+	         
+	         //get the productions from file and store in map productions
+	         String pLetter;
+	         String pWord;
+	 
+	         while ((line = bR.readLine()) != null && line.length()>0) {
+	        	 
+	        	 	//parse line into tokens at whitespace using StringTokenizer.
+	        	    StringTokenizer st = new StringTokenizer(line);
+	        	    int tokenCount = st.countTokens();
+
+	        	 	if (tokenCount == 2){
+	        	 		pLetter = st.nextToken();
+	        	 		pWord = st.nextToken();
+	        	 		
+	        	 	}else{
+	        	 		System.out.println("Error parsing productions.");
+	        	 		return;
+	        	 	}
+	        	 	
+	        	 	productions.put(pLetter, pWord);
+	         }
+
+	         fIS.close();
+
+	     } catch (Exception e) {
+	         e.printStackTrace();
+	         System.exit(0);
+	     }	
+	}
+	
+	//**************************************************************************
+	//*	METHOD DISPLAY LSYS
+	//**************************************************************************
+	//This method iterates through the map productions and displays each production
+	//**************************************************************************
+	
+	public void DisplayLSys(){
+
+		System.out.println("productions:");
+		System.out.print(productions);
+
+	}
+	
+	//**************************************************************************
+	//*	METHOD APPLY PRODUCTIONS - PART B
+	//**************************************************************************
+	//* This method iterates through [letter], examing each character in [letter] 
+	//*	and looking for a production rule for that character.  If one exists 
+	//*	adding the new string as dictacted by rule to tempWord, if no production 
+	//*	rule exists then add the character as is. After end of string has been 
+	//*	reached replace [letter] with tempWord, output [letter].
+	//**************************************************************************
+
+	public void applyProductions(){
+	
+		String tempWord = "";
+		String letter = "";
+		String pWord;//[letter]
+		
+		System.out.println("");
+		System.out.println("Applying productions to: " + axiom);
+		
+		for(int i=0; i<axiom.length();++i){
+			
+			//get the letter as a char an add it to the empty string letter 
+			letter += axiom.charAt(i);
+			
+			//look for letter in map productions
+			pWord = productions.get(letter);
+			
+			if (pWord == null){
+				//there are no production rules for this letter, thus simply add letter as is to tempWord
+				System.out.println("		letter:" + letter +" stays the same");
+				tempWord += letter;	
+			}else{
+				//add the string dicated by the production rule to tempWord
+				System.out.println("		letter:" + letter +" becomes: "+pWord);
+				tempWord += pWord;
+			}
+
+			//reset letter to empty string
+			letter = "";
+		}
+		
+		System.out.println("axiom:" + axiom);
+		System.out.println("tempWord:" + tempWord);
+		System.out.println("axiom length: " + axiom.length());
+		System.out.println("tempWord length: " + tempWord.length());
+		axiom = tempWord;
+
+	}
+	
+	//**************************************************************************
+	//*	METHOD APPLY PRODUCTIONS - Takes a string as argument , returns string
+	//**************************************************************************
+	//* This method iterates through [letter], examing each character in [letter] 
+	//*	and looking for a production rule for that character.  If one exists 
+	//*	adding the new string as dictacted by rule to tempWord, if no production 
+	//*	rule exists then add the character as is. After end of string has been 
+	//*	reached replace [letter] with tempWord, output [letter].
+	//**************************************************************************
+	
+	
+	public String applyProductions(String s){
+		
+		String tempWord = "";
+		String letter = "";
+		String pWord;//[letter]
+		
+		System.out.println("");
+		System.out.println("Applying productions to: " + s);
+		
+		for(int i=0; i<s.length();++i){
+			
+			//get the letter as a char an add it to the empty string letter 
+			letter += s.charAt(i);
+			
+			//look for letter in map productions
+			pWord = productions.get(letter);
+			
+			if (pWord == null){
+				//there are no production rules for this letter, thus simply add letter as is to tempWord
+				System.out.println("		letter:" + letter +" stays the same");
+				tempWord += letter;	
+			}else{
+				//add the string dicated by the production rule to tempWord
+				System.out.println("		letter:" + letter +" becomes: "+pWord);
+				tempWord += pWord;
+			}
+
+			//reset letter to empty string
+			letter = "";
+		}
+		
+		System.out.println("axiom:" + axiom);
+		System.out.println("tempWord:" + tempWord);
+		return tempWord;
+
+	}
+	
+	//**************************************************************************
+	//*	METHOD PRODUCE - PART B
+	//**************************************************************************
+	//* This method applies the productions to input axiom to given depth
+	//**************************************************************************
+	public void Produce(){
+		for(int i=0; i<depth; ++i)
+			applyProductions();
+	}
+	
+	//I assume that the generated L-Systems are generated based on the characters in the axiom provided.
+	//These characters will function as the [letters] in the production rules.
+
+	//**************************************************************************
+	//*	METHOD GENERATE SYMMETRIC LSYS - PART D
+	//**************************************************************************
+	//*	This method creates a completely random L-System. This is accomplished
+	//*	by creating production rules by using a character randomly selected from
+	//*	input axiom as the [letter] in the production rule. Input axiom must
+	//* at least one character long, and may be longer.  The [word] is 
+	//*	generated by randomly choosing a string of characters from the alphabet 
+	//*	array, length of which is determined by a random number generator with 
+	//* MAX_PRODUCTION_SIZE as the upper limit.  The number of production rules 
+	//* is determined by a random number generator with MAX_PRODUCTION_RULES as 
+	//* the upper limit.  The generated prodution rules are stored in map  
+	//*	productions with the [letter] as the key and the [word] value.
+	//***************************************************************************
+	public void GenerateRandomLSys(){
+		
+		if(axiom.length()>=1){
+			
+			Random generator = new Random();
+			
+			//get the number of production rules in this L-System
+			int numProductionRules= generator.nextInt(MAX_PRODUCTION_RULES)+1;
+			for (int i=0; i<numProductionRules; ++i){
+				
+				//GET LETTER
+				//randomly select letter for rule from the axiom
+				String letter = "";
+				letter += axiom.charAt(generator.nextInt(axiom.length()));
+				
+				//GET WORD
+				//randomly construct word from alphabet
+				//get the size of this production
+				int productionSize = generator.nextInt(MAX_PRODUCTION_SIZE)+1;
+				
+				//generate word by randomly selecting productionSize characters from alphabet array
+				//and concatinating to word.
+				String word = "";
+				for(int j=0; j<productionSize; ++j)
+					word += alphabet[generator.nextInt(alphabet.length)];
+				
+				//add letter and word to productions
+				productions.put(letter, word);
+				
+			}
+			System.out.println("new random l-sys");
+			System.out.println(productions);
+			
+			//output the productions to a file named according to String fileName.
+			ProductionsFileOutput();		
+		}else{
+			System.out.println("Input axiom must be at least one character long.");
+		}
+		
+		
+	}
+
+	//**************************************************************************
+	//*	METHOD GENERATE SYMMETRIC LSYS - PART D
+	//**************************************************************************
+	//*	This method generates an L-System whose output, on the a single 
+	//*	character initial word, is always symmetric.  This is accomplished
+	//*	by creating production rules by using the single character input as the
+	//*	[letter] in the production rule and generating the [word] by randomly
+	//* choosing a string of characters from the alphabet array, length of 
+	//* which is determined by a random number generator with MAX_PRODUCTION_SIZE
+	//* 	as the upper limit.  The [word] is created by concatinating the
+	//*	string+[letter]+string.  The number of production rules is determined by
+	//* a random number generator with MAX_PRODUCTION_RULES as the upper limit.
+	//*	The generated prodution rules are stored in map productions with the 
+	//*	[letter] as the key and the [word] value.
+	//***************************************************************************
+	public void GenerateSymmetricLSys(){
+		
+		//check that input axiom is only one character long.
+		if(axiom.length()==1){
+			Random generator = new Random();
+			
+			//get the number of production rules in this L-System
+			//There will be between 1 and MAX_PRODUCTION_RULES production rules.
+			int numProductionRules= generator.nextInt(MAX_PRODUCTION_RULES)+1;
+			
+			//for each production rule get the [letter] and the [word]
+			for (int i=0; i<numProductionRules; ++i){
+				
+				//GET LETTER
+				//randomly selects [letter] for the production rule from the axiom.
+				String letter = "";
+				letter += axiom.charAt(generator.nextInt(axiom.length()));
+				
+				//GET WORD
+				//randomly construct word from alphabet array
+				//get the size of the [word] for this production,
+				//The random number generator determines the size of a substring of the [word]
+				//the size of the [word] for this production will be the size of the substring
+				//times 2 plus 1.
+				int productionSize = generator.nextInt(MAX_PRODUCTION_SIZE)+1;
+				//intialize [word] to the letter provided by axiom.
+				String word = letter;
+				
+				//bulid up the [word] by randomly selecting a character from the alphabet and adding
+				//this character to the front and the end of the word. 
+				for(int j=0; j<(productionSize); ++j){
+					
+					char c = alphabet[generator.nextInt(alphabet.length)];
+					word = c + word + c;
+				}
+				//add [letter] and [word] to productions
+				productions.put(letter, word);
+			}
+			
+			System.out.println("new symmetric l-sys");
+			System.out.println(productions);
+			
+			//output the productions to a file named according to String fileName.
+			ProductionsFileOutput();
+			
+		}else{
+			System.out.println("Input axiom must be only one character long.");
+		}
+	}
+	
+	//**************************************************************************
+	//*	METHOD GENERATE EXPONENTIAL LSYS - PART D
+	//**************************************************************************
+	//*	This method generates an L-System whose output, on the a single 
+	//*	character initial word,grows like the function 2i in length.  This is accomplished
+	//*	by creating production rules by using the single character input as the
+	//*	[letter] in the production rule and generating the [word] by concatinating
+	//*	the [letter] with itself, thereby doubling the [letter] when the production
+	//*	rule is applied.
+	//*	The generated prodution rules are stored in map productions with the 
+	//*	[letter] as the key and the [word] value.
+	//***************************************************************************
+	public void GenerateExponentialLSys(){
+		
+		//check that input axiom is only one character long.
+		if(axiom.length()==1){
+			//create [word] by concatinating the axiom with itself.
+			String word = axiom + axiom; 
+			
+			//add [letter] and [word] to productions
+			productions.put(axiom, word);
+			
+			System.out.println("new exponential l-sys");
+			System.out.println(productions);
+		
+			//output the productions to a file named according to String fileName.
+			ProductionsFileOutput();
+		}else{
+			System.out.println("Input axiom must be only one character long.");
+		}
+	}
+	
+	//**************************************************************************
+	//*	METHOD PRODUCTIONS FILE OUTPUT - PART D
+	//**************************************************************************
+	//*	This method outputs the map productions to a file.  The first line
+	//*	of the file is the number of productions and the remaining lines are
+	//*	the produciton rules in the format [letter] [word].
+	//*	Much of this method is adapted from the sample code for CART 363 by
+	//* Taras Kowaliw, 2007.
+	//***************************************************************************
+	public void ProductionsFileOutput(){
+		
+		//first, we reference a file
+        // we use the System class to find system-specific information
+
+        // first, we get an absolute path to the current working directory
+        String path = System.getProperty("user.dir");
+        
+        // next, we append the file name fileName and ".txt"
+        if(fileName.length()>0)
+        	path += File.separator + fileName + ".txt";
+        else
+        	path += File.separator + "lsystem.txt";
+
+        // now, we create a File
+        File file = new File(path);
+
+        // see if the file exists, since we don't want to overwrite anything
+        if (file.exists()) {
+            System.out.println("Ooops... the file exists!");
+            System.exit(0);
+        }
+
+        // now we create an output stream - a plethora of possible
+        // errors, so we use a "try" clause
+        FileWriter fW;
+        PrintWriter pW;
+
+        try {
+            fW = new FileWriter(file);
+            pW = new PrintWriter(fW);
+
+            // now productions are printed into file
+            // first print the number of productions into file
+            pW.println(productions.size());
+            
+            //now iterate through the productions map and print production to file
+            Iterator keyValuePairs1 = productions.entrySet().iterator();
+            for (int i = 0; i < productions.size(); i++)
+            {
+              Map.Entry entry = (Map.Entry) keyValuePairs1.next();
+              String letter = (String)entry.getKey();
+              String word = (String)entry.getValue();
+            
+              pW.println(letter + " " + word);
+            }
+            
+            fW.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.exit(0);
+        }
+	}
+	
+	
+	
+	public int getDepth(){ return depth;}
+	public String getAxiom(){ return axiom;}
+
+}
+

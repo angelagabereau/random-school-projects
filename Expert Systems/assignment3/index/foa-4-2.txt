@@ -1,0 +1,112 @@
+
+
+FOA: 4.2 Extending the dialog with \RelFbk
+
+
+
+
+
+FOA Home
+
+ | UP: Assessing the retrieval
+
+
+
+Extending the dialog with \RelFbk
+
+Figure (figure) focuses on a single instance of \RelFbk, shown
+as a labeling over the set of \Ret documents. But beyond any one
+reaction to a single retrieved set product, a central premise
+of the FOA process is that users' reactions to just-retrieved
+documents provides the pivotal link many such assesments into the FOA
+search dialog. This is perhaps most clear in Figure (figure) ,
+where RelFbk is used to link a series of reactions into a QUERY
+SESSION .
+
+
+Attempts to support this searching process, and then
+attempts to rigorously evaluate how well software sytems support
+browsing users as they FOA is one of the most vexing issues within IR
+evaluation. [Daniels85] [<A
+HREF="bibrefs.html#Saracevic88">Saracevic88] [<A
+HREF="bibrefs.html#Larson91">Larson91] [<A
+HREF="bibrefs.html#REF1045">REF1045] [<A
+HREF="bibrefs.html#ODay93">ODay93] [<A
+HREF="bibrefs.html#Cawsey92">Cawsey92] [<A
+HREF="bibrefs.html#Russel93">Russel93] [<A
+HREF="bibrefs.html#Koenemann96">Koenemann96] . Part of the problem
+is the misconception that, if a search engine works perfectly, and the
+user issues the perfect MAGIC BULLET QUERY , out will spill all
+and only relevant documents! Such simplistic definitions of optimality
+come naturally to computer scientists; library scientists who are used
+to the naturalistic behaviors of real patrons in their libraries know
+that a much more extended and nebulous form of support is required.
+
+
+Marcia
+Bates' famous BERRY PICKING metaphor [<A
+HREF="bibrefs.html#REF839">REF839] [<A
+HREF="bibrefs.html#Bates89">Bates89] is useful here. [a] query is
+not satisfied by a single final retrieved set, but by a series of
+selections of individiual references and bits of information at each
+stage of the ever-modifying search A bit-at-a-time retrieval of this
+sort is here called beryypicking. This term is used by analogy to
+picking huckleberries or blueberries in the forest. The berries are
+scattered on the bushes; they do not come in bunches. One must pick them
+one at a time. One could do berry-picking of information without the
+search need itself changing (evolving) but ... [we] consider searches
+that combine both of these characteristics. [<A
+HREF="bibrefs.html#Bates89">Bates89]
+
+
+ In addition to highlighting the
+same iterative, browsing behavior central to FOA's characterization of
+the dialog, the ``evolving'' character of the information need in Bates'
+metaphor is also important. Imagine that you are in the forest on an
+idyllic day with only one purpose: fill your bucket with the best
+blueberries you can find. Early in the day, with your whole afternoon in
+front of you, you are likely to be very choosy. At this juncture, you
+could bump into a bush full of blueberries that were not as ripe nor as
+large as you imagine must exist somewhere else in the forest,
+and not drop a single one into your basket. But late in the afternoon,
+if you have had poor luck and little to show for your efforts, you could
+come across an even worse bush and grab every single berry, shriveled or
+not!
+
+
+Applying this metaphor to FOA is provacative in many respects. For
+example, it suggests that maintaining an explicit representation of the
+retrieved document ``basket'' might be a useful addition to any search
+engine interface. It predicts a time course to the distribution of
+users' RelFbk assessments. For now, we simply observe that it seems
+quite likely that an assessment of one document's relevance will depend
+greatly on the ``basket'' of other documents we already have seen. The
+general idea of thinking of an ``evolutionary ecology of information
+foraging'' [Pirolli97] has become
+less metaphoric and more concrete as information search agents (like the
+InfoSpiders described in &sect;7.6 ) explore
+the ``environment'' of the WWW.
+
+Subsections
+
+	 4.2.1 Using \RelFbk for query refinement
+	 4.2.2 Using \RelFbk to adapt documents' indices
+	 4.2.3 Summary
+
+
+
+
+Top of Page
+
+ | UP: Assessing the retrieval
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

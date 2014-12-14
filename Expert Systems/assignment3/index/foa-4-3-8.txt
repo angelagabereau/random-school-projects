@@ -1,0 +1,87 @@
+
+
+FOA: 4.3.8 One-parameter criteria
+
+
+
+
+
+FOA Home
+
+ | UP: INDIVIDUALS' assessment: search engine  performance
+
+
+
+One-parameter criteria
+
+This section began with Recall and Precision, the two most typical
+measures of search engine performance. From that beginning, even richer,
+more elaborate characterizations of how well the system is performing
+have been considered. But even having the two measures of
+Recall and Precision means that it is not a simple matter to decide
+whether one system is better or worse than another. What are we to think
+of a system that has good Recall but poor precision, relative to another
+with the opposite bug/feature?
+
+
+For example, if we wish to optimize a
+search engine with respect to one or more design parameters (e.g., the
+exact form of the query/document matching function, cf. Section <A
+HREF="foa-5-3-1.html">&sect;5.3.1 ), effective optimization becomes
+much more difficult in MULTI-CRITERIAL cases. Such thinking has
+generated ``composite'' measures based on the basic components of recall
+and precision.
+
+
+For example, Nordine and van Rijsbergen [<A
+HREF="bibrefs.html#Jardine71">Jardine71] [<A
+HREF="bibrefs.html#vanR73">vanR73] originally proposed the
+F-MEASURE for this purpose \beq F_{\beta} \equiv
+\frac{(\beta^{2}+1) \cdot \mathname{Precision} \cdot \mathname{Recall} }
+{\beta^{2} \mathname{Precision} + \mathname{Recall}} \eeq \vanR{174} has
+since defined the closely related EFFECTIVENESS meaurure $E$
+which uses $\alpha$ to smoothly vary the emphasis given to precision vs.
+recall: \beq {E_{\alpha}} \equiv 1-
+\left(\frac{\alpha}{\mathname{Precision}}+\frac{1-\alpha}{\mathname{Recall}}\right)^{-1}
+\eeq The transform $\alpha = \frac{1}{\beta^2 + 1}$ converts easily
+between the two formulations, with $E = 1 - F$. \vanR{174} also presents
+an argument that a perfectly even-handed balance of precision against
+recall at $\alpha = 0.5$ is most appropriate.
+
+
+As discussed at some length
+in Section &sect;7.4 , it is possible to view
+retrieval as a type of classification task: given a set of features for
+each document (e.g., the keywords it contains), classifiy it as either
+\Rel or \IRel with respect to some query. Lewis and Gale [<A
+HREF="bibrefs.html#Lewis94b">Lewis94b] have used the $F_{\beta}$
+measure in the context of text classification tasks, and also recommend
+a focus on the same $\beta=1.0$ balance. CLASSIFICATION ACCURACY
+measures how often the classification is correct. If we associate the
+choice to retrieve a document with classifiying it as \Rel, we can use
+the variables defined in the contingency table of Figure
+(FOAref) : \mathname{Accuracy} \equiv \frac{\mid Retr \cap Rel
+\mid + \mid \overline{Retr} \cap \overline{Rel} \mid}{\mathname{NDoc}}
+
+Subsections
+
+	 4.3.8.1 Sliding ratio
+	 4.3.8.2 Point alienation
+
+
+
+
+Top of Page
+
+ | UP: INDIVIDUALS' assessment: search engine  performance
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

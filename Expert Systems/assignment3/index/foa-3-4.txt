@@ -1,0 +1,120 @@
+
+
+FOA: 3.4 Vector space
+
+
+
+
+
+FOA Home
+
+ | UP: Weighting and matching against Indices
+
+
+
+Vector space
+
+One of life's most satisfying pleasures is going to a good library and
+browsing in an area of interest. After having negotiated the library's
+organization and found just which floor and shelves are associated with
+the CALL NUMBERS of your topic, you are physically
+surrounded by books and books, all of interest! Some are reassuring old
+friends, already known to you; others are new books by familiar authors,
+and (best of all!) some are brand new titles.
+
+
+This system works because
+human catalogers have proven themselves able to reliably and
+consistently identify the (primary!) topic of books according to
+conventional systems of subject headings like the Library of Congress
+Subject Headings, or the Dewey Decimal system.
+
+
+Our goal is to abstract
+away from this very friendly notion of physical space in the
+library, to a similar but generalized notion of SEMANTIC space in
+which documents about the same topic remain close together. But
+rather than allowing ourselves to be restricted by the physical
+realities of three-dimensional space, and the fact that books can only
+be shelved in a single place in a library, we will consider abstract
+spaces of thousands of dimensions. we can represent in electronic
+indices.}
+
+
+We can make concrete progress towards these lofty goals
+beginning with the \( \MATHNAME{INDEX} \) MATRIX relating each
+document in a corpus to all of their keywords. A very natural and
+influential interpretation of this matrix (due to Gerry Salton [<A
+HREF="bibrefs.html#Salton75">Salton75] [<A
+HREF="bibrefs.html#Salton83">Salton83] ) is to imagine each and
+every keyword of the vocabulary as a separate dimension of a VECTOR
+SPACE . In other words, the DIMENSIONALITY of the vector
+space is the size of our vocabulary. Each document can be represented as
+a vector within such a space. Figure (figure) shows a very
+simplified (binary) \( \mathname{Index} \) matrix, and a cartoon of its
+corresponding vector representation.
+
+
+Estimates of vocabulary sizes of
+native speakers of a language approach 50,000; if you are articulate,
+your speaking and/or reading vocabularies might be 100,000 or more.
+Assuming that we have an even modest $10^6$ document corpus, this matrix
+is therefore something like $10^6\times\; 10^5$. That's a big matrix,
+even by modern supercomputing standards.}.
+
+
+In addition to the vectors
+representing all documents, one special row matrix and vector
+corresponds to a query. Since documents and queries exist within a
+common vector space, we naturally characterize how we'd like our
+retrieval system to work - just as we go to a physical location in the
+library to be near books about a topic, we seek those
+documents that are close to our query vector. This is a useful
+characterization of what we'd like our retrieval system to accomplish,
+but it is still far from a specification of an algorithm for
+accomplishing it. For example, it seems to require that the query vector
+be compared against each and every document, something we can hope to
+avoid.
+
+
+An even more important issue to be resolved before the vector
+space model can be useful is being specific about just what it means for
+a document and query to be close to one another. As will be discussed in
+Section &sect;5.2.2 , there are many
+plausible measures of proximity within a vector space. For the time
+being, we will assume the use of the INNER PRODUCT of query and
+document vectors as our metric:
+
+
+People have difficulty imaging spaces
+with more than the three physical dimensions of experience, and so it is
+no wonder that abstract spaces of 10^5 \) dimensions are hard to
+conceptualize. Sketches like (FOAref) do the best they can to
+convey ideas in the three dimensions we appreciate, but it is critically
+important that we not let intuitions based on such small-dimensional
+experiences bias our understanding of the large-dimensional spaces
+actually being represented and searched.
+
+Subsections
+
+	 3.4.1 Keyword discrimination
+	 3.4.2 Vector length normalization
+	 3.4.3 Summary: SMART weighting specification
+
+
+
+
+Top of Page
+
+ | UP: Weighting and matching against Indices
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

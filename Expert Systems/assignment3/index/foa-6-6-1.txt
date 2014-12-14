@@ -1,0 +1,141 @@
+
+
+FOA: 6.6.1 Geographical hitlists
+
+
+
+
+
+FOA Home
+
+ | UP: Deep interfaces
+
+
+
+Geographical hitlists
+
+SINGULAR tokens are those proper nouns -- people, places, events
+-- that have a unique reference in the world. They are distinguised from
+GENERAL terms which refer to CATEGORIES of objects in the
+world. Distinctions like this have been a part of linguistic analysis
+since the beginning [REF54] , and many
+with a background in AI will recall Ron Brachman's {\tt
+CLYDE\_THE\_ELEPHANT} example [REF336]
+[REF669] .
+
+
+In FOA the distinction
+initially arose out of practical considerations. The basic morphological
+procesing of folding case, Porter's stemmer and similar tools is
+designed primarily to deal with what we could, in the present context,
+call GENERAL TERMS only. Conversly, proper names (family and
+place names, etc.) rarely observe morphological transformation names.
+The capitalization which often flags singular proper nouns is thrown
+away, rather than actually helping to ease the task of automatically
+identifying and parsing them. Names like {\tt JOHNSON} purportedly began
+as names to describe sons of John. Suggest rules like those used in
+Porter's stemmer to exploit systematic variations in family names such
+as this.
+
+
+ It is no wonder, then, that NAME-TAGGING techniques
+which deal intelligently with singular tokens was an early area of
+search engine development [Rau88] [<A
+HREF="bibrefs.html#Jacobs87">Jacobs87] . Identifying the sub-class
+of people singulars is an especially active area. Relatively
+small dictionaries of the ``movers and shakers'' of the modern world --
+politicians, captains of industry, artists, etc. -- can provide an
+especially informative and commercially valuable set of additional
+indexing tokens in applications such as financial news services.
+
+
+Chris
+Needham has proposed an interesting strategy for progressively applying
+stronger models of representation based on various classes of singulars
+(personal communication). Working on a representation for editors, the
+procedure Needham and his group hit upon was to \item first describe
+places in the world; \item then people who live (are
+born, travel through and then die) in these places; and finally \item
+events involving people at locations. Specification of one
+layer of terminology provided a concrete frame of reference for the
+next: Events involve people, which are associated with places. This
+suggests one argument for focusing on place-related singulars first. But
+modeling even this ``simplest'' class of propoer names quickly required
+even tighter focuse onto PHYSICAL PLACES about which it was quite
+easy to give very concrete reference and distinguished from POLITICAL
+PLACES whose names and extents can vary dramatically. As editors of
+the \EB, these designers were especially aware of how historically and
+culturally sensitive resolving political place names could be.
+
+
+But at
+least for physical locations, the emergence of GLOBAL POSITIONING
+SYSTEM (GPS) technologies that allow users to know their position
+within a single, reconciled geographic frame has helped to drive a
+growing market for GEOGRAPHICAL INFORMATION SYSTEMS (GIS)
+software. and the development of world-wide AUTHORITY LISTS of
+place names (e.g., The
+U. S. Board on Geographic Names (BGS) and the earlier <A
+HREF="http://164.214.2.59/gns/html/FIPS/FIP10-4.html">Federal
+Information Processing Standards (FIPS) ``Countries, Dependencies,
+Areas Of Special Sovereignty, And Their Principal Administrative
+Divisions'' list). Like people's names, place data is an important
+information commodity.
+
+
+Further, human cognition has evolved to live in a
+three-dimensional world. We each have deep psychological commitments to
+basic features of our physical space and orientation with respect to a
+spatial frame of reference [REF47] [<A
+HREF="bibrefs.html#Kosslyn80">Kosslyn80] . In contrast to all the
+other abstract, disembodied dimensions along which information often
+barrages a user's screen, place information is special. Our experience
+of time is the other important experiential dimension, as demonstrated
+by representations like the TIME LINE . The orientation provided
+by such concrete frames can be critical.
+
+
+Consider, for example, the query
+{CIVIL WAR BATTLE} and its conventional retrieval, as shown in Figure
+(figure) Instead we should be able to see these retrieved items
+in the geographical frame they naturally suggest, as shown in Figure
+(figure)
+
+
+ Note the steps this required: First the textual
+hitlist was parsed for geographical tokens. Next, the map coordinates
+for each of these WiW entries are collected, and a CONVEX HULL
+(bounding polygon) for at least a majority of them is computed. Finally
+the map which best contains this region is identified, zoomed and
+shifted to best fit them.
+
+
+Within this same frame, a user also immediately
+knows how to DRAW QUERIES , for example restricting search to
+only those battles near the East Coast, or along a particular river.
+With modern graphical techniques, animation of these battles as a
+time-line slider is slid back and forth is almost trivial. But the
+additional power of visualization and DIRECT MANIPULATION
+interface techiques [REF654] such as
+these to browsing users is enormous. The important thing is that this
+additional functionality is not at the expense of a much more complex,
+complicated interface of commands or even menu items. People already
+know what space \means, how to interpret it and how to work within it.
+
+
+
+
+Top of Page
+
+ | UP: Deep interfaces
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

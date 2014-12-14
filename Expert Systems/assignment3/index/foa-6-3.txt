@@ -1,0 +1,72 @@
+
+
+FOA: 6.3 Keyword structures
+
+
+
+
+
+FOA Home
+
+ | UP: Inference beyond the \Index
+
+
+
+Keyword structures
+
+Most of what we have said about the Index relation (e.g., as
+part of the vector space model) assumes that keywords are simply a set
+of features. But beyond simply providing access to the retrieval of
+documents, the fact that keywords are \rikmeaning-ful objects in their
+own right means that we can analyze relationships among keywords
+directly.
+
+
+THESAURI are structured representations of relations
+among keywords. Common relations represented in thesauri include:
+
+
+ \item
+\textbf{Broader term/narrower term (BT/NT)}; these capture hierarchic
+relations, generally between a kind of semantics, sometimes part whole
+relation. \item \textbf{Related term (RT)} capturing synonym or
+quasi-synonym relationships. \item \textbf{Use for (UF)} capturing a
+preferred, conventional or authoritative term over possible
+alternatives.
+
+
+ One of the most extensive examples of such a
+representation is the MESH (MEdical Subject Headings) thesaurus, part of
+the National Library of Medicine's extensive PubMed system. FIgure
+(figure) shows the term {\tt LYMPHOMA} within the MESH
+thesaurus. expanded in the second two tree locations.} example
+Hierarchic BT/NT relations are shown as indentation. Because this
+thesaurus allows a single keyword to fit in multiple places in the
+hierarchy (e.g., treating {\tt LYMPHOMA} as a kind of {\tt NEOPLASM} as
+well as a kind of {\tt IMMUNOLOGIC DISEASE} ) this browser shows the
+term as part of three separate paths; note that the children (narrower
+terms) of {\tt LYMPHOMA} are repeated at each location.
+
+Subsections
+
+	 6.3.1 Automatic thesaurus construction
+	 6.3.2 Corpus-based linguistics and WordNet
+	 6.3.3 Taxonomies
+
+
+
+
+Top of Page
+
+ | UP: Inference beyond the \Index
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

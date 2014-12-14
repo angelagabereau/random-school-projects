@@ -1,0 +1,75 @@
+
+
+FOA: 2.3.2 Noise words
+
+
+
+
+
+FOA Home
+
+ | UP: Intra-document parsing
+
+
+
+Noise words
+
+From the earliest days of IR (e.g. Luhn's seminal work [<A
+HREF="bibrefs.html#Luhn57">Luhn57] ) two related facts have been
+obvious: first, that a relatively small number of words account for a
+very significant fraction of all text's bulk. Words like IT,
+AND and TO can be found in virtually every sentence.
+Second, these  NOISE WORDS make very poor index terms. Users are
+unlikely to ask for documents about TO and it is hard to
+imagine a document about BE.} Due then to both their
+frequency and their lack of indexing consequence, we will build in the
+capability of ignoring noise words into our lexical analyzer.
+
+
+As will be
+discussed extensively in Chapter 3, noise words are often imagined to be
+the most frequently occurring words in a corpus. One problem with
+defining noise words in this way is that it requires a frequency
+analysis of the corpus prior to lexical analysis. It is possible to use
+frequency analyses from other corpora, assuming that the distribution of
+noise words is relatively constant across corpora, but such an
+extrapolation is not always warranted. Worse, the most frequent words
+often include words that might make very good key words. Fox notes that
+the words TIME, WAR, HOME, LIFE, WATER and
+WORLD are among the 200 most frequent in general English
+literature.[FoxC92]
+
+
+ Instead, we will
+define noise words extensionally, in terms of a finite list or
+NEGATIVE DICTIONARY. The list we use, STOP.WRD, was derived by
+Fox from an analysis of the Brown corpus[<A
+HREF="bibrefs.html#Fox90">Fox90] .
+
+
+The relationship between these
+noise words and those words most critical to syntactic analysis of
+natural language sentences is striking. note that the same tokens that
+are thrown away as noise because they have no meaning are precisely
+those FUNCTION WORDS most important to the syntactic
+analysis of well-formed sentences. This is the first, but not the last,
+suggestion of a fundamental complimentarity between FOA's concern with
+semantics and computational linguistics' concern with syntax.
+
+
+
+
+Top of Page
+
+ | UP: Intra-document parsing
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

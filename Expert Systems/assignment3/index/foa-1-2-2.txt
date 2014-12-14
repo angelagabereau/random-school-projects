@@ -1,0 +1,90 @@
+
+
+FOA: 1.2.2 Topical scope
+
+
+
+
+
+FOA Home
+
+ | UP: Keywords
+
+
+
+Topical scope
+
+The first constraint we can apply to the set of keywords we will allow
+in our vocabulary is to define a DOMAIN OF DISCOURSE - the
+subject area within which each and every user of our search engine is
+assumed to be searching. While we might imagine building a truly
+encyclopedic reference work, one capable of answering questions
+about any topic whatsoever, it is much more common to build a
+search engine with more limited goals, capable of answering questions
+about some particular subject. We will choose the simpler path
+(it will prove enough of a challenge!), and focus on a particular topic.
+To be concrete, throughout this text we will assume that the domain of
+discourse is {\tt ARTIFICIAL INTELLIGENCE} (AI). Briefly, AI can be
+defined as a sub-discipline of computer science, especially concerned
+with algorithms that mimic inferences which, had they been made by a
+human, would be considered ``intelligent.'' It typically includes such
+topics as {\tt KNOWLEDGE REPRESENTATION, MACHINE LEARNING, ROBOTICS},
+etc.
+
+
+Thus is a BROADER TERM than \term{ARTIFICIAL INTELLIGENCE}.
+This HYPERNYM relationship between the two phrases is something
+we will return to later (cf. Section <A
+HREF="foa-6-3.html">&sect;6.3 ). For example, our task becomes more
+difficult if we assume that the corpus of documents contains materials
+on the broader topic of \term{COMPUTER SCIENCE}, rather than just (!)
+\term{ARTIFICIAL INTELLIGENCE}. Conversely, the topics \term{KNOWLEDGE
+REPRESENTATION}, \term{MACHINE LEARNING}, \term{ROBOTICS} are all
+NARROWER TERMS , and our task would, {\em caeteris
+paribus\/}\footnote{(Assuming) all other things being equal.}, be made
+easier if we only had to help users FOA one of them.
+
+
+Constraining the
+vocabulary so that it is EXHAUSTIVE enough that any imaginable
+topic is expressible within the language, while remaining
+SPECIFIC enough that any particular subjects a user is likely to
+investigate can be distinguished from others, will become a central goal
+of our design. \term{ROBOTICS}, for example, would seem a descriptive
+keyword because it identifies a relatively small sub-area of
+\term{ARTIFICIAL INTELLIGENCE}. \term{COMPUTER SCIENCE} would be silly
+as a keyword (for this corpus), as we are assuming it would apply to
+each and every document and hence does nothing to discriminate them - it
+is too exhaustive. At the other extreme, \term{ROBOTIC VACUUM CLEANERS
+FOR 747 AIRLINERS} is almost certainly too specific.
+
+
+The VOCABULARY
+SIZE -- the total number of keywords -- depends on many factors,
+including the scope of the domain of discourse. A typical language user
+has a reading vocabulary of approximately 50,000 words. Web search
+engines and large test corpora formed from the union of many document
+types may require vocabularies ten times this large. It is unlikely that
+such a large lexicon of keywords is required for restricted corpora, but
+it is also true that even a narrow field can develop an extensive,
+specialized JARGON or TERMS OF ART. In practice, search
+engines typically have difficulty reducing the number of usable keywords
+much below 10,000.
+
+
+
+
+Top of Page
+
+ | UP: Keywords
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

@@ -1,0 +1,38 @@
+
+
+FOA: 3.5.2 Cosine similarity
+
+
+
+
+
+FOA Home
+
+ | UP: Matching queries against documents
+
+
+
+Cosine similarity
+
+We will focus here on the COSINE measure of similarity. Not only
+does this respect the useful mathematical properties mentioned at the
+beginning of this section, but it is consistent with a geometric
+interpretation of the vector space that many find insightful.
+
+
+
+
+Top of Page
+
+ | UP: Matching queries against documents
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

@@ -1,0 +1,41 @@
+
+
+FOA: 2.5.3 Software libraries
+
+
+
+
+
+FOA Home
+
+ | UP: Implementation
+
+
+
+Software libraries
+
+As much as possible, we will depend on standard libraries for some of
+our basic utilities. In particular, it is recommended that you use:
+
+
+
+\item gethash - This is the standard hashtable routine,
+part of most Unix distributions.
+
+
+
+
+Top of Page
+
+ | UP: Implementation
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

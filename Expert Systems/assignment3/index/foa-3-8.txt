@@ -1,0 +1,98 @@
+
+
+FOA: 3.8 Conclusion
+
+
+
+
+
+FOA Home
+
+ | UP: Weighting and matching against Indices
+
+
+
+Conclusion
+
+We've covered enormous ground in this chapter. We began by wondering
+just what it might mean to try to understand communicative acts,
+like the publication of a document or the posing of a question/query. We
+looked in some detail at one of the most fundamental characteristics of
+texts, Zipf's Law, and found it to be, in fact, quite \rikmeaning-less!
+But the next level of features, tokens like those produced by the
+machinery of Chapter 2, supported a rich analysis of the Index, as a
+balance between the vocabularies of the documents' authors and the
+searchers' subsequent queries. The vector space provides a concrete
+model of potential keyword vocabularies and what it might mean to match
+within this space. Finally, we considered an efficient implementation of
+nearly-complete matching. In the next chapter we consider the problem of
+evaluating just how well all these techniques work in practice. But
+there are gaps in this story that are so obvious we don't even need to
+measure.
+
+
+Soem invovle implementation issues that can be critical,
+especially when faced with very large corpora [<A
+HREF="bibrefs.html#Harper92">Harper92] . Parallel implementation
+techniques, for example those pioneered on ``massively parallel'' SIMD
+(single instruction/multiple data) Connection machines become important
+in this respect [REF589] [<A
+HREF="bibrefs.html#REF378">REF378] [<A
+HREF="bibrefs.html#REF583">REF583] . In the modern age of multiple
+search engines each indexing (only partially overlapping versions! [<A
+HREF="bibrefs.html#Lawrence98">Lawrence98] ) of the WWW techniques
+for FUSING multiple hitlists into a single list for the same user
+suggests another level of parallelism in the FOA task [<A
+HREF="bibrefs.html#Voorhees95">Voorhees95] .
+
+
+But linguists, in
+particular, must have more serious, implmentation-independent concerns.
+Imagine that you are someone who has studied the range of human
+languages and who appreciates both their wide variety and equally
+remarkable commonalities. You would be appalled at the violence we have
+done to the syntactic structure of language. For linguists,
+finding out about documents by counting their words is like trying to
+understand Beijing by listening to a single microphone poised high over
+the city. You can pick up on a few basic trends (like when most people
+are awake) but most of the texture is missing!
+
+
+{DOG BITES MAN} and {\tt
+MAN BITES DOG} clearly mean two different things. Word order
+obviously conveys meaning beyond that brought by the three words.
+And the problem doesn't end with word order. Look how different the
+meanings of these phrases are: \bit \item {\tt NEUTRALIZATION OF
+THE PRESENT} \item {\tt REPRESENTING NEUTRONS} \item {\tt
+REPRESENTATIONS, NOT NEUTRONS} \eit despite the fact that all of them
+(conceivably) reduce to the same set of indexable tokens! Note
+especially how critical the same ``noise'' words thrown away on
+statistical grounds (in Chapter 2) are in analyzing a sentence's
+syntactic structure.
+
+
+The attempt to understand the phenomena of
+meaning -- words -- by looking for patterns in word frequency
+statistics alone is reminiscent of the tea leaves and entrails of this
+chapter's opening quote. Still, the success of many WWW search engines
+that use very little beyond this kind of gross analysis suggests that
+their is much more information in the statistics than traditional,
+syntactically-focussed linguists might have believed.
+
+
+
+
+Top of Page
+
+ | UP: Weighting and matching against Indices
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+

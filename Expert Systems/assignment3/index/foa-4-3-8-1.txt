@@ -1,0 +1,74 @@
+
+
+FOA: 4.3.8.1 Sliding ratio
+
+
+
+
+
+FOA Home
+
+ | UP: One-parameter criteria
+
+
+
+Sliding ratio
+
+The fact that the set is ordered makes it useful to compare two rank
+orderings directly. If the ``correct,'' idealized ranking is known (for
+example, one corresponding to perfectly decreasing probability of
+relevance), then an actual search engine's hitlist ranking can be
+compared against this standard. More typically, the rankings of two
+retrieval systems are compared to one another.
+
+
+Given two rankings, we
+will prefer the one which ranks relevant documents ahead of irrelevant
+ones. If our relevance assesments are binary, with each document simply
+marked as relevant or Irrelevant, the normalized recall measure
+considered in Section &sect;4.3.6 (or the
+expected search length measure to be described in Section <A
+HREF="foa-4-3-10-1.html">&sect;4.3.10.1 ) is the best we can do in
+distinguishing the two rankings.
+
+
+But if we assume instead that it is
+possible to impose a more refined measure $(d_i)$ than simply \Rel/\IRel
+(e.g., recall the richer preference scale of Figure (FOAref) ),
+more sophisticated measures are possible. In this case, we prefer a
+ranking which ranks $d_i$ ahead of $d_j$ just in case
+$\mathname{Rel}(d_i) > \mathname{Rel}(d_j)$. One way to quantify this
+preference is to sum the $\mathname{Rel}(d_i)$ for the $\mathname{NRet}$
+most highly ranked documents: \beq \sum_{i=1}^{NRet} Rel({d_i}) Ret}
+Rel({d_i}) } Rel({d_i}) el({d_i}) {d_i}) i}) \eeq
+
+
+The ratio of this
+measure, computed for each of the two systems' rankings, is called the
+SLIDING RATIO score [<A
+HREF="bibrefs.html#Pollack68">Pollack68] : \beq
+\frac{\sum_{i=1}^{{Rank_1}({d_i})({d_i})\ \preceq {NRet}} {Rel}({d_i})}
+{\sum_{i=1}^{{Rank_2}({d_i})\ \preceq {NRet}} {Rel}({d_i})} \eeq As
+$NRet$ increases, this ratio comes closer to unity: \beq \lim_{{NRet}\
+\rightarrow {NDoc}} \frac{\sum_{i=1}^{{Rank_1}({d_i})\ \leq {NRet}}
+{Rel}({d_i})} {\sum_{i=1}^{{Rank_2}({d_i})\ \leq {NRet}} {Rel}({d_i})}
+=1 \eeq and so it is most useful for distinguishing between two rankings
+when only a small $\mathname{NRet}$ is considered.
+
+
+
+
+Top of Page
+
+ | UP: One-parameter criteria
+
+ | ,FOA Home 
+
+
+
+
+
+FOA &copy; R. K. Belew - 00-09-21
+
+
+
